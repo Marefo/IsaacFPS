@@ -11,13 +11,14 @@ namespace _CodeBase.HeroCode
   {
     [SerializeField] private float _sensitivityX;
     [SerializeField] private float _sensitivityY;
-    [FormerlySerializedAs("orientation")]
+    [FormerlySerializedAs("_offset")]
+    [Space(10)]
+    [SerializeField] private Vector3 _offsetFromHero;
     [Space(10)]
     [SerializeField] private Transform _orientation;
 
     private float _rotationX;
     private float _rotationY;
-    private Vector3 _offset;
     private InputService _inputService;
 
     [Inject]
@@ -28,18 +29,19 @@ namespace _CodeBase.HeroCode
 
     private void Start()
     {
-      _offset = transform.position - _orientation.transform.position;
+      _offsetFromHero = transform.position - _orientation.transform.position;
       Lock();
     }
 
-    private void Update()
-    {
-      transform.position = _orientation.transform.position + _offset;
-    }
+    private void Update() => FollowHero();
 
-    private void LateUpdate()
+    private void LateUpdate() => Look();
+
+    private void FollowHero()
     {
-      Look();
+      Vector3 targetPosition = _orientation.transform.position + _offsetFromHero;
+      targetPosition.y = transform.position.y;
+      transform.position = targetPosition;
     }
 
     private void Look()

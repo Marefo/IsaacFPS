@@ -9,6 +9,8 @@ using Zenject;
 
 public class HeroMovement : MonoBehaviour
 {
+  public Vector3 MoveDirection => GetMoveDirection();
+
   [SerializeField] private float _moveSpeed;
   [Space(10)] 
   [SerializeField] private Transform _orientation;
@@ -24,12 +26,12 @@ public class HeroMovement : MonoBehaviour
 
   private void FixedUpdate() => Move();
 
-  private void Move()
+  private Vector3 GetMoveDirection()
   {
-    Vector3 input = _inputService.MovementInput;
-    Vector3 direction = _orientation.forward * input.z + _orientation.right * input.x;
+    Vector3 direction = _orientation.forward * _inputService.MovementInput.z + _orientation.right * _inputService.MovementInput.x;
     direction.y = 0;
-    
-    _rigidbody.AddForce(direction.normalized * _moveSpeed, ForceMode.Force);
+    return direction;
   }
+  
+  private void Move() => _rigidbody.AddForce(MoveDirection.normalized * _moveSpeed, ForceMode.Force);
 }

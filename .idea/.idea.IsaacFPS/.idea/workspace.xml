@@ -3,80 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="f8849ab3-d35d-492a-ab84-559b39c4dc6c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IsaacFPS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IsaacFPS/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/ContactShadows.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/ContactShadows.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Editor/ContactShadowsEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Editor/ContactShadowsEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Editor/NoiseTextureSetEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Editor/NoiseTextureSetEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Scripts/NoiseTextureSet.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Scripts/NoiseTextureSet.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Shaders.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Shaders/Common.cginc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Shaders/Common.cginc.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Shaders/Composite.cginc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Shaders/Composite.cginc.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Shaders/ContactShadows.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Shaders/ContactShadows.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Shaders/Raytrace.cginc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Shaders/Raytrace.cginc.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Shaders/TempFilter.cginc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Shaders/TempFilter.cginc.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Textures/LDR_LLL1_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Textures/LDR_LLL1_0.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Textures/LDR_LLL1_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Textures/LDR_LLL1_1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Textures/LDR_LLL1_10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Textures/LDR_LLL1_10.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Textures/LDR_LLL1_11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Textures/LDR_LLL1_11.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Textures/LDR_LLL1_12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Textures/LDR_LLL1_12.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Textures/LDR_LLL1_13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Textures/LDR_LLL1_13.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Textures/LDR_LLL1_14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Textures/LDR_LLL1_14.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Textures/LDR_LLL1_15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Textures/LDR_LLL1_15.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Textures/LDR_LLL1_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Textures/LDR_LLL1_2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Textures/LDR_LLL1_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Textures/LDR_LLL1_3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Textures/LDR_LLL1_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Textures/LDR_LLL1_4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Textures/LDR_LLL1_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Textures/LDR_LLL1_5.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Textures/LDR_LLL1_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Textures/LDR_LLL1_6.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Textures/LDR_LLL1_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Textures/LDR_LLL1_7.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Textures/LDR_LLL1_8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Textures/LDR_LLL1_8.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Textures/LDR_LLL1_9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Textures/LDR_LLL1_9.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Textures/NoiseTextureSet.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContactShadows/Textures/NoiseTextureSet.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/New Material.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/New Material.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/wall (1).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/wall (1).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/HeroCode/HeroCameraRotator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/HeroCode/HeroCameraRotator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/HeroCode/HeroMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/HeroCode/HeroMovement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Common/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/BurstAotSettings_StandaloneWindows.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/BurstAotSettings_StandaloneWindows.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/CommonBurstAotSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/CommonBurstAotSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/../../../PlayerMovementTutorial.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -166,7 +100,7 @@
       <workItem from="1675172460387" duration="32000" />
       <workItem from="1675172559899" duration="261000" />
       <workItem from="1675173931298" duration="56000" />
-      <workItem from="1675174352023" duration="17467000" />
+      <workItem from="1675174352023" duration="19671000" />
     </task>
     <servers />
   </component>
