@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a9f43cbb48147b28af5341029369415, type: 3}
+  m_Name: HeroShooterSettings
+  m_EditorClassIdentifier: 
+  Delay: 0.61
+  Damage: 1
+  MaxShootDistance: 15
+  ProjectileSpeed: 10
+  ProjectilePrefab: {fileID: 7038363627252032064, guid: c71b9d113e2b02e4cb830bd2741a19c4,
+    type: 3}

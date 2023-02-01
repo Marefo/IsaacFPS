@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 772.8
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Console
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 32057
+  controlID: 49
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 32058
+  controlID: 16
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 32059
+  controlID: 17
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -243,14 +243,14 @@ MonoBehaviour:
     y: 495.2
     width: 1172.8
     height: 227.59998
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 16}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -338,7 +338,7 @@ MonoBehaviour:
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
     m_HSlider: 0
-    m_VSlider: 1
+    m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
@@ -351,18 +351,18 @@ MonoBehaviour:
       y: 21
       width: 880.4
       height: 453.2
-    m_Scale: {x: 0.57265985, y: 0.57265985}
-    m_Translation: {x: 440.2, y: 230.06792}
+    m_Scale: {x: 0.524537, y: 0.524537}
+    m_Translation: {x: 440.2, y: 226.6}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -768.69366
-      y: -401.75317
-      width: 1537.3873
-      height: 791.3948
+      x: -839.2163
+      y: -432.00003
+      width: 1678.4326
+      height: 864.00006
     m_MinimalGUI: 1
   m_defaultScale: 0.524537
   m_LastWindowPixelSize: {x: 1100.5, y: 592.75}
@@ -405,7 +405,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 9893fbff3e94fbff4499fbffa679fcff4c7afcff527ffcff30bcfcffd6bcfcffdcc1fcff26f3fcffccf3fcffd2f8fcff1846fffff053ffff98d5ffff0afbffffec770000f87700005ede00006ede0000e0eb0000f0eb000020fb000034fb0000602b0100
+      m_ExpandedIDs: 9277ffff08fbffff3e780000be780000d0780000e0780000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -507,7 +507,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
+      snapOffset: {x: 0, y: 24.8}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-transform-toolbar
@@ -639,7 +639,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 0
-      snapOffset: {x: 0, y: 0}
+      snapOffset: {x: 0, y: 24.8}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Particles
@@ -655,9 +655,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.3922014, y: 1.1595272, z: -0.103707284}
+    m_Target: {x: -4.575795, y: 2.221853, z: 6.509274}
     speed: 2
-    m_Value: {x: 2.3922014, y: 1.1595272, z: -0.103707284}
+    m_Value: {x: -3.5386744, y: 1.6487762, z: 0.24781725}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -704,13 +704,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.03627303, y: 0.6538799, z: -0.031409528, w: -0.7550836}
+    m_Target: {x: 0.0791452, y: -0.54500824, z: 0.051933244, w: 0.8331384}
     speed: 2
-    m_Value: {x: -0.036272805, y: 0.6538758, z: -0.031409334, w: -0.7550789}
+    m_Value: {x: -0.019374123, y: 0.8936463, z: -0.038931258, w: -0.44666037}
   m_Size:
-    m_Target: 0.8660254
+    m_Target: 1.4686766
     speed: 2
-    m_Value: 0.8660254
+    m_Value: 1.2315754
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -833,22 +833,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/_Common/InputSystem
+    - Assets/_Common/Hero
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/_Common/InputSystem
+  - Assets/_Common/Hero
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\GameDev\UnityProjects\IsaacFPS
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: d6790000
-    m_LastClickedID: 31190
-    m_ExpandedIDs: 000000000079000002790000047900007679000000ca9a3b
+    m_SelectedIDs: 3e7b0000
+    m_LastClickedID: 31550
+    m_ExpandedIDs: 00000000ba7a0000bc7a0000be7a0000c07a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -876,7 +876,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000079000002790000047900007679000000ca9a3b
+    m_ExpandedIDs: 00000000ba7a0000bc7a0000be7a0000c07a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -903,7 +903,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -993,7 +993,7 @@ MonoBehaviour:
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
   m_PreviewResizer:
-    m_CachedPref: 160
+    m_CachedPref: -160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1

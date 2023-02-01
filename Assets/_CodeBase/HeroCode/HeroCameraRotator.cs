@@ -11,7 +11,6 @@ namespace _CodeBase.HeroCode
   {
     [SerializeField] private float _sensitivityX;
     [SerializeField] private float _sensitivityY;
-    [FormerlySerializedAs("_offset")]
     [Space(10)]
     [SerializeField] private Vector3 _offsetFromHero;
     [Space(10)]

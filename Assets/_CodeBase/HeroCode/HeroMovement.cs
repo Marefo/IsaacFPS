@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using _CodeBase.Extensions;
 using _CodeBase.Infrastructure.Services;
 using _CodeBase.Logging;
+using _CodeBase.Units;
 using UnityEngine;
 using Zenject;
 
@@ -13,6 +14,7 @@ public class HeroMovement : MonoBehaviour
 
   [SerializeField] private float _moveSpeed;
   [Space(10)] 
+  [SerializeField] private UnitAnimator _animator;
   [SerializeField] private Transform _orientation;
   [SerializeField] private Rigidbody _rigidbody;
   
@@ -33,5 +35,9 @@ public class HeroMovement : MonoBehaviour
     return direction;
   }
   
-  private void Move() => _rigidbody.AddForce(MoveDirection.normalized * _moveSpeed, ForceMode.Force);
+  private void Move()
+  {
+    _rigidbody.AddForce(MoveDirection.normalized * _moveSpeed, ForceMode.Force);
+    _animator.ChangeRunState(MoveDirection != Vector3.zero);
+  }
 }
