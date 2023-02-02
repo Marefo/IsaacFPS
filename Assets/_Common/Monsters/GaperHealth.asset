@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df7a2efcc8e44aa7935ba722e16b4ac9, type: 3}
   m_Name: GaperHealth
   m_EditorClassIdentifier: 
-  MaxValue: 5
-  StartValue: 5
+  MaxValue: 10
+  StartValue: 10

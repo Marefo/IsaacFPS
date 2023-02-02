@@ -8,31 +8,23 @@ namespace _CodeBase.Units.GaperCode.States
   public class ChaseState : State
   {
     private readonly GaperStateMachine _stateMachine;
-    private float _pushDistance;
-    private NavMeshAgent _agent;
-    private UnitAnimator _animator;
+    private readonly NavMeshAgent _agent;
 
-    public ChaseState(GaperStateMachine stateMachine)
+    public ChaseState(GaperStateMachine stateMachine, NavMeshAgent agent)
     {
       _stateMachine = stateMachine;
+      _agent = agent;
     }
 
     public override void Exit()
     {
       base.Exit();
-      _animator.ChangeRunState(false);
+      _agent.destination = _stateMachine.transform.position;
     }
 
-    public override void Update()
-    {
-      Chase();
-      UpdateRunAnimationState();
-    }
+    public override void Update() => Chase();
 
     private void Chase() => 
       _agent.destination = _stateMachine.Hero.transform.position;
-
-    private void UpdateRunAnimationState() => 
-      _animator.ChangeRunState(_agent.remainingDistance != 0);
   }
 }

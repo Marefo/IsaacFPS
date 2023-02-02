@@ -26,7 +26,9 @@ namespace _CodeBase.Units.GaperCode.States
     public override void Exit()
     {
       base.Exit();
-      _gaper.StopCoroutine(_attackCoroutine);
+      
+      if(_attackCoroutine != null)
+        _gaper.StopCoroutine(_attackCoroutine);
     }
 
     private IEnumerator AttackCoroutine()
