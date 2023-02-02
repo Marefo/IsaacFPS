@@ -37,6 +37,8 @@ namespace _CodeBase.HeroCode
       _inputService = inputService;
     }
 
+    private void Awake() => FinishChargedVfx();
+
     private void OnEnable() => _inputService.AttackButtonClicked += TryShoot;
     private void OnDisable() => _inputService.AttackButtonClicked -= TryShoot;
 

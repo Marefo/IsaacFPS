@@ -11,14 +11,14 @@ namespace _CodeBase.Etc
     private float _defaultPositionY;
     private float _timer;
 
-    private void Start() => _defaultPositionY = transform.position.y;
+    private void Start() => _defaultPositionY = transform.localPosition.y;
 
     private void Update()
     {
       _timer += Time.deltaTime * _speed;
-      Vector3 newPosition = transform.position;
+      Vector3 newPosition = transform.localPosition;
       newPosition.y = _defaultPositionY + Mathf.Sin(_timer) * _amount;
-      transform.position = newPosition;
+      transform.localPosition = newPosition;
     }
   }
 }

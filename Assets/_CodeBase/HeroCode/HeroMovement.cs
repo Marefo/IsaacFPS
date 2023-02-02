@@ -13,6 +13,10 @@ public class HeroMovement : MonoBehaviour
   public Vector3 MoveDirection => GetMoveDirection();
 
   [SerializeField] private float _moveSpeed;
+  [SerializeField] private float _gravity;
+  [SerializeField] private Transform _groundCheckPoint;
+  [SerializeField] private float _groundCheckSphereRadius;
+  [SerializeField] private LayerMask _floorLayer;
   [Space(10)] 
   [SerializeField] private UnitAnimator _animator;
   [SerializeField] private Transform _orientation;
@@ -26,7 +30,24 @@ public class HeroMovement : MonoBehaviour
     _inputService = inputService;
   }
 
-  private void FixedUpdate() => Move();
+  private void FixedUpdate()
+  {
+    Move();
+    ApplyGravity();
+  }
+
+  private void OnDrawGizmos()
+  {
+    Gizmos.color = Color.red;
+    Gizmos.DrawWireSphere(_groundCheckPoint.position, _groundCheckSphereRadius);
+  }
+
+  private void ApplyGravity()
+  {
+    bool grounded = Physics.CheckSphere(_groundCheckPoint.position, _groundCheckSphereRadius, _floorLayer);
+    if(grounded) return;
+    _rigidbody.AddForce(Vector3.down * _gravity);
+  }
 
   private Vector3 GetMoveDirection()
   {

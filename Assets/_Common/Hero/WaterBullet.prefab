@@ -5170,7 +5170,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 25
+      scalar: 20
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -9857,7 +9857,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _destroyerLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 192
   _zone: {fileID: 7038363628575896812}
   _destroyVfx: {fileID: 8888001104751598274, guid: 5fe315fb06b74a14898e8633a9cfa62a,
     type: 3}

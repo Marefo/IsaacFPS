@@ -40,7 +40,7 @@ Material:
     m_Ints: []
     m_Floats:
     - Vector1_1a968725898c4b20a529ce480b0021b4: -0.2
-    - _Input: 0.99
+    - _Input: 0.29247656
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Size: 0.1

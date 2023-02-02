@@ -14,6 +14,7 @@ namespace _CodeBase.IndicatorCode
     public int MaxValue { get; private set; }
     public int CurrentValue { get; private set; }
     public bool IsMaxValue => CurrentValue == MaxValue;
+    public bool IsValueZero => CurrentValue == 0;
 
     [SerializeField] private IndicatorSettings _settings;
 

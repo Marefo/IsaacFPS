@@ -27,7 +27,7 @@ namespace _CodeBase.ShooterCode
     protected override void OnDamageableZoneEnter(IDamageable damageable)
     {
       StopMovement();
-      damageable.ReceiveDamage(_settings.Damage);
+      damageable.ReceiveDamage(_settings.Damage, transform.position);
       Destroy();
     }
 
