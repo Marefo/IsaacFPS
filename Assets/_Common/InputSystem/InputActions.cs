@@ -53,6 +53,15 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ChangeCameraRotationState"",
+                    ""type"": ""Button"",
+                    ""id"": ""cc306183-b398-404e-8d12-679871274f64"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -187,6 +196,17 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""action"": ""Attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""309aeb34-f88a-4b1f-a455-05b871a9929d"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChangeCameraRotationState"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -198,6 +218,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         m_Game_Movement = m_Game.FindAction("Movement", throwIfNotFound: true);
         m_Game_Look = m_Game.FindAction("Look", throwIfNotFound: true);
         m_Game_Attack = m_Game.FindAction("Attack", throwIfNotFound: true);
+        m_Game_ChangeCameraRotationState = m_Game.FindAction("ChangeCameraRotationState", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -260,6 +281,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
     private readonly InputAction m_Game_Movement;
     private readonly InputAction m_Game_Look;
     private readonly InputAction m_Game_Attack;
+    private readonly InputAction m_Game_ChangeCameraRotationState;
     public struct GameActions
     {
         private @InputActions m_Wrapper;
@@ -267,6 +289,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         public InputAction @Movement => m_Wrapper.m_Game_Movement;
         public InputAction @Look => m_Wrapper.m_Game_Look;
         public InputAction @Attack => m_Wrapper.m_Game_Attack;
+        public InputAction @ChangeCameraRotationState => m_Wrapper.m_Game_ChangeCameraRotationState;
         public InputActionMap Get() { return m_Wrapper.m_Game; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -285,6 +308,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @Attack.started -= m_Wrapper.m_GameActionsCallbackInterface.OnAttack;
                 @Attack.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnAttack;
                 @Attack.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnAttack;
+                @ChangeCameraRotationState.started -= m_Wrapper.m_GameActionsCallbackInterface.OnChangeCameraRotationState;
+                @ChangeCameraRotationState.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnChangeCameraRotationState;
+                @ChangeCameraRotationState.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnChangeCameraRotationState;
             }
             m_Wrapper.m_GameActionsCallbackInterface = instance;
             if (instance != null)
@@ -298,6 +324,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @Attack.started += instance.OnAttack;
                 @Attack.performed += instance.OnAttack;
                 @Attack.canceled += instance.OnAttack;
+                @ChangeCameraRotationState.started += instance.OnChangeCameraRotationState;
+                @ChangeCameraRotationState.performed += instance.OnChangeCameraRotationState;
+                @ChangeCameraRotationState.canceled += instance.OnChangeCameraRotationState;
             }
         }
     }
@@ -307,5 +336,6 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         void OnMovement(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
+        void OnChangeCameraRotationState(InputAction.CallbackContext context);
     }
 }

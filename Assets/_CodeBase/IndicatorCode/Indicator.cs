@@ -21,22 +21,22 @@ namespace _CodeBase.IndicatorCode
     private void Start() => Initialize();
 
     [Button()]
-    public void IncreaseForTen() => ChangeValue(10);
+    public void IncreaseForOne() => ChangeValue(1);
     
     [Button()]
-    public void DecreaseForTen() => ChangeValue(-10);
+    public void DecreaseForOne() => ChangeValue(-1);
 
     public void Increase(int value) => ChangeValue(Mathf.Abs(value));
     public void Decrease(int value) => ChangeValue(-Mathf.Abs(value));
     
-    public void ChangeToZero()
+    public virtual void ChangeToZero()
     {
       CurrentValue = 0;
       Changed?.Invoke();
       ValueCameToZero?.Invoke();
     }
 
-    private void ChangeValue(int value)
+    protected virtual void ChangeValue(int value)
     {
       CurrentValue = Mathf.Clamp(CurrentValue + value, 0, MaxValue);
       Changed?.Invoke();
@@ -47,7 +47,7 @@ namespace _CodeBase.IndicatorCode
         ValueCameToMax?.Invoke();
     }
 
-    private void Initialize()
+    protected virtual void Initialize()
     {
       MaxValue = _settings.MaxValue;
       CurrentValue = _settings.StartValue;

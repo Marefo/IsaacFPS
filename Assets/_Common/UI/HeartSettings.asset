@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df7a2efcc8e44aa7935ba722e16b4ac9, type: 3}
-  m_Name: HeroHealthSettings
+  m_Script: {fileID: 11500000, guid: 422df282262e47e580c9830382ef31b4, type: 3}
+  m_Name: HeartSettings
   m_EditorClassIdentifier: 
-  MaxValue: 6
-  StartValue: 6
+  HeartValue: 2
+  Punch: 0.2
+  Duration: 0.1

@@ -3,32 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="f8849ab3-d35d-492a-ab84-559b39c4dc6c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IsaacFPS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IsaacFPS/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Materials/Basics/circle_AB.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Materials/Basics/circle_AB.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Materials/Misc/Liquid/drop_AB.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Materials/Misc/Liquid/drop_AB.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Materials/Misc/Liquid/splat01_3x3_AB.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Materials/Misc/Liquid/splat01_3x3_AB.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Materials/Misc/Liquid/splat02_3x3_AB.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Materials/Misc/Liquid/splat02_3x3_AB.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Materials/Misc/Liquid/splat03_3x3_AB.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Materials/Misc/Liquid/splat03_3x3_AB.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Materials/Misc/Liquid/water_3x3_AB.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Materials/Misc/Liquid/water_3x3_AB.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Materials/Misc/Liquid/water_soft_3x3_AB.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Materials/Misc/Liquid/water_soft_3x3_AB.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Materials/Misc/Liquid/water_trsp_3x3_AB.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Materials/Misc/Liquid/water_trsp_3x3_AB.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Prefabs 2D/Blood/Red/BloodExplosion2D.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Prefabs 2D/Blood/Red/BloodExplosion2D.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Prefabs 2D/Blood/Yellow/YellowBloodExplosion2D.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Prefabs 2D/Blood/Yellow/YellowBloodExplosion2D.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Polygon Arsenal/Materials/Misc/PolyGoreAtlasRed.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Polygon Arsenal/Materials/Misc/PolyGoreAtlasRed.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Polygon Arsenal/Materials/Solids/PolySolidShiny.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Polygon Arsenal/Materials/Solids/PolySolidShiny.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Polygon Arsenal/Materials/Sprites/PolySprite_AB.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Polygon Arsenal/Materials/Sprites/PolySprite_AB.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Polygon Arsenal/Prefabs/Combat/Missiles/Magic/Liquid/WaterMissile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Polygon Arsenal/Prefabs/Combat/Missiles/Magic/Liquid/WaterMissile.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Etc/SinMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Etc/SinMover.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/HeroCode/HeroMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/HeroCode/HeroMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Etc/ContactDamageDealer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Etc/ContactDamageDealer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/HeroCode/CameraHeadBobPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/CameraCode/CameraHeadBobPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/HeroCode/CameraHeadBobPlayer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/CameraCode/CameraHeadBobPlayer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/HeroCode/Hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/HeroCode/Hero.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/IndicatorCode/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/IndicatorCode/Health.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/IndicatorCode/Indicator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/IndicatorCode/Indicator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Interfaces/IDamageable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Interfaces/IDamageable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/ShooterCode/HeroBullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/ShooterCode/HeroBullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Infrastructure/Services/InputService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Infrastructure/Services/InputService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/GaperCode/Gaper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/GaperCode/Gaper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Hero/HeroHealthSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Hero/HeroHealthSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Common/Hero/Ripple.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Hero/Ripple.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Hero/WaterBullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Hero/WaterBullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/InputSystem/InputActions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/InputSystem/InputActions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/InputSystem/InputActions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/InputSystem/InputActions.inputactions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Common/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +129,7 @@
       <workItem from="1675173931298" duration="56000" />
       <workItem from="1675174352023" duration="19979000" />
       <workItem from="1675256094627" duration="9838000" />
-      <workItem from="1675328905977" duration="6888000" />
+      <workItem from="1675328905977" duration="16598000" />
     </task>
     <servers />
   </component>

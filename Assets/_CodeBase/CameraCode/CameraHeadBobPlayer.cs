@@ -1,8 +1,6 @@
-﻿using System;
-using UnityEngine;
-using UnityEngine.Serialization;
+﻿using UnityEngine;
 
-namespace _CodeBase.HeroCode
+namespace _CodeBase.CameraCode
 {
   public class CameraHeadBobPlayer : MonoBehaviour
   {

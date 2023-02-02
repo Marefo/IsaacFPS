@@ -12,6 +12,7 @@ namespace _CodeBase.Infrastructure.Services
     public Vector3 LookInput => GetLookInput();
 
     private InputActions _inputActions;
+    private bool _cameraRotationEnabled = true;
 
     private void Awake() => _inputActions = new InputActions();
 
@@ -19,12 +20,14 @@ namespace _CodeBase.Infrastructure.Services
     {
       _inputActions.Enable();
       _inputActions.Game.Attack.performed += OnAttackButtonClick;
+      _inputActions.Game.ChangeCameraRotationState.performed += OnChangeCameraRotationState;
     }
 
     private void OnDisable()
     {
       _inputActions.Disable();
       _inputActions.Game.Attack.performed -= OnAttackButtonClick;
+      _inputActions.Game.ChangeCameraRotationState.performed -= OnChangeCameraRotationState;
     }
 
     private Vector3 GetMovementInput()
@@ -33,9 +36,14 @@ namespace _CodeBase.Infrastructure.Services
       return new Vector3(input.x, 0, input.y);
     }
 
-    private Vector3 GetLookInput() => 
-      _inputActions.Game.Look.ReadValue<Vector2>();
+    private Vector3 GetLookInput()
+    {
+      return _cameraRotationEnabled ? _inputActions.Game.Look.ReadValue<Vector2>() : Vector3.zero;
+    }
 
     private void OnAttackButtonClick(InputAction.CallbackContext obj) => AttackButtonClicked?.Invoke();
+
+    private void OnChangeCameraRotationState(InputAction.CallbackContext obj) => 
+      _cameraRotationEnabled = !_cameraRotationEnabled;
   }
 }

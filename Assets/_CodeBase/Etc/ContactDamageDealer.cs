@@ -16,7 +16,6 @@ namespace _CodeBase.Etc
 
     private void OnCollisionEnter(Collision collision)
     {
-      MyDebug.Log($"collision = {collision.gameObject}", MyDebug.DebugColor.green);
       if(collision.gameObject.TryGetComponent(out Hero hero) == false || _hasHealth && _health.IsValueZero) return;
       hero.ApplyContactDamage(collision.GetContact(0).point);
     }

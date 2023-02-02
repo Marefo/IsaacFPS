@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df7a2efcc8e44aa7935ba722e16b4ac9, type: 3}
-  m_Name: HeroHealthSettings
+  m_Script: {fileID: 11500000, guid: 98ae030f96e2489d9185feb0a51260a2, type: 3}
+  m_Name: GapperSettings
   m_EditorClassIdentifier: 
-  MaxValue: 6
-  StartValue: 6
+  DistanceForAttack: 5
+  AttackDuration: 1
+  AttackCooldown: 2.5

@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df7a2efcc8e44aa7935ba722e16b4ac9, type: 3}
-  m_Name: HeroHealthSettings
+  m_Script: {fileID: 11500000, guid: c7954ce4090c404ea520a8fbfcc1ad7d, type: 3}
+  m_Name: ContactShakeSettings
   m_EditorClassIdentifier: 
-  MaxValue: 6
-  StartValue: 6
+  Duration: 0.15
+  Amount: 0.1
+  DecreaseFactor: 0.5
