@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace _CodeBase.Units.GaperCode
+namespace _CodeBase.Units.Monsters.GaperCode
 {
   public class GaperAnimator : MonoBehaviour
   {

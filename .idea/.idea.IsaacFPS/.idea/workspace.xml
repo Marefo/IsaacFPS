@@ -3,14 +3,48 @@
   <component name="ChangeListManager">
     <list default="true" id="f8849ab3-d35d-492a-ab84-559b39c4dc6c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IsaacFPS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IsaacFPS/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/GaperCode/Data/GaperSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/GaperCode/Data/GaperSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/GaperCode/Gaper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/GaperCode/Gaper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/GaperCode/GaperStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/GaperCode/GaperStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/GaperCode/States/AttackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/GaperCode/States/AttackState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/GaperCode/States/ChaseState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/GaperCode/States/ChaseState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Extensions/Extensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Extensions/Extensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Infrastructure/Helpers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Infrastructure/Helpers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/GaperCode.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/GaperCode.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/GaperCode/Data.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/GaperCode/Data.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/GaperCode/Data/GaperSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/GaperCode/Data/GaperSettings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/GaperCode/Data/GaperSettings.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/GaperCode/Data/GaperSettings.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/GaperCode/Gaper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/GaperCode/Gaper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/GaperCode/Gaper.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/GaperCode/Gaper.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/GaperCode/GaperAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/GaperCode/GaperAnimator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/GaperCode/GaperAnimator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/GaperCode/GaperAnimator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/GaperCode/GaperStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/GaperCode/GaperStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/GaperCode/GaperStateMachine.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/GaperCode/GaperStateMachine.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/GaperCode/States.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/GaperCode/States.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/GaperCode/States/AttackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/GaperCode/States/AttackState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/GaperCode/States/AttackState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/GaperCode/States/AttackState.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/GaperCode/States/ChaseState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/GaperCode/States/ChaseState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/GaperCode/States/ChaseState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/GaperCode/States/ChaseState.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/GaperCode/States/IdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/GaperCode/States/IdleState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/GaperCode/States/IdleState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/GaperCode/States/IdleState.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/ColorMap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/ColorMap.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/ColorMap.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/ColorMap.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Gaper.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Gaper.controller.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Gaper.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/Gaper.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/GaperDeathVfx.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/GaperDeathVfx.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/GapperSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/GapperSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Hero.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Hero.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/attack.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/attack.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/gaperWithAnimations2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/gaperWithAnimations2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/idle.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/idle.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/run.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/run.anim.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Common/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +156,8 @@
       <workItem from="1675173931298" duration="56000" />
       <workItem from="1675174352023" duration="19979000" />
       <workItem from="1675256094627" duration="9838000" />
-      <workItem from="1675328905977" duration="19602000" />
+      <workItem from="1675328905977" duration="20242000" />
+      <workItem from="1675415643778" duration="4801000" />
     </task>
     <servers />
   </component>

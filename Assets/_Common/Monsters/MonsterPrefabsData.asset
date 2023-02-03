@@ -9,14 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98ae030f96e2489d9185feb0a51260a2, type: 3}
-  m_Name: GapperSettings
+  m_Script: {fileID: 11500000, guid: 4a5957c1456f4ce0a6d6e46905d1b5d8, type: 3}
+  m_Name: MonsterPrefabsData
   m_EditorClassIdentifier: 
-  AttackDuration: 1
-  AttackCooldown: 2.5
-  Acceleration:
-    Min: 4
-    Max: 8
-  MoveSpeed:
-    Min: 6
-    Max: 10
+  Data:
+  - Type: 0
+    Prefab: {fileID: 5928034059004765267, guid: dcdf87cdeb6676040b106547771a0a9e,
+      type: 3}

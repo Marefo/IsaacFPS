@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using _CodeBase.StateMachineCode;
-using _CodeBase.Units.GaperCode.Data;
+using _CodeBase.Units.Monsters.GaperCode.Data;
 using UnityEngine;
 
-namespace _CodeBase.Units.GaperCode.States
+namespace _CodeBase.Units.Monsters.GaperCode.States
 {
   public class AttackState : State
   {

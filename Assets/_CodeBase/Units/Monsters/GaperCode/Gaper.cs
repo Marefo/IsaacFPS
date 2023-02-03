@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Linq;
 using _CodeBase.Etc;
+using _CodeBase.Extensions;
 using _CodeBase.HeroCode;
 using _CodeBase.IndicatorCode;
 using _CodeBase.Interfaces;
-using _CodeBase.Units.GaperCode.Data;
+using _CodeBase.Units.Monsters.GaperCode.Data;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace _CodeBase.Units.GaperCode
+namespace _CodeBase.Units.Monsters.GaperCode
 {
-  public class Gaper : MonoBehaviour, IDamageable
+  public class Gaper : Monster
   {
     [SerializeField] private Transform _deathVfxSpawnPoint;
     [SerializeField] private ParticleSystem _deathVfx;
@@ -41,9 +42,18 @@ namespace _CodeBase.Units.GaperCode
       _gaperAnimator.AttackFramePlayed -= OnAttackFrame;
     }
 
+    private void Start() => SetUpSpeed();
+
     private void Update() => UpdateRunAnimationState();
 
-    public void ReceiveDamage(int damageValue, Vector3 position) => _health.Decrease(damageValue);
+    public override void ReceiveDamage(int damageValue, Vector3 position) => _health.Decrease(damageValue);
+
+    public void Attack()
+    {
+      _isAttacking = true;
+      DOVirtual.DelayedCall(_settings.AttackDuration, ResetAttack);
+      PlayAttack();
+    }
 
     private void OnAttackZoneEnter(Collider obj)
     {
@@ -60,13 +70,12 @@ namespace _CodeBase.Units.GaperCode
         ApplyDamageToHero(heroCollider.GetComponent<Hero>());
     }
 
-    public void Attack()
+    private void SetUpSpeed()
     {
-      _isAttacking = true;
-      DOVirtual.DelayedCall(_settings.AttackDuration, ResetAttack);
-      PlayAttack();
+      _agent.acceleration = _settings.Acceleration.GetRandomValue();
+      _agent.speed = _settings.MoveSpeed.GetRandomValue();
     }
-
+    
     private void PlayAttack() => _animator.PlayAttack();
 
     private void ResetAttack()
@@ -81,9 +90,10 @@ namespace _CodeBase.Units.GaperCode
       _attacked = true;
     }
     
-    private void Die()
+    protected override void Die()
     {
       Instantiate(_deathVfx, _deathVfxSpawnPoint.position, Quaternion.identity);
+      base.Die();
       Destroy(gameObject);
     }
     

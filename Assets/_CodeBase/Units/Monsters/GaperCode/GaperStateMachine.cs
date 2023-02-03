@@ -1,20 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using _CodeBase.Etc;
 using _CodeBase.HeroCode;
 using _CodeBase.StateMachineCode;
-using _CodeBase.Units.GaperCode.Data;
-using _CodeBase.Units.GaperCode.States;
+using _CodeBase.Units.Monsters.GaperCode.Data;
+using _CodeBase.Units.Monsters.GaperCode.States;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace _CodeBase.Units.GaperCode
+namespace _CodeBase.Units.Monsters.GaperCode
 {
   public class GaperStateMachine : MonoBehaviour
   {
     public Hero Hero { get; private set; }
 
-    [SerializeField] private TriggerListener _roomZone;
     [SerializeField] private TriggerListener _attackZone;
     [SerializeField] private Gaper _gaper;
     [SerializeField] private NavMeshAgent _agent;
@@ -27,16 +27,14 @@ namespace _CodeBase.Units.GaperCode
 
     private void OnEnable()
     {
-      _roomZone.Entered += OnRoomZoneEnter;
-      _roomZone.Canceled += OnRoomZoneCancel;
+      _gaper.Initialized += OnInitialize;
       _attackZone.Entered += OnAttackZoneEnter;
       _attackZone.Canceled += OnAttackZoneCancel;
     }
 
     private void OnDisable()
     {
-      _roomZone.Entered -= OnRoomZoneEnter;
-      _roomZone.Canceled -= OnRoomZoneCancel;
+      _gaper.Initialized -= OnInitialize;
       _attackZone.Entered -= OnAttackZoneEnter;
       _attackZone.Canceled -= OnAttackZoneCancel;
     }
@@ -45,7 +43,7 @@ namespace _CodeBase.Units.GaperCode
     {
       InitializeStates();
       InitializeStateTransitions();
-      _stateMachine.EnterState(_stateMachine.GetState<IdleState>());
+      InitializeStartState();
     }
 
     private void Update() => _stateMachine.Update();
@@ -53,6 +51,18 @@ namespace _CodeBase.Units.GaperCode
     private void FixedUpdate() => _stateMachine.FixedUpdate();
 
     private void OnDrawGizmos() => _stateMachine?.OnDrawGizmos();
+    
+    private void OnDestroy()
+    {
+      _gaper.RoomZone.Entered -= OnRoomZoneEnter;
+      _gaper.RoomZone.Canceled -= OnRoomZoneCancel;  
+    }
+
+    private void OnInitialize()
+    {
+      _gaper.RoomZone.Entered += OnRoomZoneEnter;
+      _gaper.RoomZone.Canceled += OnRoomZoneCancel;
+    }
 
     private void OnRoomZoneEnter(Collider obj)
     {
@@ -94,6 +104,19 @@ namespace _CodeBase.Units.GaperCode
       _stateMachine.AddStates(states);
     }
 
+    private void InitializeStartState()
+    {
+      Collider heroCollider = _gaper.RoomZone.CollidersInZone.FirstOrDefault(other => other.GetComponent<Hero>() != null);
+
+      if (heroCollider != null)
+      {
+        Hero = heroCollider.GetComponent<Hero>();
+        _stateMachine.EnterState(_stateMachine.GetState<ChaseState>());
+      }
+      else
+        _stateMachine.EnterState(_stateMachine.GetState<IdleState>());
+    }
+    
     private void InitializeStateTransitions()
     {
       InitializeIdleStateTransitions();

@@ -1,9 +1,8 @@
-﻿using _CodeBase.HeroCode;
+﻿using _CodeBase.Infrastructure;
 using _CodeBase.StateMachineCode;
-using UnityEngine;
 using UnityEngine.AI;
 
-namespace _CodeBase.Units.GaperCode.States
+namespace _CodeBase.Units.Monsters.GaperCode.States
 {
   public class ChaseState : State
   {
@@ -25,6 +24,6 @@ namespace _CodeBase.Units.GaperCode.States
     public override void Update() => Chase();
 
     private void Chase() => 
-      _agent.destination = _stateMachine.Hero.transform.position;
+      _agent.destination = Helpers.RandomPointOnCircleEdge(_stateMachine.Hero.transform.position, 1.5f);
   }
 }
