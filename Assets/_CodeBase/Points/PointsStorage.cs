@@ -13,7 +13,7 @@ namespace _CodeBase.Points
 
 		public List<T> Points { get; private set; }
 
-		private void Awake() => Points = transform.GetComponentsInChildren<T>().ToList();
+		private void Awake() => Points = transform.GetComponentsInChildren<T>().Where(point => point.gameObject.activeSelf).ToList();
 
 		private void OnEnable() => 
 			Points.ForEach(point => point.Released += OnPointRelease);

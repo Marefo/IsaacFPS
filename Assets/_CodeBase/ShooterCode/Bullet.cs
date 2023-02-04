@@ -2,21 +2,22 @@
 using _CodeBase.HeroCode.Data;
 using _CodeBase.Interfaces;
 using _CodeBase.Logging;
+using _CodeBase.ShooterCode.Data;
 using UnityEngine;
 
 namespace _CodeBase.ShooterCode
 {
-  public class HeroBullet : Projectile
+  public class Bullet : Projectile
   {
     [SerializeField] private ParticleSystem _destroyVfx;
     
     private Vector3 _startPosition;
     private Vector3 _direction;
-    private HeroShooterSettings _settings;
+    private BulletSettings _settings;
     private Coroutine _moveCoroutine;
     private int _ricochetTimes;
 
-    public void OnShoot(Vector3 direction, HeroShooterSettings settings)
+    public void OnShoot(Vector3 direction, BulletSettings settings)
     {
       _startPosition = transform.position;
       _direction = direction;

@@ -5,6 +5,7 @@ using _CodeBase.HeroCode.Data;
 using _CodeBase.IndicatorCode;
 using _CodeBase.Infrastructure.Services;
 using _CodeBase.ShooterCode;
+using _CodeBase.ShooterCode.Data;
 using _CodeBase.Units;
 using DG.Tweening;
 using UnityEngine;
@@ -26,6 +27,7 @@ namespace _CodeBase.HeroCode
     [SerializeField] private UnitAnimator _animator;
     [SerializeField] private UniversalRendererData _rendererData;
     [Space(10)] 
+    [SerializeField] private BulletSettings _bulletSettings;
     [SerializeField] private HeroShooterSettings _settings;
 
     private float? _lastShootTime;
@@ -54,8 +56,8 @@ namespace _CodeBase.HeroCode
       PlayChargedVfx();
       _shootVfxList.ForEach(vfx => vfx.Play());
       
-      HeroBullet projectile = Instantiate(_settings.ProjectilePrefab, _shootPoint.position, Quaternion.identity);
-      projectile.OnShoot(_camera.forward, _settings);
+      Bullet projectile = Instantiate(_settings.ProjectilePrefab, _shootPoint.position, Quaternion.identity);
+      projectile.OnShoot(_camera.forward, _bulletSettings);
       
       _lastShootTime = Time.time;
     }

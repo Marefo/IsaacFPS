@@ -8,10 +8,6 @@ namespace _CodeBase.HeroCode.Data
   public class HeroShooterSettings : ScriptableObject
   {
     public float Delay;
-    public int Damage;
-    [FormerlySerializedAs("ShootDistance")] public float MaxShootDistance;
-    public float ProjectileSpeed;
-    [Space(10)]
-    public HeroBullet ProjectilePrefab;
+    public Bullet ProjectilePrefab;
   }
 }

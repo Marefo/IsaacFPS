@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace _CodeBase.Units.Monsters.GaperCode.Data
 {
-  [CreateAssetMenu(fileName = "GapperSettings", menuName = "Settings/Gapper", order = 0)]
+  [CreateAssetMenu(fileName = "GapperSettings", menuName = "Settings/Monsters/Gapper", order = 0)]
   public class GaperSettings : ScriptableObject
   {
     public float AttackDuration;

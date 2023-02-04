@@ -5001,7 +5001,7 @@ GameObject:
   - component: {fileID: 6539776928978548821}
   - component: {fileID: 6453900583155620847}
   m_Layer: 0
-  m_Name: GaperDeathVfx
+  m_Name: DeathVfx
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

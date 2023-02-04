@@ -1,11 +1,9 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using _CodeBase.Etc;
 using _CodeBase.Extensions;
 using _CodeBase.HeroCode;
-using _CodeBase.IndicatorCode;
-using _CodeBase.Interfaces;
 using _CodeBase.Units.Monsters.GaperCode.Data;
+using _CodeBase.Units.Monsters.PacerCode;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.AI;
@@ -17,7 +15,8 @@ namespace _CodeBase.Units.Monsters.GaperCode
     [SerializeField] private Transform _deathVfxSpawnPoint;
     [SerializeField] private ParticleSystem _deathVfx;
     [Space(10)]
-    [SerializeField] private Health _health;
+    [SerializeField] private Pacer _pacerPrefab;
+    [Space(10)]
     [SerializeField] private NavMeshAgent _agent;
     [SerializeField] private UnitAnimator _animator;
     [SerializeField] private GaperAnimator _gaperAnimator;
@@ -30,14 +29,14 @@ namespace _CodeBase.Units.Monsters.GaperCode
     
     private void OnEnable()
     {
-      _health.ValueCameToZero += Die;
+      SubscribeEvents();
       _attackZone.Entered += OnAttackZoneEnter;
       _gaperAnimator.AttackFramePlayed += OnAttackFrame;
     }
 
     private void OnDisable()
     {
-      _health.ValueCameToZero -= Die;
+      UnSubscribeEvents();
       _attackZone.Entered -= OnAttackZoneEnter;
       _gaperAnimator.AttackFramePlayed -= OnAttackFrame;
     }
@@ -46,12 +45,10 @@ namespace _CodeBase.Units.Monsters.GaperCode
 
     private void Update() => UpdateRunAnimationState();
 
-    public override void ReceiveDamage(int damageValue, Vector3 position) => _health.Decrease(damageValue);
-
     public void Attack()
     {
       _isAttacking = true;
-      DOVirtual.DelayedCall(_settings.AttackDuration, ResetAttack);
+      DOVirtual.DelayedCall(_settings.AttackDuration, ResetAttack).SetLink(gameObject);
       PlayAttack();
     }
 
@@ -93,6 +90,10 @@ namespace _CodeBase.Units.Monsters.GaperCode
     protected override void Die()
     {
       Instantiate(_deathVfx, _deathVfxSpawnPoint.position, Quaternion.identity);
+      Vector3 spawnPosition = transform.position;
+      spawnPosition.y = _pacerPrefab.SpawnHeight;
+      Pacer pacer = Instantiate(_pacerPrefab, spawnPosition, Quaternion.identity);
+      _monsterMonitor.AddMonster(pacer);
       base.Die();
       Destroy(gameObject);
     }

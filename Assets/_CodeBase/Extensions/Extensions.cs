@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using _CodeBase.Data;
 using UnityEngine;
+using UnityEngine.AI;
 using SystemRandom = System.Random;
 
 namespace _CodeBase.Extensions
@@ -8,6 +9,12 @@ namespace _CodeBase.Extensions
   public static class Extensions
   {
     private static readonly SystemRandom rng = new SystemRandom(); 
+    
+    public static Vector3 GetNavMeshSampledPosition(this Vector3 position)
+    {
+      NavMesh.SamplePosition(position, out NavMeshHit hit, float.MaxValue, NavMesh.AllAreas);
+      return hit.position;
+    }
     
     public static float GetRandomValue(this Range range) => Random.Range(range.Min, range.Max + 1);
     

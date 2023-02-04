@@ -23,13 +23,14 @@ namespace _CodeBase.Units.Monsters
     {
       spawnPoint.Take();
       GameObject prefab = _prefabsData.GetPrefab(spawnPoint.Type);
+      Monster prefabMonster = prefab.GetComponent<Monster>();
       Monster monster = Instantiate(prefab, spawnPoint.transform).GetComponent<Monster>();
-      monster.transform.localPosition = Vector3.zero;
+      monster.transform.localPosition = Vector3.up * prefabMonster.SpawnHeight;
 
       if (spawnPoint.HasTargetRotation)
         monster.transform.localRotation = Quaternion.Euler(spawnPoint.TargetRotation);
           
-      monster.Initialize(_room.Zone);
+      monster.Initialize(_room.Zone, _monitor);
       _monitor.AddMonster(monster);
     }
   }

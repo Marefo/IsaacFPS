@@ -4,37 +4,34 @@ using System.Linq;
 using _CodeBase.Etc;
 using _CodeBase.HeroCode;
 using _CodeBase.StateMachineCode;
+using _CodeBase.Units.Monsters.CommonStates;
 using _CodeBase.Units.Monsters.GaperCode.Data;
 using _CodeBase.Units.Monsters.GaperCode.States;
+using _CodeBase.Units.Monsters.Interfaces;
 using UnityEngine;
 using UnityEngine.AI;
 
 namespace _CodeBase.Units.Monsters.GaperCode
 {
-  public class GaperStateMachine : MonoBehaviour
+  public class GaperStateMachine : MonsterStateMachine, ITargetProvider
   {
-    public Hero Hero { get; private set; }
-
     [SerializeField] private TriggerListener _attackZone;
     [SerializeField] private Gaper _gaper;
-    [SerializeField] private NavMeshAgent _agent;
     [Space(10)]
     [SerializeField] private GaperSettings _settings;
     
-    private StateMachine _stateMachine;
-    private bool _isHeroInRoomZone;
     private bool _isHeroInAttackZone;
 
-    private void OnEnable()
+    protected override void OnEnable()
     {
-      _gaper.Initialized += OnInitialize;
+      base.OnEnable();
       _attackZone.Entered += OnAttackZoneEnter;
       _attackZone.Canceled += OnAttackZoneCancel;
     }
 
-    private void OnDisable()
+    protected override void OnDisable()
     {
-      _gaper.Initialized -= OnInitialize;
+      base.OnDisable();
       _attackZone.Entered -= OnAttackZoneEnter;
       _attackZone.Canceled -= OnAttackZoneCancel;
     }
@@ -46,37 +43,7 @@ namespace _CodeBase.Units.Monsters.GaperCode
       InitializeStartState();
     }
 
-    private void Update() => _stateMachine.Update();
-
-    private void FixedUpdate() => _stateMachine.FixedUpdate();
-
-    private void OnDrawGizmos() => _stateMachine?.OnDrawGizmos();
-    
-    private void OnDestroy()
-    {
-      _gaper.RoomZone.Entered -= OnRoomZoneEnter;
-      _gaper.RoomZone.Canceled -= OnRoomZoneCancel;  
-    }
-
-    private void OnInitialize()
-    {
-      _gaper.RoomZone.Entered += OnRoomZoneEnter;
-      _gaper.RoomZone.Canceled += OnRoomZoneCancel;
-    }
-
-    private void OnRoomZoneEnter(Collider obj)
-    {
-      if(obj.TryGetComponent(out Hero hero) == false) return;
-      Hero = hero;
-      _isHeroInRoomZone = true;
-    }
-
-    private void OnRoomZoneCancel(Collider obj)
-    {
-      if(obj.TryGetComponent(out Hero hero) == false) return;
-      Hero = null;
-      _isHeroInRoomZone = false;
-    }
+    public Transform GetTarget() => Hero.transform;
 
     private void OnAttackZoneEnter(Collider obj)
     {
@@ -97,7 +64,7 @@ namespace _CodeBase.Units.Monsters.GaperCode
       Dictionary<Type, State> states = new Dictionary<Type, State>()
       {
         [typeof(IdleState)] = new IdleState(),
-        [typeof(ChaseState)] = new ChaseState(this, _agent),
+        [typeof(ChaseState)] = new ChaseState(this, _agent, true),
         [typeof(AttackState)] = new AttackState(_gaper, _settings),
       };
       
@@ -116,7 +83,7 @@ namespace _CodeBase.Units.Monsters.GaperCode
       else
         _stateMachine.EnterState(_stateMachine.GetState<IdleState>());
     }
-    
+
     private void InitializeStateTransitions()
     {
       InitializeIdleStateTransitions();
@@ -130,7 +97,7 @@ namespace _CodeBase.Units.Monsters.GaperCode
       var chaseState = _stateMachine.GetState<ChaseState>();
       var attackState = _stateMachine.GetState<AttackState>();
       
-      At(idleState, chaseState, () => _isHeroInRoomZone);
+      At(idleState, chaseState, () => IsHeroInRoomZone);
       At(idleState, attackState, () => _isHeroInAttackZone);
     }
 
@@ -140,7 +107,7 @@ namespace _CodeBase.Units.Monsters.GaperCode
       var idleState = _stateMachine.GetState<IdleState>();
       var attackState = _stateMachine.GetState<AttackState>();
       
-      At(chaseState, idleState, () => _isHeroInRoomZone == false);
+      At(chaseState, idleState, () => IsHeroInRoomZone == false);
       At(chaseState, attackState, () => _isHeroInAttackZone);
     }
 
@@ -151,7 +118,7 @@ namespace _CodeBase.Units.Monsters.GaperCode
       var idleState = _stateMachine.GetState<IdleState>();
       
       At(attackState, chaseState, () => _isHeroInAttackZone == false);
-      At(attackState, idleState, () => _isHeroInRoomZone == false);
+      At(attackState, idleState, () => IsHeroInRoomZone == false);
     }
 
     private void At(State from, State to, Func<bool> condition) => 

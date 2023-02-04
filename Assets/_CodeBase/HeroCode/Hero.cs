@@ -4,15 +4,18 @@ using _CodeBase.CameraCode;
 using _CodeBase.CameraCode.Data;
 using _CodeBase.Data;
 using _CodeBase.IndicatorCode;
+using _CodeBase.Interfaces;
+using _CodeBase.Logging;
 using _CodeBase.Units;
 using DG.Tweening;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
 namespace _CodeBase.HeroCode
 {
-  public class Hero : MonoBehaviour
+  public class Hero : MonoBehaviour, IDamageable
   {
     [SerializeField] private CameraShaker _cameraShaker;
     [SerializeField] private Volume _volume;
@@ -24,7 +27,6 @@ namespace _CodeBase.HeroCode
     [SerializeField] private ContactDamageSettings _contactDamageSettings;
 
     private Vignette _vignette;
-    private Coroutine _changeVignetteColorCoroutine;
     private Tween _resetVignetteColorTween;
     
     private void Start()
@@ -32,6 +34,8 @@ namespace _CodeBase.HeroCode
       _volume.profile.TryGet(out Vignette vignette);
       _vignette = vignette;
     }
+
+    public void ReceiveDamage(int damageValue, Vector3 position) => ApplyContactDamage(position);
 
     public void ApplyContactDamage(Vector3 contactPoint)
     {
@@ -44,33 +48,39 @@ namespace _CodeBase.HeroCode
       _rigidbody.AddForce(knockBackDirection * _contactDamageSettings.KnockBackForce, ForceMode.Impulse);
     }
 
+    [Button]
     private void PlayDamagedScreenEffect()
     {
-      if (_changeVignetteColorCoroutine != null)
-      {
-        StopCoroutine(_changeVignetteColorCoroutine);
-        _resetVignetteColorTween?.Kill();
-        _vignette.color.value = Color.black;
-      }
+      _resetVignetteColorTween?.Kill();
+      StopAllCoroutines();
+      _vignette.color.value = Color.black;
       
-      _changeVignetteColorCoroutine = 
-        StartCoroutine(ChangeVignetteColorCoroutine(Color.red, _shakeSettings.Duration / 2));
+      StartCoroutine(ChangeVignetteColorCoroutine(Color.red, _shakeSettings.Duration / 2.1f));
+      _resetVignetteColorTween = DOVirtual.DelayedCall(_shakeSettings.Duration / 2, ResetVignetteColor);
+    }
 
-      _resetVignetteColorTween = DOVirtual.DelayedCall(_shakeSettings.Duration / 2, 
-        () => StartCoroutine(ChangeVignetteColorCoroutine(Color.black, _shakeSettings.Duration / 2)));
+    private void ResetVignetteColor()
+    {
+      _resetVignetteColorTween?.Kill();
+      StopAllCoroutines();
+      StartCoroutine(ChangeVignetteColorCoroutine(Color.black, _shakeSettings.Duration / 2.1f));
     }
 
     private IEnumerator ChangeVignetteColorCoroutine(Color targetColor, float duration)
     {
       Color startColor = _vignette.color.value;
       float time = 0f;
- 
-      while(time <= duration)
+
+      while(true)
       {
+        if(time >= duration)
+          yield break;
+        else
+          yield return null;
+        
         float percent = Mathf.InverseLerp(0, duration, time);
         _vignette.color.value = Color.Lerp(startColor, targetColor, percent);
         time += Time.deltaTime;
-        yield return null;
       }
     }
   }

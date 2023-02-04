@@ -1,6 +1,6 @@
 ﻿using _CodeBase.StateMachineCode;
 
-namespace _CodeBase.Units.Monsters.GaperCode.States
+namespace _CodeBase.Units.Monsters.CommonStates
 {
   public class IdleState : State
   {

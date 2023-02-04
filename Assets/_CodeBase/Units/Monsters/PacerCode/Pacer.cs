@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections;
-using System.Linq;
-using _CodeBase.Etc;
+﻿using _CodeBase.Etc;
 using _CodeBase.Extensions;
-using _CodeBase.HeroCode;
 using _CodeBase.Logging;
+using _CodeBase.Units.Monsters.PacerCode.Data;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.AI;
@@ -15,96 +12,142 @@ namespace _CodeBase.Units.Monsters.PacerCode
 {
   public class Pacer : Monster
   {
-    [SerializeField] private float _jumpCooldown;
-    [SerializeField] private Range _jumpDistance;
-    [SerializeField] private float _jumpHeight;
-    [SerializeField] private float _jumpDuration;
-    [SerializeField] private Ease _ease;
+    [SerializeField] private Transform _model;
+    [SerializeField] private TriggerListener _damageZone;
+    [Space(10)]
+    [SerializeField] private Transform _deathVfxSpawnPoint;
+    [SerializeField] private ParticleSystem _deathVfx;
     [Space(10)]
     [SerializeField] private Transform _groundCheckPoint;
     [SerializeField] private Transform _landCheckPoint;
-    [SerializeField] private float _landCheckSphereRadius;
+    [SerializeField] private Vector3 _landCheckSize;
     [SerializeField] private float _groundCheckSphereRadius;
     [SerializeField] private LayerMask _floorLayer;
     [Space(10)] 
+    [SerializeField] private Transform _landVfxSpawnPoint;
     [SerializeField] private ParticleSystem _landVfx;
     [Space(10)] 
     [SerializeField] private PacerAnimator _pacerAnimator;
     [SerializeField] private UnitAnimator _animator;
+    [Space(10)] 
+    [SerializeField] private PacerSettings _settings;
 
     private float _defaultPositionY;
+    private Vector3 _targetPosition;
+    private Quaternion _modelStartRotation;
+    private float _startJumpTime;
     private bool _grounded = true;
     private bool _canLand = true;
-    private bool _landing = true;
+    private bool _isJumping;
 
-    private void OnEnable() => _pacerAnimator.LandImpacted += OnLandImpact;
-    private void OnDisable() => _pacerAnimator.LandImpacted -= OnLandImpact;
+    private void OnEnable()
+    {
+      SubscribeEvents();
+      _pacerAnimator.Jumped += OnJumpFrame;
+      _pacerAnimator.LandImpacted += OnLandImpact;
+    }
+
+    private void OnDisable()
+    {
+      UnSubscribeEvents();
+      _pacerAnimator.Jumped -= OnJumpFrame;
+      _pacerAnimator.LandImpacted -= OnLandImpact;
+    }
 
     private void Start()
     {
       _defaultPositionY = transform.position.y;
+      _modelStartRotation = new Quaternion(_model.localRotation.x, _model.localRotation.y, _model.localRotation.z,
+        _model.localRotation.w);
       RandomPositionJump();
     }
 
-    private void Update()
-    {
-      //transform.LookAt(_heroTransform);
-    }
+    private void Update() => HandleModelRotation();
 
     private void FixedUpdate()
     {
-      _canLand = Physics.CheckSphere(_landCheckPoint.position, _landCheckSphereRadius, _floorLayer);
+      _canLand = Physics.CheckBox(_landCheckPoint.position, _landCheckSize, Quaternion.identity, _floorLayer);
       _grounded = Physics.CheckSphere(_groundCheckPoint.position, _groundCheckSphereRadius, _floorLayer);
       
-      if(_canLand && _grounded == false)
+      if(Time.time > _startJumpTime + _settings.JumpDuration / 2 && _canLand && _grounded == false)
         Land();
     }
 
     private void OnDrawGizmos()
     {
       Gizmos.color = Color.yellow;
-      Gizmos.DrawWireSphere(_groundCheckPoint.position, _landCheckSphereRadius);
+      Gizmos.DrawWireCube(_landCheckPoint.position, _landCheckSize);
       Gizmos.color = Color.red;
       Gizmos.DrawWireSphere(_groundCheckPoint.position, _groundCheckSphereRadius);
     }
 
-    private void Jump()
+    private void OnJumpFrame()
     {
-      
+      transform.DOKill();
+      transform.DOJump(_targetPosition,  _settings.JumpHeight, 1, _settings.JumpDuration)
+        .SetEase(_settings.JumpEase);
     }
-    
+
     private void RandomPositionJump()
     {
-      float distance = _jumpDistance.GetRandomValue();
+      float distance = _settings.JumpDistance.GetRandomValue();
       Vector3 randomDirection = Random.insideUnitSphere * distance;
       randomDirection += transform.position;
       NavMesh.SamplePosition(randomDirection, out NavMeshHit hit, distance, 1);
-      Vector3 targetPosition = hit.position;
-
+      _targetPosition = hit.position;
+      _targetPosition.y = _defaultPositionY;
+      _isJumping = true;
       _animator.PlayJump();
-      transform.DOKill();
-      transform.DOJump(targetPosition, _jumpHeight, 1, _jumpDuration)
-        .SetEase(_ease);
+      _startJumpTime = Time.time;
     }
 
     private void Land()
     {
-      MyDebug.Log($"Land", MyDebug.DebugColor.yellow);
-      _landing = true;
+      _isJumping = false;
+      _startJumpTime = float.MaxValue;
       _animator.PlayLand();
+      _damageZone.gameObject.SetActive(true);
     }
 
     private void OnLandImpact()
     {
       SpawnLandVfx();
-      DOVirtual.DelayedCall(_jumpCooldown, RandomPositionJump);
+      DOVirtual.DelayedCall(_settings.JumpCooldown / 2, () => _damageZone.gameObject.SetActive(false)).SetLink(gameObject);
+      DOVirtual.DelayedCall(_settings.JumpCooldown, RandomPositionJump).SetLink(gameObject);
     }
 
     private void SpawnLandVfx()
     {
       Vector3 spawnPosition = transform.position;
       spawnPosition.y = _defaultPositionY;
-      Instantiate(_landVfx, spawnPosition, Quaternion.identity);
+      Instantiate(_landVfx, _landVfxSpawnPoint.position, Quaternion.identity);
+    }
+
+    private void HandleModelRotation()
+    {
+      if (_isJumping == false) return;
+
+      if (Time.time <= _startJumpTime + _settings.JumpDuration / 2)
+      {
+        Vector3 rotationTargetPosition = _targetPosition;
+        rotationTargetPosition.y = transform.position.y;
+        _model.LookAt(rotationTargetPosition);
+      }
+      else
+      {
+        Quaternion target = new Quaternion(_modelStartRotation.x, _model.localRotation.y, _modelStartRotation.z,
+          _model.localRotation.w);
+        _model.localRotation =
+          Quaternion.Slerp(_model.localRotation, target, _settings.ResetRotationSpeed * Time.deltaTime);
+      }
+    }
+    
+    protected override void Die()
+    {
+      ParticleSystem vfx = Instantiate(_deathVfx, _deathVfxSpawnPoint.position, Quaternion.identity);
+      vfx.transform.localScale = Vector3.one * 0.8f;
+      base.Die();
+      Destroy(gameObject);
     }
   }
 }
