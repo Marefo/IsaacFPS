@@ -2,65 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8849ab3-d35d-492a-ab84-559b39c4dc6c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/CommonStates/ChaseState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IsaacFPS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IsaacFPS/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Polygon Arsenal/Materials/Solids/PolySolidRough.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Polygon Arsenal/Materials/Solids/PolySolidRough.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Extensions/Extensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Extensions/Extensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/HeroCode/Data/HeroShooterSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/HeroCode/Data/HeroShooterSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/HeroCode/Hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/HeroCode/Hero.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/HeroCode/HeroMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/HeroCode/HeroMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/HeroCode/HeroShooter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/HeroCode/HeroShooter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Points/PointsStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Points/PointsStorage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/ShooterCode/HeroBullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/ShooterCode/Bullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/ShooterCode/HeroBullet.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/ShooterCode/Bullet.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Materials/Basics/glow1_ADD.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Materials/Basics/glow1_ADD.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Materials/Basics/glow2_ADD.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Materials/Basics/glow2_ADD.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Materials/Misc/Sword/slash_circle01_AB.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Materials/Misc/Sword/slash_circle01_AB.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Etc/AgentRandomHeightSetter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Etc/AgentRandomHeightSetter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/ShooterCode/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/ShooterCode/Bullet.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/Data/MonsterType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/Data/MonsterType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/GaperCode/Data/GaperSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/GaperCode/Data/GaperSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/GaperCode/Gaper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/GaperCode/Gaper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/FlyCode/Fly.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/FlyCode/Fly.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/FlyCode/FlyStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/FlyCode/FlyStateMachine.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/GaperCode/GaperStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/GaperCode/GaperStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/GaperCode/States/ChaseState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/GaperCode/States/ChaseState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/CommonStates/ChaseState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/GaperCode/States/IdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/CommonStates/IdleState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/GaperCode/States/IdleState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/CommonStates/IdleState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/Monster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/Monster.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/MonsterSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/MonsterSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/PacerCode/Pacer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/PacerCode/Pacer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/PacerCode/PacerAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/PacerCode/PacerAnimator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Environment/wall (1).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Environment/wall (1).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/BloodParticle.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/BloodParticle.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/DamageVfx.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/DamageVfx.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Dust.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Dust.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Gaper.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Gaper.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Gaper.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/Gaper.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Gaper/GaperDeathVfx.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Gaper/GaperDeathVfx.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/GaperHealth.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/GaperHealth.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/GapperSettings.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/GapperSettings.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Idle.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Idle.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Jump.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Jump.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Land.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Land.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/LandingVFX.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/LandingVFX.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/MonsterStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/MonsterStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/PooterCode/Data/PooterSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/PooterCode/Data/PooterSettings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/PooterCode/PooterStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/PooterCode/PooterStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/PooterCode/States/EscapeState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/PooterCode/States/EscapeState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Hero/HeroShooterSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Hero/HeroShooterSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Hero/Tear.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Hero/Tear.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Hero/WaterBubble.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Hero/WaterBubble.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Hero/WaterBulletExplosion.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Hero/WaterBulletExplosion.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Fly.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/Fly.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/MonsterPrefabsData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/MonsterPrefabsData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Pacer.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Pacer.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Pacer.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Pacer.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/pacer 1.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/pacer 1.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/pacer 2.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/pacer 2.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/pacer.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/pacer.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Pooter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/Pooter.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Pooter/DeathParticle.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/Pooter/DeathParticle.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Pooter/Pooter.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/Pooter/Pooter.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Pooter/PooterDeathVfx.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/Pooter/PooterDeathVfx.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Pooter/PooterSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/Pooter/PooterSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Common/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Scenes/Game/NavMesh-Environment.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Scenes/Game/NavMesh-Environment.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
@@ -178,6 +150,7 @@
       <workItem from="1675415643778" duration="5396000" />
       <workItem from="1675441051598" duration="3925000" />
       <workItem from="1675503476121" duration="20196000" />
+      <workItem from="1675596695414" duration="9185000" />
     </task>
     <servers />
   </component>

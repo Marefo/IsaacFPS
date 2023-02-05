@@ -78,6 +78,7 @@ namespace _CodeBase.Units.Monsters.GaperCode
       if (heroCollider != null)
       {
         Hero = heroCollider.GetComponent<Hero>();
+        IsHeroInRoomZone = true;
         _stateMachine.EnterState(_stateMachine.GetState<ChaseState>());
       }
       else

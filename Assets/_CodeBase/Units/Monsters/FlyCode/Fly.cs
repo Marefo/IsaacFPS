@@ -1,8 +1,4 @@
-﻿using System;
-using _CodeBase.Extensions;
-using UnityEngine;
-using UnityEngine.AI;
-using Range = _CodeBase.Data.Range;
+﻿using UnityEngine;
 
 namespace _CodeBase.Units.Monsters.FlyCode
 {

@@ -9859,6 +9859,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 192
   _zone: {fileID: 7038363628575896812}
+  _destroyVfxScale: 1
   _destroyVfx: {fileID: 8888001104751598274, guid: 5fe315fb06b74a14898e8633a9cfa62a,
     type: 3}
 --- !u!54 &2481493581243374745

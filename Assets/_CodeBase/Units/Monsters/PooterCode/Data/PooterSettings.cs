@@ -4,7 +4,7 @@ using UnityEngine.Serialization;
 
 namespace _CodeBase.Units.Monsters.PooterCode.Data
 {
-  [CreateAssetMenu(fileName = "PooterSettings", menuName = "Settings/Pooter")]
+  [CreateAssetMenu(fileName = "PooterSettings", menuName = "Settings/Monsters/Pooter")]
   public class PooterSettings : ScriptableObject
   {
     [FormerlySerializedAs("ShootDelay")] public float AttackDelay;

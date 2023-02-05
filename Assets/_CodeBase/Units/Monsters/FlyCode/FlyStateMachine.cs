@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using _CodeBase.HeroCode;
+using _CodeBase.Logging;
 using _CodeBase.StateMachineCode;
 using _CodeBase.Units.Monsters.CommonStates;
 using _CodeBase.Units.Monsters.GaperCode.States;
@@ -42,6 +43,7 @@ namespace _CodeBase.Units.Monsters.FlyCode
       if (heroCollider != null)
       {
         Hero = heroCollider.GetComponent<Hero>();
+        IsHeroInRoomZone = true;
         _stateMachine.EnterState(_stateMachine.GetState<ChaseState>());
       }
       else

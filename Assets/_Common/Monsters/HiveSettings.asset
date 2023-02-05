@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855e748fc2374d319dd24ad62b3ab3b4, type: 3}
+  m_Name: HiveSettings
+  m_EditorClassIdentifier: 
+  SpawnDelay: 5
+  EscapeDistance: 8
+  PooterPrefab: {fileID: 3889967501242644347, guid: bc09e3cb4066af146af1ee5243fa774e,
+    type: 3}
+  FlyPrefab: {fileID: 1361460062943909677, guid: 7f231095644831b4cb7281dbd2258775,
+    type: 3}

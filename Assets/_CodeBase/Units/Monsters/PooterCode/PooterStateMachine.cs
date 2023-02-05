@@ -49,8 +49,8 @@ namespace _CodeBase.Units.Monsters.PooterCode
       Dictionary<Type, State> states = new Dictionary<Type, State>()
       {
         [typeof(IdleState)] = new IdleState(),
-        [typeof(AttackState)] = new AttackState(this, _animator, _model, this, _shootPoint, _bulletSettings, _settings),
-        [typeof(EscapeState)] = new EscapeState(this, _agent, this),
+        [typeof(AttackState)] = new AttackState(this, _animator, this, _shootPoint, _bulletSettings, _settings),
+        [typeof(EscapeState)] = new EscapeState(this, _agent, this, _settings),
       };
       
       _stateMachine.AddStates(states);
@@ -60,8 +60,11 @@ namespace _CodeBase.Units.Monsters.PooterCode
     {
       Collider heroCollider = _monster.RoomZone.CollidersInZone.FirstOrDefault(other => other.GetComponent<Hero>() != null);
 
-      if(heroCollider != null)
+      if (heroCollider != null)
+      {
         Hero = heroCollider.GetComponent<Hero>();
+        IsHeroInRoomZone = true;
+      }
 
       if (heroCollider != null && HasToEscape())
         _stateMachine.EnterState(_stateMachine.GetState<EscapeState>());

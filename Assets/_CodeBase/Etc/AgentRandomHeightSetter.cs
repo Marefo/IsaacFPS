@@ -15,9 +15,12 @@ namespace _CodeBase.Etc
 
     private void SetUpHeight()
     {
+      _agent.enabled = false;
       float height = _height.GetRandomValue();
       _agent.height = height;
       _agent.baseOffset = height / 2;
+      transform.position += Vector3.up * _agent.baseOffset;
+      _agent.enabled = true;
     }
   }
 }

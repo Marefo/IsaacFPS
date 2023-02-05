@@ -1,4 +1,5 @@
 ﻿using _CodeBase.HeroCode;
+using _CodeBase.Logging;
 using _CodeBase.StateMachineCode;
 using UnityEngine;
 using UnityEngine.AI;
@@ -8,7 +9,7 @@ namespace _CodeBase.Units.Monsters
 {
   public class MonsterStateMachine : MonoBehaviour
   {
-    public bool IsHeroInRoomZone { get; private set; }
+    public bool IsHeroInRoomZone { get; protected set; }
     public Hero Hero { get; protected set; }
     
     [SerializeField] protected Monster _monster;

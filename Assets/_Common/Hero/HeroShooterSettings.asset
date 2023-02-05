@@ -13,8 +13,5 @@ MonoBehaviour:
   m_Name: HeroShooterSettings
   m_EditorClassIdentifier: 
   Delay: 0.61
-  Damage: 1
-  MaxShootDistance: 15
-  ProjectileSpeed: 10
   ProjectilePrefab: {fileID: 7038363627252032064, guid: c71b9d113e2b02e4cb830bd2741a19c4,
     type: 3}

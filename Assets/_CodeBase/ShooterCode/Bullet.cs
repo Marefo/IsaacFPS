@@ -9,6 +9,7 @@ namespace _CodeBase.ShooterCode
 {
   public class Bullet : Projectile
   {
+    [SerializeField] private float _destroyVfxScale;
     [SerializeField] private ParticleSystem _destroyVfx;
     
     private Vector3 _startPosition;
@@ -60,7 +61,8 @@ namespace _CodeBase.ShooterCode
 
     protected override void Destroy()
     {
-      Instantiate(_destroyVfx, transform.position, Quaternion.identity);
+      ParticleSystem vfx = Instantiate(_destroyVfx, transform.position, Quaternion.identity);
+      vfx.transform.localScale = Vector3.one * _destroyVfxScale;
       StopMovement();
       Destroy(gameObject);
     }
