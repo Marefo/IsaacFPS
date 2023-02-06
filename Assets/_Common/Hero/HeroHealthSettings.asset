@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: HeroHealthSettings
   m_EditorClassIdentifier: 
   MaxValue: 6
-  StartValue: 6
+  StartValue: 1
