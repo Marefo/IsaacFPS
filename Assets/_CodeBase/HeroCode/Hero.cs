@@ -12,11 +12,13 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.Serialization;
 
 namespace _CodeBase.HeroCode
 {
   public class Hero : MonoBehaviour, IDamageable
   {
+    [field: SerializeField] public Transform ShootTarget { get; private set; }
     [SerializeField] private CameraShaker _cameraShaker;
     [SerializeField] private Volume _volume;
     [SerializeField] private Health _health;

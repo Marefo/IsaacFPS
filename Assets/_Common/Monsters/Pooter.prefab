@@ -200,6 +200,7 @@ GameObject:
   - component: {fileID: 3889967501242644322}
   - component: {fileID: 3889967501242644347}
   - component: {fileID: 3889967501242644348}
+  - component: {fileID: 5138160028141613360}
   - component: {fileID: 3889967501242644349}
   - component: {fileID: 3889967501242644350}
   - component: {fileID: 3889967501242644351}
@@ -262,11 +263,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _monster: {fileID: 3889967501242644347}
   _agent: {fileID: 3889967501242644320}
-  _model: {fileID: 8884651663504860639}
   _shootPoint: {fileID: 3889967501896507651}
+  _shooter: {fileID: 5138160028141613360}
   _animator: {fileID: 8884651663504860637}
-  _bulletSettings: {fileID: 11400000, guid: f8e274619e4d2a64d99dd2263631d1be, type: 2}
+  _bulletSettings: {fileID: 11400000, guid: 9b9f267808b2e05448660cb2d6c2ce58, type: 2}
   _settings: {fileID: 11400000, guid: ffb402eb0c7307540b9702d71da82932, type: 2}
+--- !u!114 &5138160028141613360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3889967501242644323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86ce3df1504146f78f34d73f0019a1a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3889967501242644349
 MonoBehaviour:
   m_ObjectHideFlags: 0

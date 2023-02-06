@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08f5bf79a5994a4686ce8ee8e4ad56f1, type: 3}
+  m_Name: WormSettings
+  m_EditorClassIdentifier: 
+  MoveDistance: 20
+  DisappearDelay: 1.125
+  AppearDelay: 4
+  AttackDelay: 1.125
+  GroundAppearTime: 0.2
+  GroundDisappearTime: 1
+  BulletPrefab: {fileID: 2758664052018798143, guid: 57ab8ed884d48e046abcaa63547166d8,
+    type: 3}
+  BulletSettings: {fileID: 11400000, guid: f8e274619e4d2a64d99dd2263631d1be, type: 2}

@@ -3,36 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="f8849ab3-d35d-492a-ab84-559b39c4dc6c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IsaacFPS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IsaacFPS/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Materials/Basics/glow1_ADD.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Materials/Basics/glow1_ADD.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Materials/Basics/glow2_ADD.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Materials/Basics/glow2_ADD.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Materials/Misc/Sword/slash_circle01_AB.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Materials/Misc/Sword/slash_circle01_AB.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Etc/AgentRandomHeightSetter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Etc/AgentRandomHeightSetter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/ShooterCode/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/ShooterCode/Bullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/HeroCode/Hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/HeroCode/Hero.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/Data/MonsterType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/Data/MonsterType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/FlyCode/Fly.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/FlyCode/Fly.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/FlyCode/FlyStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/FlyCode/FlyStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/GaperCode/GaperStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/GaperCode/GaperStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/MonsterStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/MonsterStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/PooterCode/Data/PooterSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/PooterCode/Data/PooterSettings.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/PooterCode/PooterStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/PooterCode/PooterStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/PooterCode/States/EscapeState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/PooterCode/States/EscapeState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Hero/HeroShooterSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Hero/HeroShooterSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Hero/Tear.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Hero/Tear.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Hero/WaterBubble.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Hero/WaterBubble.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Hero/WaterBulletExplosion.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Hero/WaterBulletExplosion.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Fly.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/Fly.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/PooterCode/States/AttackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/PooterCode/States/AttackState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/HiveHealth.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/HiveHealth.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/HiveSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/HiveSettings.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/MonsterPrefabsData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/MonsterPrefabsData.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Pooter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/Pooter.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Pooter/DeathParticle.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/Pooter/DeathParticle.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Pooter/Pooter.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/Pooter/Pooter.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Pooter/PooterDeathVfx.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/Pooter/PooterDeathVfx.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Pooter/PooterSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/Pooter/PooterSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Common/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Scenes/Game/NavMesh-Environment.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Scenes/Game/NavMesh-Environment.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
@@ -44,6 +25,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/_CodeBase/IndicatorCode/Health.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_CodeBase/IndicatorCode/Indicator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/WormCode/Worm.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.7.3/Editor/LongTextArea.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.8.9/Samples~/Cinemachine Example Scenes/Shared/Scripts/SpawnInCircle.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@12.1.7/Editor/Lighting/IESEngine.cs" root0="SKIP_HIGHLIGHTING" />
@@ -150,7 +132,8 @@
       <workItem from="1675415643778" duration="5396000" />
       <workItem from="1675441051598" duration="3925000" />
       <workItem from="1675503476121" duration="20196000" />
-      <workItem from="1675596695414" duration="9185000" />
+      <workItem from="1675596695414" duration="9727000" />
+      <workItem from="1675683511534" duration="5437000" />
     </task>
     <servers />
   </component>

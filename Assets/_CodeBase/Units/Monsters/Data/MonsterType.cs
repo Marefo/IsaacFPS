@@ -7,5 +7,6 @@
     Fly = 2,
     Pooter = 3,
     Hive = 4,
+    Worm = 5,
   }
 }

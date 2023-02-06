@@ -16,9 +16,9 @@ namespace _CodeBase.Units.Monsters.PooterCode
 {
   public class PooterStateMachine : MonsterStateMachine, ITargetProvider
   {
-    [SerializeField] private Transform _model;
     [SerializeField] private Transform _shootPoint;
     [Space(10)]
+    [SerializeField] private MonsterShooter _shooter;
     [SerializeField] private UnitAnimator _animator;
     [Space(10)] 
     [SerializeField] private BulletSettings _bulletSettings;
@@ -36,7 +36,7 @@ namespace _CodeBase.Units.Monsters.PooterCode
       StartCoroutine(AttackCoroutine());
     }
 
-    public Transform GetTarget() => Hero.transform;
+    public Transform GetTarget() => Hero.ShootTarget;
     
     public void ChangeAttackPossibilityState(bool enable) => _canAttack = enable;
 
@@ -49,7 +49,7 @@ namespace _CodeBase.Units.Monsters.PooterCode
       Dictionary<Type, State> states = new Dictionary<Type, State>()
       {
         [typeof(IdleState)] = new IdleState(),
-        [typeof(AttackState)] = new AttackState(this, _animator, this, _shootPoint, _bulletSettings, _settings),
+        [typeof(AttackState)] = new AttackState(this, _animator,  _shooter, this, _shootPoint, _bulletSettings, _settings),
         [typeof(EscapeState)] = new EscapeState(this, _agent, this, _settings),
       };
       
