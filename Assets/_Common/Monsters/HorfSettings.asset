@@ -9,15 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08f5bf79a5994a4686ce8ee8e4ad56f1, type: 3}
-  m_Name: WormSettings
+  m_Script: {fileID: 11500000, guid: 341d5b4f0d5d410c818519dc4cee265c, type: 3}
+  m_Name: HorfSettings
   m_EditorClassIdentifier: 
-  MoveDistance: 20
-  DisappearDelay: 1.125
-  AppearDelay: 4
-  AttackDelay: 1.125
-  GroundAppearTime: 0.2
-  GroundDisappearTime: 1
+  AttackCooldown: 2.8
+  ShakeDuration: 0.2
+  ShakeStrength: 0.15
+  ObstaclesLayerMask:
+    serializedVersion: 2
+    m_Bits: 192
   BulletPrefab: {fileID: 2758664052018798143, guid: 57ab8ed884d48e046abcaa63547166d8,
     type: 3}
   BulletSettings: {fileID: 11400000, guid: 9b9f267808b2e05448660cb2d6c2ce58, type: 2}

@@ -10,6 +10,9 @@ namespace _CodeBase.Extensions
   {
     private static readonly SystemRandom rng = new SystemRandom(); 
     
+    public static bool CompareLayers(this GameObject obj, LayerMask layerMask) => 
+      layerMask == (layerMask | (1 << obj.layer));
+    
     public static Vector3 GetNavMeshSampledPosition(this Vector3 position)
     {
       NavMesh.SamplePosition(position, out NavMeshHit hit, float.MaxValue, NavMesh.AllAreas);

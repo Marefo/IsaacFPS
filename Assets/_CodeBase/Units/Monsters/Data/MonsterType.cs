@@ -8,5 +8,6 @@
     Pooter = 3,
     Hive = 4,
     Worm = 5,
+    Harf = 6,
   }
 }
