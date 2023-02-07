@@ -73,7 +73,7 @@ namespace _CodeBase.Units.Monsters.GaperCode
 
     private void InitializeStartState()
     {
-      Collider heroCollider = _gaper.RoomZone.CollidersInZone.FirstOrDefault(other => other.GetComponent<Hero>() != null);
+      Collider heroCollider = _gaper.RoomZone.GetHeroFromZone();
 
       if (heroCollider != null)
       {

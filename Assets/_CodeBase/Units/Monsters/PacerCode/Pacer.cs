@@ -32,6 +32,7 @@ namespace _CodeBase.Units.Monsters.PacerCode
     [Space(10)] 
     [SerializeField] private PacerSettings _settings;
 
+    private Collider _roomZoneCollider;
     private float _defaultPositionY;
     private Vector3 _targetPosition;
     private Quaternion _modelStartRotation;
@@ -43,6 +44,7 @@ namespace _CodeBase.Units.Monsters.PacerCode
     private void OnEnable()
     {
       SubscribeEvents();
+      Initialized += OnInitialize;
       _pacerAnimator.Jumped += OnJumpFrame;
       _pacerAnimator.LandImpacted += OnLandImpact;
     }
@@ -50,6 +52,7 @@ namespace _CodeBase.Units.Monsters.PacerCode
     private void OnDisable()
     {
       UnSubscribeEvents();
+      Initialized -= OnInitialize;
       _pacerAnimator.Jumped -= OnJumpFrame;
       _pacerAnimator.LandImpacted -= OnLandImpact;
     }
@@ -81,6 +84,8 @@ namespace _CodeBase.Units.Monsters.PacerCode
       Gizmos.DrawWireSphere(_groundCheckPoint.position, _groundCheckSphereRadius);
     }
 
+    private void OnInitialize() => _roomZoneCollider = RoomZone.GetComponent<Collider>();
+
     private void OnJumpFrame()
     {
       transform.DOKill();
@@ -90,17 +95,23 @@ namespace _CodeBase.Units.Monsters.PacerCode
 
     private void RandomPositionJump()
     {
-      float distance = _settings.JumpDistance.GetRandomValue();
-      Vector3 randomDirection = Random.insideUnitSphere * distance;
-      randomDirection += transform.position;
-      NavMesh.SamplePosition(randomDirection, out NavMeshHit hit, distance, 1);
-      _targetPosition = hit.position;
+      _targetPosition = GetRandomPosition().GetNavMeshSampledPosition();
       _targetPosition.y = _defaultPositionY;
+      
       _isJumping = true;
       _animator.PlayJump();
       _startJumpTime = Time.time;
     }
+    
+    private Vector3 GetRandomPosition()
+    {
+      float positionX = Random.Range(_roomZoneCollider.bounds.min.x, _roomZoneCollider.bounds.max.x);
+      float positionZ = Random.Range(_roomZoneCollider.bounds.min.z, _roomZoneCollider.bounds.max.z);
+      Vector3 targetPosition = new Vector3(positionX, transform.position.y, positionZ);
 
+      return targetPosition;
+    }
+    
     private void Land()
     {
       _isJumping = false;

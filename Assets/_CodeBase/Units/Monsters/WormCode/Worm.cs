@@ -135,7 +135,7 @@ namespace _CodeBase.Units.Monsters.WormCode
 
     private void CheckForHero()
     {
-      Collider heroCollider = RoomZone.CollidersInZone.FirstOrDefault(other => other.GetComponent<Hero>() != null);
+      Collider heroCollider = RoomZone.GetHeroFromZone();
 
       if (heroCollider == null) return;
       

@@ -93,6 +93,7 @@ namespace _CodeBase.Units.Monsters.GaperCode
       Vector3 spawnPosition = transform.position;
       spawnPosition.y = _pacerPrefab.SpawnHeight;
       Pacer pacer = Instantiate(_pacerPrefab, spawnPosition, Quaternion.identity);
+      pacer.Initialize(RoomZone, _monsterMonitor);
       _monsterMonitor.AddMonster(pacer);
       base.Die();
       Destroy(gameObject);

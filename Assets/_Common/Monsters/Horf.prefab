@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c02a70f9b5dd96441ae16736320bc664, type: 2}
+  - {fileID: 2100000, guid: cda2db6de646f054e81413f2dc774446, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 7307545770902848520}
   - component: {fileID: 7307545770902848521}
   m_Layer: 0
-  m_Name: Harf
+  m_Name: Horf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

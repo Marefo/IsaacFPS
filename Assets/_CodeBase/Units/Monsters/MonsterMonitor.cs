@@ -7,6 +7,7 @@ namespace _CodeBase.Units.Monsters
   public class MonsterMonitor : MonoBehaviour
   {
     public event Action MonsterDead;
+    public event Action AllMonstersDied;
     
     private readonly List<Monster> _monsters = new List<Monster>();
 
@@ -26,6 +27,9 @@ namespace _CodeBase.Units.Monsters
     {
       _monsters.Remove(monster);
       MonsterDead?.Invoke();
+      
+      if(_monsters.Count == 0)
+        AllMonstersDied?.Invoke();
     }
   }
 }

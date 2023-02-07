@@ -3,17 +3,51 @@
   <component name="ChangeListManager">
     <list default="true" id="f8849ab3-d35d-492a-ab84-559b39c4dc6c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IsaacFPS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IsaacFPS/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/HeroCode/Hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/HeroCode/Hero.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Infrastructure/Installers/BootstrapInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Infrastructure/Installers/BootstrapInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/Data/MonsterType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/Data/MonsterType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Materials/Basics/circlestretchy_AB.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Materials/Basics/circlestretchy_AB.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Materials/Basics/cloud_2x2_default_AB.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Materials/Basics/cloud_2x2_default_AB.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Materials/Basics/cloud_2x2_soft_AB.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Materials/Basics/cloud_2x2_soft_AB.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Etc/TriggerListener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Etc/TriggerListener.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/RoomCode/Room.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/RoomCode/Room.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/FlyCode/FlyStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/FlyCode/FlyStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/GaperCode/GaperStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/GaperCode/GaperStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/Monster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/Monster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/MonsterMonitor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/MonsterMonitor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/MonsterSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/MonsterSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/PacerCode/Pacer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/PacerCode/Pacer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/PooterCode/PooterStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/PooterCode/PooterStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/WormCode/Worm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/WormCode/Worm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Environment/Ceiling.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Environment/Ceiling.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Environment/Chandelier.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Environment/Chandelier.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Environment/Floor.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Environment/Floor.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Environment/Wall.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Environment/Wall.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Environment/WallRocks.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Environment/WallRocks.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Environment/chandelier.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Environment/chandelier.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Environment/model.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Environment/model.obj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Environment/wall.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Environment/wall.fbx.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Common/Hero/HeroHealthSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Hero/HeroHealthSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/HorfHealth.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/HorfHealth.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/HorfSettings.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/HorfSettings.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Fly.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/Fly.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Gaper.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/Gaper.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Gaper/Gaper.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Gaper/Gaper.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Harf.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Harf.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Hive.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/Hive.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Pacer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/Pacer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Pooter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/Pooter.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Worm.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/Worm.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Common/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Scenes/Game/NavMesh-Environment.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Scenes/Game/NavMesh-Environment.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +166,8 @@
       <workItem from="1675441051598" duration="3925000" />
       <workItem from="1675503476121" duration="20196000" />
       <workItem from="1675596695414" duration="9727000" />
-      <workItem from="1675683511534" duration="14323000" />
+      <workItem from="1675683511534" duration="14437000" />
+      <workItem from="1675779380172" duration="5052000" />
     </task>
     <servers />
   </component>

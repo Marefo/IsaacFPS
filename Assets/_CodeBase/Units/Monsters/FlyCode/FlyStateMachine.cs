@@ -38,7 +38,7 @@ namespace _CodeBase.Units.Monsters.FlyCode
     
     private void InitializeStartState()
     {
-      Collider heroCollider = _monster.RoomZone.CollidersInZone.FirstOrDefault(other => other.GetComponent<Hero>() != null);
+      Collider heroCollider = _monster.RoomZone.GetHeroFromZone();
 
       if (heroCollider != null)
       {

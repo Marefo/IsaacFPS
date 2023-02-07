@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using _CodeBase.Extensions;
+using _CodeBase.HeroCode;
 using UnityEngine;
 
 namespace _CodeBase.Etc
@@ -25,5 +27,8 @@ namespace _CodeBase.Etc
       _collidersInZone.Remove(other);
       Canceled?.Invoke(other);
     }
+
+    public Collider GetHeroFromZone() => 
+      CollidersInZone.FirstOrDefault(other => other != null && other.GetComponent<Hero>() != null);
   }
 }
