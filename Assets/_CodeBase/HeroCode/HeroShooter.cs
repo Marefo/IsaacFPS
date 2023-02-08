@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using _CodeBase.Extensions;
 using _CodeBase.HeroCode.Data;
 using _CodeBase.Infrastructure.Services;
@@ -13,6 +14,8 @@ namespace _CodeBase.HeroCode
 {
   public class HeroShooter : MonoBehaviour
   {
+    public event Action<int> BombsAmountChanged;
+    
     [SerializeField] private Transform _camera;
     [SerializeField] private Transform _shootPoint;
     [SerializeField] private Transform _throwPoint;
@@ -33,6 +36,7 @@ namespace _CodeBase.HeroCode
     private InputService _inputService;
     private Grenade _currentGrenade;
     private bool _canThrowGrenade = true;
+    private int _bombsAmount;
 
     [Inject]
     public void Construct(InputService inputService)
@@ -57,7 +61,21 @@ namespace _CodeBase.HeroCode
       _handsAnimator.GrenadePickedUp -= OnGrenadePickedUp;
       _handsAnimator.ThrowFramePlayed -= OnThrowFrame;
     }
-    
+
+    private void Start() => IncreaseBombAmount();
+
+    public void IncreaseBombAmount()
+    {
+      _bombsAmount += 1;
+      BombsAmountChanged?.Invoke(_bombsAmount);
+    }
+
+    private void DecreaseBombAmount()
+    {
+      _bombsAmount -= 1;
+      BombsAmountChanged?.Invoke(_bombsAmount);
+    }
+
     private void TryShoot()
     {
       if (_lastShootTime == null || Time.time > _lastShootTime.Value + _settings.Delay) 
@@ -73,6 +91,7 @@ namespace _CodeBase.HeroCode
 
     private void OnThrowFrame()
     {
+      DecreaseBombAmount();
       _currentGrenade.transform.SetParent(null);
       _currentGrenade.transform.SetLossyScale(1, 1, 1);
       _currentGrenade.transform.DORotate(Vector3.zero, 0.1f).SetLink(_currentGrenade.gameObject);
@@ -93,7 +112,7 @@ namespace _CodeBase.HeroCode
 
     private void TryThrowGrenade()
     {
-      if (_canThrowGrenade) 
+      if (_bombsAmount > 0 && _canThrowGrenade) 
         Throw();
     }
 
