@@ -6,7 +6,8 @@ using Zenject;
 public class HeroMovement : MonoBehaviour
 {
   public Vector3 MoveDirection => GetMoveDirection();
-
+  public bool IsMoving => _rigidbody.velocity != Vector3.zero && _inputService.MovementInput != Vector3.zero;
+  
   [SerializeField] private float _moveSpeed;
   [SerializeField] private float _gravity;
   [SerializeField] private Transform _groundCheckPoint;

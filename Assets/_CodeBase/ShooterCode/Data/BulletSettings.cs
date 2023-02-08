@@ -7,6 +7,8 @@ namespace _CodeBase.ShooterCode.Data
   {
     public int Damage;
     public float ProjectileSpeed;
+    public float Gravity;
+    public float Height;
     public float MaxShootDistance;
   }
 }

@@ -15,3 +15,7 @@ MonoBehaviour:
   Delay: 0.61
   ProjectilePrefab: {fileID: 7038363627252032064, guid: c71b9d113e2b02e4cb830bd2741a19c4,
     type: 3}
+  GrenadePrefab: {fileID: -1978816788479211978, guid: 0a2bb4e65b2f6bf43925f7a22958ac5b,
+    type: 3}
+  BulletSettings: {fileID: 11400000, guid: f8e274619e4d2a64d99dd2263631d1be, type: 2}
+  GrenadeSettings: {fileID: 11400000, guid: b217299c588488044bb3be39bb283d76, type: 2}

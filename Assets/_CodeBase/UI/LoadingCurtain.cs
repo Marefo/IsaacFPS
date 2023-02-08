@@ -18,11 +18,7 @@ namespace _CodeBase.UI
 		private Tweener _fadeIn;
 		private Tweener _fadeOut;
 
-		private void Awake()
-		{
-			DontDestroyOnLoad(this);
-			Hide();
-		}
+		private void Awake() => Hide();
 
 		public void Show()
 		{

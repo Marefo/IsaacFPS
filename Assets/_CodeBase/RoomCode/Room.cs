@@ -47,8 +47,9 @@ namespace _CodeBase.RoomCode
 
     private void OnZoneEnter(Collider obj)
     {
+      if (obj.TryGetComponent(out Hero hero) == false) return;
       _chandelier.SetActive(true);
-      if(obj.TryGetComponent(out Hero hero) == false || _hasMonsters == false) return;
+      if(_hasMonsters == false) return;
       ChangeDoorsState(true);
       ChangeLinkedRoomsDoorsState(true);
       DOVirtual.DelayedCall(_settings.SpawnDelay, () => _monsterSpawner.SpawnMonsters(_settings.SpawnAfterSmokeDelay));
@@ -56,6 +57,7 @@ namespace _CodeBase.RoomCode
 
     private void OnZoneCancel(Collider obj)
     {
+      if (obj.TryGetComponent(out Hero hero) == false) return;
       _chandelier.SetActive(false);
     }
 

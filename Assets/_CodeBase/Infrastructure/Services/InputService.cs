@@ -7,6 +7,7 @@ namespace _CodeBase.Infrastructure.Services
   public class InputService : MonoBehaviour
   {
     public event Action AttackButtonClicked;
+    public event Action ThrowGrenadeButtonClicked;
     
     public Vector3 MovementInput => GetMovementInput();
     public Vector3 LookInput => GetLookInput();
@@ -20,6 +21,7 @@ namespace _CodeBase.Infrastructure.Services
     {
       _inputActions.Enable();
       _inputActions.Game.Attack.performed += OnAttackButtonClick;
+      _inputActions.Game.ThrowGrenade.performed += OnThrowGrenadeButtonClick;
       _inputActions.Game.ChangeCameraRotationState.performed += OnChangeCameraRotationState;
     }
 
@@ -27,6 +29,7 @@ namespace _CodeBase.Infrastructure.Services
     {
       _inputActions.Disable();
       _inputActions.Game.Attack.performed -= OnAttackButtonClick;
+      _inputActions.Game.ThrowGrenade.performed -= OnThrowGrenadeButtonClick;
       _inputActions.Game.ChangeCameraRotationState.performed -= OnChangeCameraRotationState;
     }
 
@@ -42,6 +45,8 @@ namespace _CodeBase.Infrastructure.Services
     }
 
     private void OnAttackButtonClick(InputAction.CallbackContext obj) => AttackButtonClicked?.Invoke();
+
+    private void OnThrowGrenadeButtonClick(InputAction.CallbackContext obj) => ThrowGrenadeButtonClicked?.Invoke();
 
     private void OnChangeCameraRotationState(InputAction.CallbackContext obj) => 
       _cameraRotationEnabled = !_cameraRotationEnabled;

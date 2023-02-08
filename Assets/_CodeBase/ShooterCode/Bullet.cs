@@ -9,6 +9,7 @@ namespace _CodeBase.ShooterCode
 {
   public class Bullet : Projectile
   {
+    [SerializeField] private bool _disableDamageOnStart;
     [SerializeField] private float _destroyVfxScale;
     [SerializeField] private ParticleSystem _destroyVfx;
     
@@ -26,8 +27,11 @@ namespace _CodeBase.ShooterCode
       StartMovement();
     }
 
+    public void EnableDamage() => _disableDamageOnStart = false;
+
     protected override void OnDamageableZoneEnter(IDamageable damageable)
     {
+      if(_disableDamageOnStart) return;
       StopMovement();
       damageable.ReceiveDamage(_settings.Damage, transform.position);
       Destroy();

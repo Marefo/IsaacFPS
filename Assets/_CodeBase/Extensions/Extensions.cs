@@ -13,6 +13,26 @@ namespace _CodeBase.Extensions
     public static bool CompareLayers(this GameObject obj, LayerMask layerMask) => 
       layerMask == (layerMask | (1 << obj.layer));
     
+    public static Transform SetLossyScale(this Transform transform, float? x = null, float? y = null, float? z = null)
+    {
+      var lossyScale = transform.lossyScale.Change3(x, y, z);
+
+      transform.localScale = Vector3.one;
+      transform.localScale = new Vector3(lossyScale.x / transform.lossyScale.x,
+        lossyScale.y / transform.lossyScale.y,
+        lossyScale.z / transform.lossyScale.z);
+
+      return transform;
+    }
+    
+    public static Vector3 Change3(this Vector3 vector, float? x = null, float? y = null, float? z = null)
+    {
+      if (x.HasValue) vector.x = x.Value;
+      if (y.HasValue) vector.y = y.Value;
+      if (z.HasValue) vector.z = z.Value;
+      return vector;
+    }
+    
     public static Vector3 GetNavMeshSampledPosition(this Vector3 position)
     {
       NavMesh.SamplePosition(position, out NavMeshHit hit, float.MaxValue, NavMesh.AllAreas);
