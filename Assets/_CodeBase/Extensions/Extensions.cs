@@ -65,5 +65,17 @@ namespace _CodeBase.Extensions
       }
       return result;
     }
+    
+    public static void EnableEmission(this ParticleSystem particles)
+    {
+      var particlesEmission = particles.emission;
+      particlesEmission.enabled = true;
+    }
+		
+    public static void DisableEmission(this ParticleSystem particles)
+    {
+      var particlesEmission = particles.emission;
+      particlesEmission.enabled = false;
+    }
   }
 }

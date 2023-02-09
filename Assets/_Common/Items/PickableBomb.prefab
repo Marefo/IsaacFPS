@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 234248501723061623}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.068, y: 0.315, z: 0}
+  m_LocalPosition: {x: -0.14, y: 0.6, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -14754,6 +14754,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8503901080012452757}
+  - component: {fileID: 2674647574269300569}
   - component: {fileID: 8503901080012452758}
   - component: {fileID: 985437692341944426}
   - component: {fileID: 8503901080012452759}
@@ -14782,6 +14783,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &2674647574269300569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8503901080012452756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fe17a7787cd4ec68f17d4d73b0b7cbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 985437692341944426}
+  _settings: {fileID: 11400000, guid: 01bbf9129879fda4886409a1175e00df, type: 2}
 --- !u!114 &8503901080012452758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14817,7 +14832,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8503901080012452756}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: e7cd4ca563154c74f92ad1a6bb81d977, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -14839,7 +14854,7 @@ MonoBehaviour:
   drawingMode: 1
   outlineLayer: 0
   outlineTargets:
-  - IsVisible: 1
+  - IsVisible: 0
     CutoutMask: 8
     edgeDilateAmount: 5
     frontEdgeDilateAmount: 5

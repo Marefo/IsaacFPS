@@ -27,6 +27,8 @@ namespace _CodeBase.RoomCode
     [Space(10)] 
     [SerializeField] private RoomSettings _settings;
 
+    private bool _cleaned;
+    
     private void OnEnable()
     {
       Zone.Entered += OnZoneEnter;
@@ -49,7 +51,7 @@ namespace _CodeBase.RoomCode
     {
       if (obj.TryGetComponent(out Hero hero) == false) return;
       _chandelier.SetActive(true);
-      if(_hasMonsters == false) return;
+      if(_hasMonsters == false || _cleaned) return;
       ChangeDoorsState(true);
       ChangeLinkedRoomsDoorsState(true);
       DOVirtual.DelayedCall(_settings.SpawnDelay, () => _monsterSpawner.SpawnMonsters(_settings.SpawnAfterSmokeDelay));
@@ -63,6 +65,7 @@ namespace _CodeBase.RoomCode
 
     private void OnAllMonstersDie()
     {
+      _cleaned = true;
       ChangeDoorsState(false);
       ChangeLinkedRoomsDoorsState(false);
     }

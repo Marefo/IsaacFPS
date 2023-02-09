@@ -40,7 +40,7 @@ namespace _CodeBase.PickableItems
     {
       transform.DOKill();
       transform.localScale = Vector3.one;
-      transform.DOPunchScale(Vector3.one * _strength, _time);
+      transform.DOPunchScale(Vector3.one * _strength, _time).SetLink(gameObject);
     }
   }
 }

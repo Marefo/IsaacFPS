@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82a74b364fb4fc48433c6bf18dab1d5, type: 3}
+  m_Name: ChestDropsData
+  m_EditorClassIdentifier: 
+  Drops:
+  - Chance: 15
+    Prefab: {fileID: 5597707384179669473, guid: a932ccc00259d8c43bfcb3779dc0e38a,
+      type: 3}
+  - Chance: 95
+    Prefab: {fileID: 2674647574269300569, guid: a920ac266d938184990d4f03ccccdaa8,
+      type: 3}
