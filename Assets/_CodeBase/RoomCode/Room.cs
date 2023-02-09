@@ -18,6 +18,7 @@ namespace _CodeBase.RoomCode
     [SerializeField] private bool _hasMonsters; 
     [ShowIf("_hasMonsters"), SerializeField] private MonsterMonitor _monsterMonitor;
     [ShowIf("_hasMonsters"), SerializeField] private MonsterSpawner _monsterSpawner;
+    [ShowIf("_hasMonsters"), SerializeField] private Transform _chestSpawnPoint;
     [Space(10)] 
     [SerializeField] private GameObject _chandelier;
     [Space(10)] 
@@ -68,6 +69,7 @@ namespace _CodeBase.RoomCode
       _cleaned = true;
       ChangeDoorsState(false);
       ChangeLinkedRoomsDoorsState(false);
+      Instantiate(_settings.ChestPrefab, _chestSpawnPoint.position, _settings.ChestPrefab.transform.rotation);
     }
 
     public void ChangeLinkedRoomsDoorsState(bool enable) => _linkedRooms.ForEach(room => room.ChangeDoorsState(enable));

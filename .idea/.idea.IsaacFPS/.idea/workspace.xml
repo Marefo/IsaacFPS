@@ -3,9 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="f8849ab3-d35d-492a-ab84-559b39c4dc6c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IsaacFPS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IsaacFPS/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/ItemsDrop/DropItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/ItemsDrop/DropItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Items/ChestDropsData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Items/ChestDropsData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame2 (Advanced)/Scripts/Misc/EnemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame2 (Advanced)/Scripts/Misc/EnemySpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Materials/Basics/circle_sharp_AB.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Materials/Basics/circle_sharp_AB.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Materials/Misc/Fire/fire_3x6_ADD.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Epic Toon FX/Materials/Misc/Fire/fire_3x6_ADD.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/RoomCode/Data/RoomSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/RoomCode/Data/RoomSettings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/RoomCode/Room.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/RoomCode/Room.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Environment/MonsterSpawnVfx.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Environment/MonsterSpawnVfx.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Environment/RoomSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Environment/RoomSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Items/BombMonster.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Items/BombMonster.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Items/BombMonster/jump1.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Items/BombMonster/jump1.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Common/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Scenes/Game/NavMesh-Environment.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Scenes/Game/NavMesh-Environment.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +137,7 @@
       <workItem from="1675779380172" duration="5632000" />
       <workItem from="1675852397667" duration="17793000" />
       <workItem from="1675890206513" duration="1321000" />
-      <workItem from="1675936067816" duration="16321000" />
+      <workItem from="1675936067816" duration="20301000" />
     </task>
     <servers />
   </component>

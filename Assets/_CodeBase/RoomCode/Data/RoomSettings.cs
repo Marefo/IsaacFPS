@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using _CodeBase.Etc;
+using UnityEngine;
 
 namespace _CodeBase.RoomCode.Data
 {
@@ -7,5 +8,7 @@ namespace _CodeBase.RoomCode.Data
   {
     public float SpawnDelay;
     public float SpawnAfterSmokeDelay;
+    [Space(10)] 
+    public Chest ChestPrefab;
   }
 }

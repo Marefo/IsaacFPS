@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9bc86de72d349b68c92c7babfebd93a, type: 3}
-  m_Name: RoomSettings
+  m_Script: {fileID: 11500000, guid: df7a2efcc8e44aa7935ba722e16b4ac9, type: 3}
+  m_Name: CampfireHealth
   m_EditorClassIdentifier: 
-  SpawnDelay: 0.25
-  SpawnAfterSmokeDelay: 0.15
-  ChestPrefab: {fileID: 5448322347203627516, guid: b59bb6ccf80afc94facff1924ad3264e,
-    type: 3}
+  MaxValue: 3
+  StartValue: 3
