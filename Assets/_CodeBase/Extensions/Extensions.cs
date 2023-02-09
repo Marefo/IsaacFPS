@@ -33,6 +33,9 @@ namespace _CodeBase.Extensions
       return vector;
     }
     
+    public static int GetSignForInterpolation(this float currentValue, float targetValue) => 
+      targetValue > currentValue ? 1 : -1;
+    
     public static Vector3 GetNavMeshSampledPosition(this Vector3 position)
     {
       NavMesh.SamplePosition(position, out NavMeshHit hit, float.MaxValue, NavMesh.AllAreas);

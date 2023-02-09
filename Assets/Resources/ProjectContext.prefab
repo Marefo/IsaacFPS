@@ -78,5 +78,7 @@ MonoBehaviour:
     type: 3}
   _sceneService: {fileID: 6021703293944712995, guid: 10380094f22c4434685ddc90b9db65b9,
     type: 3}
+  _timeService: {fileID: 843813149765459984, guid: b6ca6ece2056b2d42989933b4627201b,
+    type: 3}
   _loadingCurtain: {fileID: 3840022841783557036, guid: 17e63aa25dd304040bb3c900fbb194be,
     type: 3}

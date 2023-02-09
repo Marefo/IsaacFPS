@@ -1,4 +1,5 @@
 ﻿using System;
+using _CodeBase.Etc;
 using _CodeBase.Infrastructure.Services;
 using _CodeBase.Logging;
 using UnityEngine;
@@ -29,7 +30,7 @@ namespace _CodeBase.HeroCode
     private void Start()
     {
       _offsetFromHero = transform.position - _orientation.transform.position;
-      Lock();
+      CursorVisibilityController.Hide();
     }
 
     private void Update() => FollowHero();
@@ -54,12 +55,6 @@ namespace _CodeBase.HeroCode
 
       transform.rotation = Quaternion.Euler(_rotationX, _rotationY, 0);
       _orientation.rotation = Quaternion.Euler(0, _rotationY, 0);
-    }
-
-    private void Lock()
-    {
-      Cursor.lockState = CursorLockMode.Locked;
-      Cursor.visible = false;
     }
   }
 }

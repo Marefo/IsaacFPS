@@ -3,14 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="f8849ab3-d35d-492a-ab84-559b39c4dc6c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IsaacFPS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IsaacFPS/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/HeroCode/HeroShooter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/HeroCode/HeroShooter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Hero/BoomSmoke.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Hero/BoomSmoke.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Hero/Ripple.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Hero/Ripple.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Hero/Smoke.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Hero/Smoke.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ProjectContext.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ProjectContext.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Extensions/Extensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Extensions/Extensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/HeroCode/HeroCameraRotator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/HeroCode/HeroCameraRotator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Infrastructure/Installers/BootstrapInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Infrastructure/Installers/BootstrapInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Infrastructure/Services/InputService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Infrastructure/Services/InputService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/PickableItems/PickableHeart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/PickableItems/PickableHeart.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Infrastructure/BootstrapInstaller.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Infrastructure/BootstrapInstaller.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/InputSystem/InputActions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/InputSystem/InputActions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/InputSystem/InputActions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/InputSystem/InputActions.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Items/Heart.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Items/Heart.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Items/PickableHeart.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Items/PickableHeart.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Common/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/UI/upheavtt SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/UI/upheavtt SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +139,9 @@
       <workItem from="1675596695414" duration="9727000" />
       <workItem from="1675683511534" duration="14437000" />
       <workItem from="1675779380172" duration="5632000" />
-      <workItem from="1675852397667" duration="17364000" />
+      <workItem from="1675852397667" duration="17793000" />
+      <workItem from="1675890206513" duration="1321000" />
+      <workItem from="1675936067816" duration="4416000" />
     </task>
     <servers />
   </component>
