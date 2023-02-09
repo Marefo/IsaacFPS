@@ -80,5 +80,7 @@ MonoBehaviour:
     type: 3}
   _timeService: {fileID: 843813149765459984, guid: b6ca6ece2056b2d42989933b4627201b,
     type: 3}
+  _navMeshService: {fileID: 2466442195871857616, guid: c29d25c144a29f34bb8e1159366d7f44,
+    type: 3}
   _loadingCurtain: {fileID: 3840022841783557036, guid: 17e63aa25dd304040bb3c900fbb194be,
     type: 3}

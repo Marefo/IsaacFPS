@@ -249,6 +249,8 @@ MonoBehaviour:
   _deathVfxPoint: {fileID: 3889967500939517490}
   _deathVfx: {fileID: 3813009088048231014, guid: e1c83ff94137015449b42731affafd37,
     type: 3}
+  _deathTrail: {fileID: 6668435059352458460, guid: 4e55f460618da4c4d868d511438c7add,
+    type: 3}
 --- !u!114 &3889967501242644348
 MonoBehaviour:
   m_ObjectHideFlags: 0

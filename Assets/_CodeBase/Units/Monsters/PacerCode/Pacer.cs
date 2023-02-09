@@ -1,5 +1,6 @@
 ﻿using _CodeBase.Etc;
 using _CodeBase.Extensions;
+using _CodeBase.Infrastructure;
 using _CodeBase.Logging;
 using _CodeBase.Units.Monsters.PacerCode.Data;
 using DG.Tweening;
@@ -17,6 +18,8 @@ namespace _CodeBase.Units.Monsters.PacerCode
     [Space(10)]
     [SerializeField] private Transform _deathVfxSpawnPoint;
     [SerializeField] private ParticleSystem _deathVfx;
+    [SerializeField] private GameObject _deathTrail;
+    [SerializeField] private GameObject _jumpBloodTrail;
     [Space(10)]
     [SerializeField] private Transform _groundCheckPoint;
     [SerializeField] private Transform _landCheckPoint;
@@ -95,23 +98,14 @@ namespace _CodeBase.Units.Monsters.PacerCode
 
     private void RandomPositionJump()
     {
-      _targetPosition = GetRandomPosition().GetNavMeshSampledPosition();
+      _targetPosition = Helpers.GetRandomPositionInCollider(_roomZoneCollider, transform.position.y).GetNavMeshSampledPosition();
       _targetPosition.y = _defaultPositionY;
       
       _isJumping = true;
       _animator.PlayJump();
       _startJumpTime = Time.time;
     }
-    
-    private Vector3 GetRandomPosition()
-    {
-      float positionX = Random.Range(_roomZoneCollider.bounds.min.x, _roomZoneCollider.bounds.max.x);
-      float positionZ = Random.Range(_roomZoneCollider.bounds.min.z, _roomZoneCollider.bounds.max.z);
-      Vector3 targetPosition = new Vector3(positionX, transform.position.y, positionZ);
 
-      return targetPosition;
-    }
-    
     private void Land()
     {
       _isJumping = false;
@@ -123,6 +117,7 @@ namespace _CodeBase.Units.Monsters.PacerCode
     private void OnLandImpact()
     {
       SpawnLandVfx();
+      Instantiate(_jumpBloodTrail, transform.position, Quaternion.identity);
       DOVirtual.DelayedCall(_settings.JumpCooldown / 2, () => _damageZone.gameObject.SetActive(false)).SetLink(gameObject);
       DOVirtual.DelayedCall(_settings.JumpCooldown, RandomPositionJump).SetLink(gameObject);
     }
@@ -155,6 +150,7 @@ namespace _CodeBase.Units.Monsters.PacerCode
     
     protected override void Die()
     {
+      Instantiate(_deathTrail, _deathVfxSpawnPoint.position, Quaternion.identity);
       ParticleSystem vfx = Instantiate(_deathVfx, _deathVfxSpawnPoint.position, Quaternion.identity);
       vfx.transform.localScale = Vector3.one * 0.8f;
       base.Die();

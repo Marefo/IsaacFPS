@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using _CodeBase.Etc;
 using _CodeBase.HeroCode;
+using _CodeBase.Infrastructure.Services;
 using _CodeBase.Logging;
 using _CodeBase.RoomCode.Data;
 using _CodeBase.Units.Monsters;
 using DG.Tweening;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using Zenject;
 
 namespace _CodeBase.RoomCode
 {
@@ -28,7 +30,14 @@ namespace _CodeBase.RoomCode
     [Space(10)] 
     [SerializeField] private RoomSettings _settings;
 
+    private NavMeshService _navMeshService;
     private bool _cleaned;
+
+    [Inject]
+    public void Construct(NavMeshService navMeshService)
+    {
+      _navMeshService = navMeshService;
+    }
     
     private void OnEnable()
     {
@@ -55,6 +64,7 @@ namespace _CodeBase.RoomCode
       if(_hasMonsters == false || _cleaned) return;
       ChangeDoorsState(true);
       ChangeLinkedRoomsDoorsState(true);
+      _navMeshService.ReBake();
       DOVirtual.DelayedCall(_settings.SpawnDelay, () => _monsterSpawner.SpawnMonsters(_settings.SpawnAfterSmokeDelay));
     }
 

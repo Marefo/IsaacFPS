@@ -10,6 +10,28 @@ namespace _CodeBase.Infrastructure
       return targetPoint + new Vector3(vector2.x, 0, vector2.y);
     }
 
+    public static Vector3 GetRandomPositionInCollider(Collider collider, float positionY = 0)
+    {
+      float positionX = Random.Range(collider.bounds.min.x, collider.bounds.max.x);
+      float positionZ = Random.Range(collider.bounds.min.z, collider.bounds.max.z);
+      Vector3 targetPosition = new Vector3(positionX, positionY, positionZ);
+
+      return targetPosition;
+    }
+
+    public static Vector3 ClampPositionByCollider(Collider collider, Vector3 position)
+    {
+      Vector3 result = position;
+      
+      var boundsMin = collider.bounds.min;
+      var boundsMax = collider.bounds.max;
+      
+      result.x = Mathf.Clamp(position.x, boundsMin.x, boundsMax.x);
+      result.z = Mathf.Clamp(position.z, boundsMin.z, boundsMax.z);
+
+      return result;
+    }
+    
     public static bool CompareLayers(LayerMask layerMask1, LayerMask layerMask2) => 
       layerMask2 == (layerMask2 | (1 << layerMask1));
     

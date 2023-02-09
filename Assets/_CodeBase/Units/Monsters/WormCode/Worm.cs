@@ -15,6 +15,7 @@ namespace _CodeBase.Units.Monsters.WormCode
     [SerializeField] private Transform _shootPoint;
     [SerializeField] private Transform _deathVfxPoint;
     [SerializeField] private ParticleSystem _deathVfx;
+    [SerializeField] private GameObject _deathTrail;
     [Space(10)] 
     [SerializeField] private MonsterShooter _monsterShooter;
     [SerializeField] private WormGround _wormGround;
@@ -26,6 +27,7 @@ namespace _CodeBase.Units.Monsters.WormCode
     private Hero _hero;
     private bool _isHeroInRoomZone;
     private float _defaultPositionY;
+    private Collider _roomZoneCollider;
 
     private void OnEnable()
     {
@@ -58,6 +60,7 @@ namespace _CodeBase.Units.Monsters.WormCode
 
     private void OnInitialize()
     {
+      _roomZoneCollider = RoomZone.GetComponent<Collider>();
       RoomZone.Entered += OnRoomZoneEnter;
       RoomZone.Entered += OnRoomZoneCancel;
     }
@@ -105,15 +108,13 @@ namespace _CodeBase.Units.Monsters.WormCode
       Vector3 targetPosition = GetRandomPosition();
       transform.position = targetPosition;
     }
-
+    
     private Vector3 GetRandomPosition()
     {
-      Vector3 targetPosition;
-      Vector3 randomDirection = Random.insideUnitSphere * _settings.MoveDistance;
-      randomDirection += transform.position;
-      NavMesh.SamplePosition(randomDirection, out NavMeshHit hit, _settings.MoveDistance, 1);
-      targetPosition = hit.position;
-      targetPosition.y = _defaultPositionY;
+      float positionX = Random.Range(_roomZoneCollider.bounds.min.x, _roomZoneCollider.bounds.max.x);
+      float positionZ = Random.Range(_roomZoneCollider.bounds.min.z, _roomZoneCollider.bounds.max.z);
+      Vector3 targetPosition = new Vector3(positionX, transform.position.y, positionZ);
+
       return targetPosition;
     }
 
@@ -153,6 +154,7 @@ namespace _CodeBase.Units.Monsters.WormCode
     
     protected override void Die()
     {
+      Instantiate(_deathTrail, _deathVfxPoint.position, Quaternion.identity);
       Instantiate(_deathVfx, _deathVfxPoint.position, Quaternion.identity);
       base.Die();
       Destroy(gameObject);

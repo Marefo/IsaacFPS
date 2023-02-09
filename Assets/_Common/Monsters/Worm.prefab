@@ -243,6 +243,8 @@ MonoBehaviour:
   _deathVfxPoint: {fileID: 1861360774821253722}
   _deathVfx: {fileID: 6537639679966437507, guid: 69dd9ec2fcb62f84a8ab9b5460436c2c,
     type: 3}
+  _deathTrail: {fileID: 5666076273953807498, guid: 739dbbb4c0fb63b478abf593466c61fd,
+    type: 3}
   _monsterShooter: {fileID: 4526846310996794968}
   _wormGround: {fileID: 4526846311246297625}
   _animator: {fileID: 5996600788114957674}

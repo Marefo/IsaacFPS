@@ -236,6 +236,8 @@ MonoBehaviour:
   _deathVfxPoint: {fileID: 7307545770486692010}
   _deathVfx: {fileID: 6537639679966437507, guid: bab09106e7d96bd4c9cda809412b5847,
     type: 3}
+  _deathTrail: {fileID: 6668435059352458460, guid: 4e55f460618da4c4d868d511438c7add,
+    type: 3}
   _agroZone: {fileID: 7307545771262109714}
   _shooter: {fileID: 7307545770902848522}
   _settings: {fileID: 11400000, guid: 7b16831f6d90c55479edee8596182a12, type: 2}

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98ae030f96e2489d9185feb0a51260a2, type: 3}
   m_Name: GapperSettings
   m_EditorClassIdentifier: 
+  PacerSpawnOffsetY: 0.67
   AttackDuration: 1
   AttackCooldown: 2.5
   Acceleration:

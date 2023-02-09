@@ -17,7 +17,7 @@ namespace _CodeBase.Units.Monsters.PooterCode
   public class PooterStateMachine : MonsterStateMachine, ITargetProvider
   {
     [SerializeField] private Transform _shootPoint;
-    [Space(10)]
+    [Space(10)] 
     [SerializeField] private MonsterShooter _shooter;
     [SerializeField] private UnitAnimator _animator;
     [Space(10)] 
@@ -26,9 +26,13 @@ namespace _CodeBase.Units.Monsters.PooterCode
     
     private bool _canAttack;
     private bool _attackFinished;
-    
-    private void Start()
+    private Collider _roomZoneCollider;
+
+    protected override void OnInitialize()
     {
+      base.OnInitialize();
+      _roomZoneCollider = _monster.RoomZone.GetComponent<Collider>();
+      
       InitializeStates();
       InitializeStateTransitions();
       InitializeStartState();
@@ -50,7 +54,7 @@ namespace _CodeBase.Units.Monsters.PooterCode
       {
         [typeof(IdleState)] = new IdleState(),
         [typeof(AttackState)] = new AttackState(this, _animator,  _shooter, this, _shootPoint, _bulletSettings, _settings),
-        [typeof(EscapeState)] = new EscapeState(this, _agent, this, _settings),
+        [typeof(EscapeState)] = new EscapeState(this, _roomZoneCollider, _agent, this, _settings),
       };
       
       _stateMachine.AddStates(states);

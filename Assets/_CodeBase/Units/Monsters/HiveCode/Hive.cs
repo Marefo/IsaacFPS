@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using _CodeBase.Extensions;
 using _CodeBase.HeroCode;
+using _CodeBase.Infrastructure;
+using _CodeBase.Logging;
 using _CodeBase.Units.Monsters.FlyCode;
 using _CodeBase.Units.Monsters.HiveCode.Data;
 using UnityEngine;
@@ -17,6 +19,7 @@ namespace _CodeBase.Units.Monsters.HiveCode
     [SerializeField] private List<Transform> _flySpawnPoints;
     [Space(10)] 
     [SerializeField] private ParticleSystem _deathVfx;
+    [SerializeField] private GameObject _deathTrail;
     [SerializeField] private Transform _deathVfxPoint;
     [Space(10)] 
     [SerializeField] private UnitAnimator _animator;
@@ -28,7 +31,8 @@ namespace _CodeBase.Units.Monsters.HiveCode
     private bool _isHeroInRoomZone;
     private Vector3 _escapePosition;
     private Coroutine _spawnFliesCoroutine;
-    
+    private Collider _roomZoneCollider;
+
     private void OnEnable()
     {
       SubscribeEvents();
@@ -40,6 +44,8 @@ namespace _CodeBase.Units.Monsters.HiveCode
       UnSubscribeEvents();
       Initialized -= OnInitialize;
     }
+
+    private void Start() => CheckForHero();
 
     private void Update()
     {
@@ -57,6 +63,7 @@ namespace _CodeBase.Units.Monsters.HiveCode
 
     private void OnInitialize()
     {
+      _roomZoneCollider = RoomZone.GetComponent<Collider>();
       RoomZone.Entered += OnRoomZoneEnter;
       RoomZone.Canceled += OnRoomZoneCancel;
     }
@@ -64,9 +71,7 @@ namespace _CodeBase.Units.Monsters.HiveCode
     private void OnRoomZoneEnter(Collider obj)
     {
       if(obj.TryGetComponent(out Hero hero) == false) return;
-      _hero = hero;
-      _isHeroInRoomZone = true;
-      _spawnFliesCoroutine = StartCoroutine(SpawnFliesCoroutine());
+      OnHeroEnterZone(obj);
     }
 
     private void OnRoomZoneCancel(Collider obj)
@@ -79,17 +84,29 @@ namespace _CodeBase.Units.Monsters.HiveCode
         StopCoroutine(_spawnFliesCoroutine);
     }
 
+    private void CheckForHero()
+    {
+      Collider heroCollider = RoomZone.GetHeroFromZone();
+
+      if (heroCollider == null) return;
+      OnHeroEnterZone(heroCollider);
+    }
+
+    private void OnHeroEnterZone(Collider heroCollider)
+    {
+      _hero = heroCollider.GetComponent<Hero>();
+      _isHeroInRoomZone = true;
+      _spawnFliesCoroutine = StartCoroutine(SpawnFliesCoroutine());
+    }
+
     private void Escape()
     {
       Vector3 rotationTargetPosition = _hero.transform.position;
       rotationTargetPosition.y = transform.position.y;
       transform.LookAt(rotationTargetPosition);
       
-      if (IsTargetPositionFarEnough() == false)
-      {
-        Vector3 unSampledTargetPosition = Random.insideUnitSphere * _settings.EscapeDistance + _agent.transform.position;
-        _escapePosition = unSampledTargetPosition.GetNavMeshSampledPosition();
-      }
+      if (IsTargetPositionFarEnough() == false) 
+        _escapePosition = Helpers.GetRandomPositionInCollider(_roomZoneCollider, transform.position.y).GetNavMeshSampledPosition();
 
       _agent.SetDestination(_escapePosition);
     }
@@ -125,10 +142,12 @@ namespace _CodeBase.Units.Monsters.HiveCode
 
     protected override void Die()
     {
+      Instantiate(_deathTrail, _deathVfxPoint.position, Quaternion.identity);
+      Instantiate(_deathVfx, _deathVfxPoint.position, Quaternion.identity);
       base.Die();
-      Destroy(gameObject);
       SpawnFly(2);
       SpawnPooter();
+      Destroy(gameObject);
     }
     
     private void UpdateRunAnimationState() => 

@@ -579,6 +579,37 @@ Transform:
   m_Father: {fileID: 3432178130530377604}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -13.979665, y: 34.01879, z: -16.30803}
+--- !u!1 &4915203332329187661
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7635356076009179367}
+  m_Layer: 0
+  m_Name: DeathVfxPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7635356076009179367
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4915203332329187661}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5007239822048247685}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5007239821427409084
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,6 +678,7 @@ Transform:
   - {fileID: 5007239823189038546}
   - {fileID: 5007239822149849574}
   - {fileID: 5007239821427409085}
+  - {fileID: 7635356076009179367}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -662,14 +694,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a75db28256b49169facbbeb1fc5bee5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <SpawnHeight>k__BackingField: 0
   _health: {fileID: 5007239822048247680}
   _pooterSpawnPoint: {fileID: 5007239823189038546}
   _flySpawnPoints:
   - {fileID: 5007239821427409085}
   - {fileID: 5007239822149849574}
-  _deathVfx: {fileID: 0}
-  _deathVfxPoint: {fileID: 0}
+  _deathVfx: {fileID: 6537639679966437507, guid: bab09106e7d96bd4c9cda809412b5847,
+    type: 3}
+  _deathTrail: {fileID: 2062778965914715838, guid: 865a5219a9b66a641ad74ccce2788372,
+    type: 3}
+  _deathVfxPoint: {fileID: 7635356076009179367}
   _animator: {fileID: 5313160999167628851}
   _agent: {fileID: 5007239822048247686}
   _settings: {fileID: 11400000, guid: 2cef28ea4c0f1f0499126ad69fee0764, type: 2}
@@ -719,7 +753,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 1.17
-  m_BaseOffset: -0.04
+  m_BaseOffset: -0.08
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!136 &1728551968115819970

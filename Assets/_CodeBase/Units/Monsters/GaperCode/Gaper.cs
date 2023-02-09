@@ -93,7 +93,7 @@ namespace _CodeBase.Units.Monsters.GaperCode
       Instantiate(_deathTrail, _deathVfxSpawnPoint.position, Quaternion.identity);
       Instantiate(_deathVfx, _deathVfxSpawnPoint.position, Quaternion.identity);
       Vector3 spawnPosition = transform.position;
-      spawnPosition.y = _pacerPrefab.SpawnHeight;
+      spawnPosition.y += _pacerPrefab.SpawnOffsetY;
       Pacer pacer = Instantiate(_pacerPrefab, spawnPosition, Quaternion.identity);
       pacer.Initialize(RoomZone, _monsterMonitor);
       _monsterMonitor.AddMonster(pacer);

@@ -10,6 +10,7 @@ namespace _CodeBase.Units.Monsters.PooterCode
     [SerializeField] private PooterStateMachine _stateMachine;
     [SerializeField] private Transform _deathVfxPoint;
     [SerializeField] private ParticleSystem _deathVfx;
+    [SerializeField] private GameObject _deathTrail;
     
     private void OnEnable() => SubscribeEvents();
     private void OnDisable() => UnSubscribeEvents();
@@ -24,6 +25,7 @@ namespace _CodeBase.Units.Monsters.PooterCode
 
     protected override void Die()
     {
+      Instantiate(_deathTrail, _deathVfxPoint.position, Quaternion.identity);
       Instantiate(_deathVfx, _deathVfxPoint.position, Quaternion.identity);
       base.Die();
       Destroy(gameObject);

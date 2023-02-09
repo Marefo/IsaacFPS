@@ -16,6 +16,7 @@ namespace _CodeBase.Units.Monsters.HorfCode
     [SerializeField] private Transform _shootPoint;
     [SerializeField] private Transform _deathVfxPoint;
     [SerializeField] private ParticleSystem _deathVfx;
+    [SerializeField] private GameObject _deathTrail;
     [Space(10)] 
     [SerializeField] private TriggerListener _agroZone;
     [SerializeField] private MonsterShooter _shooter;
@@ -117,6 +118,7 @@ namespace _CodeBase.Units.Monsters.HorfCode
     
     protected override void Die()
     {
+      Instantiate(_deathTrail, _deathVfxPoint.position, Quaternion.identity);
       Instantiate(_deathVfx, _deathVfxPoint.position, Quaternion.identity);
       base.Die();
       Destroy(gameObject);

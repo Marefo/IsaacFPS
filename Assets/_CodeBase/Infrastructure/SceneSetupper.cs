@@ -9,18 +9,21 @@ namespace _CodeBase.Infrastructure
   {
     private InputService _inputService;
     private TimeService _timeService;
+    private NavMeshService _navMeshService;
     
     [Inject]
-    public void Construct(InputService inputService, TimeService timeService)
+    public void Construct(InputService inputService, TimeService timeService, NavMeshService navMeshService)
     {
       _inputService = inputService;
       _timeService = timeService;
+      _navMeshService = navMeshService;
     }
 
-    private void Start()
+    private void Awake()
     {
       _timeService.NormalizeFast();
       _inputService.Enable();
+      _navMeshService.ReBake();
     }
   }
 }

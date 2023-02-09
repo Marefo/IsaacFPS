@@ -633,12 +633,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2387fb82bf044b09e04368b4824cf64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <SpawnHeight>k__BackingField: 0.6
+  <HasSpawnOffsetY>k__BackingField: 1
+  <SpawnOffsetY>k__BackingField: 0.67
   _health: {fileID: 5477675582962795514}
   _model: {fileID: 5444330328861766021}
   _damageZone: {fileID: 5477675583745695357}
   _deathVfxSpawnPoint: {fileID: 5477675582612000434}
   _deathVfx: {fileID: 6537639679966437507, guid: bab09106e7d96bd4c9cda809412b5847,
+    type: 3}
+  _deathTrail: {fileID: 5666076273953807498, guid: 739dbbb4c0fb63b478abf593466c61fd,
+    type: 3}
+  _jumpBloodTrail: {fileID: 8834026444267563043, guid: b798729dc5a6aa94abb9a96089c83d44,
     type: 3}
   _groundCheckPoint: {fileID: 5477675582390819458}
   _landCheckPoint: {fileID: 5477675583697046976}

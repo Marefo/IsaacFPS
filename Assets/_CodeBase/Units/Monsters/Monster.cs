@@ -2,6 +2,7 @@
 using _CodeBase.Etc;
 using _CodeBase.IndicatorCode;
 using _CodeBase.Interfaces;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -12,8 +13,9 @@ namespace _CodeBase.Units.Monsters
     public event Action Initialized;
     public event Action<Monster> Dead;
     
-    [field: SerializeField] public float SpawnHeight { get; private set; }
-    [field: Space(10)] 
+    [field: SerializeField] public bool HasSpawnOffsetY { get; private set; }
+    [field: ShowIf("HasSpawnOffsetY"), SerializeField] public float SpawnOffsetY { get; private set; }
+    [Space(10)]
     [SerializeField] private Health _health;
     
     public bool IsDead { get; private set; }

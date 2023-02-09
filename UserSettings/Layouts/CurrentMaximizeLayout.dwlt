@@ -225,24 +225,24 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: f664f4ff
-      m_LastClickedID: -760586
-      m_ExpandedIDs: f064f4fff664f4ff186df4fff863f5ff1a6af5ff5400f6ffc2b8f6fff226f7ffe231f7ffd86cf8ffe86cf8ff646df8ffecc9f9ff5e9ffbff5448feff1424ffff787effff8a8affffa28afffffe8bffff0afbfffff47900000e7a0000547a0000927a0000c47a00004a7b0000827b0000867b0000
+      scrollPos: {x: 0, y: 26.799988}
+      m_SelectedIDs: 1a7a0000
+      m_LastClickedID: 31258
+      m_ExpandedIDs: ea9bfcff9ea6fcff76f1fcff86f1fcffb06cfdffbe6cfdffa884fdff488cfdff2e94fdff2ea0fdff02acfdff66b4fdff60fbfdffa8fefdffe2f4fffff8f4ffff0afbfffff4ffffff1a7a0000ce7a0000007b00006e7b0000ba7b0000be7b0000d67b000042130200241a02001a2002004a2002008a200200
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Blood2_Left
-        m_OriginalName: Blood2_Left
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -726640
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 4
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 5}
       m_SearchString: 
@@ -359,7 +359,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 24.8}
+      snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-transform-toolbar
@@ -491,9 +491,9 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 0
-      snapOffset: {x: -232, y: -202.4}
+      snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 3
+      snapCorner: 0
       id: Scene View/Particles
       index: 10
       layout: 4
@@ -507,9 +507,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.04971783, y: -6.7079496, z: 19.07638}
+    m_Target: {x: -8.523773, y: -0.52661395, z: 13.53432}
     speed: 2
-    m_Value: {x: -0.049717832, y: -6.7079496, z: 19.07638}
+    m_Value: {x: -8.523773, y: -0.52661395, z: 13.53432}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -556,13 +556,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.28443116, y: 0.43446445, z: -0.14677766, w: 0.8419119}
+    m_Target: {x: -0.08664611, y: 0.60827345, z: -0.06709304, w: -0.7861849}
     speed: 2
-    m_Value: {x: 0.28420788, y: 0.43572253, z: -0.14720269, w: 0.84125096}
+    m_Value: {x: -0.08664611, y: 0.6082734, z: -0.06709304, w: -0.78618485}
   m_Size:
-    m_Target: 6.074531
+    m_Target: 3.0440834
     speed: 2
-    m_Value: 6.3607655
+    m_Value: 3.0440834
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -822,7 +822,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -831,15 +831,15 @@ MonoBehaviour:
     y: 495.2
     width: 1176
     height: 227.59998
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 12}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 12}
   - {fileID: 13}
   - {fileID: 14}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -882,22 +882,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/_Common/Monsters/Blood
+    - Assets/_Common/Monsters
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/_Common/Monsters/Blood
+  - Assets/_Common/Monsters
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\GameDev\UnityProjects\IsaacFPS
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 223}
-    m_SelectedIDs: c25e0800
-    m_LastClickedID: 548546
-    m_ExpandedIDs: 000000007488000076880000788800007a8800007c8800007e88000080880000828800008488000086880000888800008a8800008c8800008e88000090880000cc880000da880000f2820100fef9070000ca9a3b
+    scrollPos: {x: 0, y: 219}
+    m_SelectedIDs: 688a0000
+    m_LastClickedID: 35432
+    m_ExpandedIDs: 000000004a8a00004c8a00004e8a0000508a0000528a0000548a0000568a0000588a00005a8a00005c8a00005e8a0000608a0000628a0000648a0000688a00006a8a00006c8a00006e8a0000708a0000a28a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -925,7 +925,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000007488000076880000788800007a8800007c8800007e88000080880000828800008488000086880000888800008a8800008c8800008e88000090880000f282010000ca9a3b
+    m_ExpandedIDs: 000000004a8a00004c8a00004e8a0000508a0000528a0000548a0000568a0000588a00005a8a00005c8a00005e8a0000608a0000628a0000648a0000688a00006a8a00006c8a00006e8a0000708a0000a28a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -950,8 +950,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: f664f4ff
-    m_LastClickedInstanceID: -760586
+    m_SelectedInstanceIDs: 5e7d0000
+    m_LastClickedInstanceID: 32094
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300000e330100c6a20300
     m_RenameOverlay:
@@ -977,7 +977,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 47.400024}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
@@ -1041,7 +1041,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -626586
+  m_LastSelectedObjectID: 31258
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52

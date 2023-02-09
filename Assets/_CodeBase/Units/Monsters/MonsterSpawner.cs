@@ -1,8 +1,13 @@
 ﻿using System.Collections;
+using _CodeBase.Extensions;
+using _CodeBase.Infrastructure.Services;
+using _CodeBase.Logging;
 using _CodeBase.Points;
 using _CodeBase.RoomCode;
 using _CodeBase.Units.Monsters.Data;
 using UnityEngine;
+using UnityEngine.AI;
+using Zenject;
 
 namespace _CodeBase.Units.Monsters
 {
@@ -16,22 +21,53 @@ namespace _CodeBase.Units.Monsters
     [Space(10)] 
     [SerializeField] private MonsterPrefabsData _prefabsData;
 
+    private NavMeshService _navMeshService;
     private int _spawnedChasers;
+    private float _spawnAfterSmokeDelay;
 
-    public void SpawnMonsters(float spawnAfterSmokeDelay) => 
-      _spawnPointsStorage.Points.ForEach(point => StartCoroutine(SpawnMonster(point, spawnAfterSmokeDelay)));
+    [Inject]
+    public void Construct(NavMeshService navMeshService)
+    {
+      _navMeshService = navMeshService;
+    }
+    
+    public void SpawnMonsters(float spawnAfterSmokeDelay)
+    {
+      if (_navMeshService.IsInitialized)
+        _spawnPointsStorage.Points.ForEach(point => StartCoroutine(SpawnMonster(point, spawnAfterSmokeDelay)));
+      else
+      {
+        _spawnAfterSmokeDelay = spawnAfterSmokeDelay;
+        _navMeshService.Initialized += OnInitialize;
+      }
+    }
+
+    private void OnInitialize()
+    {
+      _navMeshService.Initialized -= OnInitialize;
+      SpawnMonsters(_spawnAfterSmokeDelay);
+    }
 
     private IEnumerator SpawnMonster(MonsterSpawnPoint spawnPoint, float spawnAfterSmokeDelay)
     {
       spawnPoint.Take();
       GameObject prefab = _prefabsData.GetPrefab(spawnPoint.Type);
-      Monster prefabMonster = prefab.GetComponent<Monster>();
-      Instantiate(_spawnVfx, spawnPoint.transform);
+      Monster monsterPrefab = prefab.GetComponent<Monster>();
+      Transform vfx = Instantiate(_spawnVfx, spawnPoint.transform).transform;
+      vfx.localPosition = new Vector3(0, vfx.localPosition.y, 0);
 
       yield return new WaitForSeconds(spawnAfterSmokeDelay);
       
       Monster monster = Instantiate(prefab, spawnPoint.transform).GetComponent<Monster>();
-      monster.transform.localPosition = Vector3.up * prefabMonster.SpawnHeight;
+      Vector3 spawnPosition = Vector3.zero;
+
+      if (monsterPrefab.HasSpawnOffsetY)
+        spawnPosition.y = monsterPrefab.SpawnOffsetY;
+      
+      monster.transform.localPosition = spawnPosition;
+
+      if(monster.TryGetComponent(out NavMeshAgent agent))
+        agent.Warp(spawnPoint.Position.GetNavMeshSampledPosition());
 
       if (spawnPoint.HasTargetRotation)
         monster.transform.localRotation = Quaternion.Euler(spawnPoint.TargetRotation);
