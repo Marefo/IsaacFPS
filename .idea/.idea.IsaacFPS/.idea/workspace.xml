@@ -3,26 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f8849ab3-d35d-492a-ab84-559b39c4dc6c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IsaacFPS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IsaacFPS/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ThirdParty/Polygon Arsenal/Materials/Sprites/PolySpriteRingGlowSoft_ADD.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ThirdParty/Polygon Arsenal/Materials/Sprites/PolySpriteRingGlowSoft_ADD.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Etc/Poop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Etc/Poop.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Extensions/Extensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Extensions/Extensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Infrastructure/Helpers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Infrastructure/Helpers.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/PickableItems/PickableHeart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/PickableItems/PickableHeart.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/RoomCode/Room.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/RoomCode/Room.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Environment/Rock1 Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Environment/Rock1 Variant.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Items/BoomSmoke.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Items/BoomSmoke.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Items/Heart.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Items/Heart.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Items/PickableBomb.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Items/PickableBomb.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Items/PickableHeart.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Items/PickableHeart.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Items/Poop.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Items/Poop.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Items/Smoke.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Items/Smoke.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/ItemsDrop/DropItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/ItemsDrop/DropItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Items/ChestDropsData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Items/ChestDropsData.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Common/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +128,7 @@
       <workItem from="1675779380172" duration="5632000" />
       <workItem from="1675852397667" duration="17793000" />
       <workItem from="1675890206513" duration="1321000" />
-      <workItem from="1675936067816" duration="12318000" />
+      <workItem from="1675936067816" duration="16321000" />
     </task>
     <servers />
   </component>
