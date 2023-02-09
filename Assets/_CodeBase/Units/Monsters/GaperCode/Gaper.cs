@@ -14,6 +14,7 @@ namespace _CodeBase.Units.Monsters.GaperCode
   {
     [SerializeField] private Transform _deathVfxSpawnPoint;
     [SerializeField] private ParticleSystem _deathVfx;
+    [SerializeField] private GameObject _deathTrail;
     [Space(10)]
     [SerializeField] private Pacer _pacerPrefab;
     [Space(10)]
@@ -89,6 +90,7 @@ namespace _CodeBase.Units.Monsters.GaperCode
     
     protected override void Die()
     {
+      Instantiate(_deathTrail, _deathVfxSpawnPoint.position, Quaternion.identity);
       Instantiate(_deathVfx, _deathVfxSpawnPoint.position, Quaternion.identity);
       Vector3 spawnPosition = transform.position;
       spawnPosition.y = _pacerPrefab.SpawnHeight;

@@ -936,6 +936,8 @@ MonoBehaviour:
   _deathVfxSpawnPoint: {fileID: 1367742170818689353}
   _deathVfx: {fileID: 4677992490938532084, guid: 5851776642ece2247b0b29ab361fd0a2,
     type: 3}
+  _deathTrail: {fileID: 6668435059352458460, guid: 4e55f460618da4c4d868d511438c7add,
+    type: 3}
   _pacerPrefab: {fileID: 5477675582962795511, guid: c8b66a28de100594c938519424a0111e,
     type: 3}
   _agent: {fileID: 1651371187}

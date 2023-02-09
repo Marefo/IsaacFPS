@@ -187,8 +187,8 @@ MonoBehaviour:
     y: 0
     width: 290.4
     height: 495.2
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -226,23 +226,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 2e7d0000
-      m_LastClickedID: 0
-      m_ExpandedIDs: d86cf8ffe86cf8ff646df8ffecc9f9ff5e9ffbff5448feff1424ffff787effff8a8affffa28afffffe8bffff0afbffff0e7a0000927a0000967a0000c47a00004a7b0000827b0000867b0000
+      m_SelectedIDs: f664f4ff
+      m_LastClickedID: -760586
+      m_ExpandedIDs: f064f4fff664f4ff186df4fff863f5ff1a6af5ff5400f6ffc2b8f6fff226f7ffe231f7ffd86cf8ffe86cf8ff646df8ffecc9f9ff5e9ffbff5448feff1424ffff787effff8a8affffa28afffffe8bffff0afbfffff47900000e7a0000547a0000927a0000c47a00004a7b0000827b0000867b0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Blood2_Left
+        m_OriginalName: Blood2_Left
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -726640
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 4
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 5}
       m_SearchString: 
@@ -359,7 +359,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
+      snapOffset: {x: 0, y: 24.8}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-transform-toolbar
@@ -491,9 +491,9 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 0
-      snapOffset: {x: 0, y: 24.8}
+      snapOffset: {x: -232, y: -202.4}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
+      snapCorner: 3
       id: Scene View/Particles
       index: 10
       layout: 4
@@ -507,9 +507,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -29.84614, y: -22.007675, z: 44.810097}
+    m_Target: {x: -0.04971783, y: -6.7079496, z: 19.07638}
     speed: 2
-    m_Value: {x: -29.84614, y: -22.007675, z: 44.810097}
+    m_Value: {x: -0.049717832, y: -6.7079496, z: 19.07638}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -556,13 +556,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.2572641, y: -0.36178058, z: 0.10458883, w: 0.88998175}
+    m_Target: {x: 0.28443116, y: 0.43446445, z: -0.14677766, w: 0.8419119}
     speed: 2
-    m_Value: {x: 0.2572543, y: -0.3617668, z: 0.10458484, w: 0.8899478}
+    m_Value: {x: 0.28420788, y: 0.43572253, z: -0.14720269, w: 0.84125096}
   m_Size:
-    m_Target: 29.195818
+    m_Target: 6.074531
     speed: 2
-    m_Value: 29.195818
+    m_Value: 6.3607655
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -882,22 +882,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/_Common/Items
+    - Assets/_Common/Monsters/Blood
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/_Common/Items
+  - Assets/_Common/Monsters/Blood
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\GameDev\UnityProjects\IsaacFPS
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: ca880000
-    m_LastClickedID: 35018
-    m_ExpandedIDs: 000000007488000076880000788800007a8800007c8800007e88000080880000828800008488000086880000888800008a8800008c8800008e88000090880000ca880000f282010000ca9a3b
+    scrollPos: {x: 0, y: 223}
+    m_SelectedIDs: c25e0800
+    m_LastClickedID: 548546
+    m_ExpandedIDs: 000000007488000076880000788800007a8800007c8800007e88000080880000828800008488000086880000888800008a8800008c8800008e88000090880000cc880000da880000f2820100fef9070000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -950,8 +950,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 2e7d0000
-    m_LastClickedInstanceID: 32046
+    m_SelectedInstanceIDs: f664f4ff
+    m_LastClickedInstanceID: -760586
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300000e330100c6a20300
     m_RenameOverlay:
@@ -969,7 +969,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 11}
+      m_ClientGUIView: {fileID: 7}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -1041,7 +1041,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -456856
+  m_LastSelectedObjectID: -626586
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
