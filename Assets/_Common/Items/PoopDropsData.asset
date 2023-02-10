@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b82a74b364fb4fc48433c6bf18dab1d5, type: 3}
   m_Name: PoopDropsData
   m_EditorClassIdentifier: 
+  CanBeEmpty: 1
   Drops:
   - Chance: 15
     Prefab: {fileID: 5597707384179669473, guid: a932ccc00259d8c43bfcb3779dc0e38a,

@@ -242,7 +242,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75fab10a7f1b4b1586f0fe82ea11028b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <SpawnHeight>k__BackingField: 0
+  <HasSpawnOffsetY>k__BackingField: 0
+  <SpawnOffsetY>k__BackingField: 0
+  _damagedMaterial: {fileID: 2100000, guid: 95f48dcf666b8de44bc93934b9ab85c6, type: 2}
+  _skinnedMeshRenderers:
+  - {fileID: 3123917733174816832}
+  _meshRenderers: []
   _health: {fileID: 3889967501242644350}
   _model: {fileID: 8884651663504860639}
   _stateMachine: {fileID: 3889967501242644348}

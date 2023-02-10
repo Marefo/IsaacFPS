@@ -33,15 +33,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "ChangeCameraRotationState",
-                    "type": "Button",
-                    "id": "cc306183-b398-404e-8d12-679871274f64",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "ThrowGrenade",
                     "type": "Button",
                     "id": "33bb80fc-fc67-4906-a43c-c83f873af3bf",
@@ -195,19 +186,8 @@
                 },
                 {
                     "name": "",
-                    "id": "309aeb34-f88a-4b1f-a455-05b871a9929d",
-                    "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ChangeCameraRotationState",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "55d6ca27-e47b-4ae9-ac57-0a363948a8ba",
-                    "path": "<Keyboard>/g",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Linq;
+using _CodeBase.Extensions;
 using _CodeBase.HeroCode;
 using _CodeBase.Logging;
 using _CodeBase.Units.Monsters.WormCode.Data;
@@ -88,11 +89,12 @@ namespace _CodeBase.Units.Monsters.WormCode
       {
         yield return new WaitForSeconds(_settings.DisappearDelay);
         Disappear();
-
-        yield return new WaitForSeconds(_settings.AppearDelay / 2);
+        float appearDelay = _settings.AppearDelay.GetRandomValue();
+        
+        yield return new WaitForSeconds(appearDelay / 2);
         MoveToRandomPosition();
         
-        yield return new WaitForSeconds(_settings.AppearDelay / 2);
+        yield return new WaitForSeconds(appearDelay / 2);
         Appear();
         
         if (_isHeroInRoomZone)

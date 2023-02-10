@@ -13,15 +13,16 @@ namespace _CodeBase.PickableItems
     [SerializeField] private float _strength;
     [SerializeField] private float _time;
     [SerializeField] private float _delay;
-    
+
     private void Start() => StartCoroutine(PunchScaleEffectCoroutine());
 
     protected override void OnCollisionWithHero(Hero hero)
     {
       Health health = hero.GetComponent<Health>();
       
-      if(health.CurrentValue == health.MaxValue) return; 
-      
+      if(_used || health.CurrentValue == health.MaxValue) return;
+
+      SetAsUsed();
       health.Increase(1);
       SetAsUsed();
       Destroy(gameObject);

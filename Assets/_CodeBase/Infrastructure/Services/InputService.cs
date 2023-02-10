@@ -15,7 +15,6 @@ namespace _CodeBase.Infrastructure.Services
     public bool Enabled { get; private set; } = true;
 
     private InputActions _inputActions;
-    private bool _cameraRotationEnabled = true;
 
     private void Awake() => _inputActions = new InputActions();
 
@@ -25,7 +24,6 @@ namespace _CodeBase.Infrastructure.Services
       _inputActions.Game.Attack.performed += OnAttackButtonClick;
       _inputActions.Game.ThrowGrenade.performed += OnThrowGrenadeButtonClick;
       _inputActions.Game.Menu.performed += OnMenuButtonClick;
-      _inputActions.Game.ChangeCameraRotationState.performed += OnChangeCameraRotationState;
     }
 
     private void OnDisable()
@@ -34,7 +32,6 @@ namespace _CodeBase.Infrastructure.Services
       _inputActions.Game.Attack.performed -= OnAttackButtonClick;
       _inputActions.Game.ThrowGrenade.performed -= OnThrowGrenadeButtonClick;
       _inputActions.Game.Menu.performed -= OnMenuButtonClick;
-      _inputActions.Game.ChangeCameraRotationState.performed -= OnChangeCameraRotationState;
     }
 
     public void Enable() => Enabled = true;
@@ -46,10 +43,7 @@ namespace _CodeBase.Infrastructure.Services
       return Enabled ? new Vector3(input.x, 0, input.y) : Vector3.zero;
     }
 
-    private Vector3 GetLookInput()
-    {
-      return Enabled && _cameraRotationEnabled ? _inputActions.Game.Look.ReadValue<Vector2>() : Vector3.zero;
-    }
+    private Vector3 GetLookInput() => Enabled ? _inputActions.Game.Look.ReadValue<Vector2>() : Vector3.zero;
 
     private void OnMenuButtonClick(InputAction.CallbackContext obj) => MenuButtonClicked?.Invoke();
 
@@ -64,8 +58,5 @@ namespace _CodeBase.Infrastructure.Services
       if(Enabled == false) return;
       ThrowGrenadeButtonClicked?.Invoke();
     }
-
-    private void OnChangeCameraRotationState(InputAction.CallbackContext obj) => 
-      _cameraRotationEnabled = !_cameraRotationEnabled;
   }
 }

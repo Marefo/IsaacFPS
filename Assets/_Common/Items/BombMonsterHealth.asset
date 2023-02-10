@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df7a2efcc8e44aa7935ba722e16b4ac9, type: 3}
   m_Name: BombMonsterHealth
   m_EditorClassIdentifier: 
-  MaxValue: 4
-  StartValue: 4
+  MaxValue: 3
+  StartValue: 3

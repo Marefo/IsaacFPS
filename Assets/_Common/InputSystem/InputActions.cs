@@ -55,15 +55,6 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""ChangeCameraRotationState"",
-                    ""type"": ""Button"",
-                    ""id"": ""cc306183-b398-404e-8d12-679871274f64"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""ThrowGrenade"",
                     ""type"": ""Button"",
                     ""id"": ""33bb80fc-fc67-4906-a43c-c83f873af3bf"",
@@ -217,19 +208,8 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""309aeb34-f88a-4b1f-a455-05b871a9929d"",
-                    ""path"": ""<Keyboard>/e"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""ChangeCameraRotationState"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""55d6ca27-e47b-4ae9-ac57-0a363948a8ba"",
-                    ""path"": ""<Keyboard>/g"",
+                    ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -258,7 +238,6 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         m_Game_Movement = m_Game.FindAction("Movement", throwIfNotFound: true);
         m_Game_Look = m_Game.FindAction("Look", throwIfNotFound: true);
         m_Game_Attack = m_Game.FindAction("Attack", throwIfNotFound: true);
-        m_Game_ChangeCameraRotationState = m_Game.FindAction("ChangeCameraRotationState", throwIfNotFound: true);
         m_Game_ThrowGrenade = m_Game.FindAction("ThrowGrenade", throwIfNotFound: true);
         m_Game_Menu = m_Game.FindAction("Menu", throwIfNotFound: true);
     }
@@ -323,7 +302,6 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
     private readonly InputAction m_Game_Movement;
     private readonly InputAction m_Game_Look;
     private readonly InputAction m_Game_Attack;
-    private readonly InputAction m_Game_ChangeCameraRotationState;
     private readonly InputAction m_Game_ThrowGrenade;
     private readonly InputAction m_Game_Menu;
     public struct GameActions
@@ -333,7 +311,6 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         public InputAction @Movement => m_Wrapper.m_Game_Movement;
         public InputAction @Look => m_Wrapper.m_Game_Look;
         public InputAction @Attack => m_Wrapper.m_Game_Attack;
-        public InputAction @ChangeCameraRotationState => m_Wrapper.m_Game_ChangeCameraRotationState;
         public InputAction @ThrowGrenade => m_Wrapper.m_Game_ThrowGrenade;
         public InputAction @Menu => m_Wrapper.m_Game_Menu;
         public InputActionMap Get() { return m_Wrapper.m_Game; }
@@ -354,9 +331,6 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @Attack.started -= m_Wrapper.m_GameActionsCallbackInterface.OnAttack;
                 @Attack.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnAttack;
                 @Attack.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnAttack;
-                @ChangeCameraRotationState.started -= m_Wrapper.m_GameActionsCallbackInterface.OnChangeCameraRotationState;
-                @ChangeCameraRotationState.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnChangeCameraRotationState;
-                @ChangeCameraRotationState.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnChangeCameraRotationState;
                 @ThrowGrenade.started -= m_Wrapper.m_GameActionsCallbackInterface.OnThrowGrenade;
                 @ThrowGrenade.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnThrowGrenade;
                 @ThrowGrenade.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnThrowGrenade;
@@ -376,9 +350,6 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @Attack.started += instance.OnAttack;
                 @Attack.performed += instance.OnAttack;
                 @Attack.canceled += instance.OnAttack;
-                @ChangeCameraRotationState.started += instance.OnChangeCameraRotationState;
-                @ChangeCameraRotationState.performed += instance.OnChangeCameraRotationState;
-                @ChangeCameraRotationState.canceled += instance.OnChangeCameraRotationState;
                 @ThrowGrenade.started += instance.OnThrowGrenade;
                 @ThrowGrenade.performed += instance.OnThrowGrenade;
                 @ThrowGrenade.canceled += instance.OnThrowGrenade;
@@ -394,7 +365,6 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         void OnMovement(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
-        void OnChangeCameraRotationState(InputAction.CallbackContext context);
         void OnThrowGrenade(InputAction.CallbackContext context);
         void OnMenu(InputAction.CallbackContext context);
     }

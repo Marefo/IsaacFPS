@@ -13,6 +13,7 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.Serialization;
 using Zenject;
 
 namespace _CodeBase.HeroCode
@@ -21,6 +22,8 @@ namespace _CodeBase.HeroCode
   {
     [SerializeField] private float _dieDelay;
     [SerializeField] private float _dieDuration;
+    [SerializeField] private Transform _bloodVfxPoint;
+    [SerializeField] private GameObject _bloodVfxPrefab;
     [field: Space(10)]
     [field: SerializeField] public Transform ShootTarget { get; private set; }
     [SerializeField] private CameraShaker _cameraShaker;
@@ -57,6 +60,7 @@ namespace _CodeBase.HeroCode
 
     public void ApplyContactDamage(Vector3 contactPoint)
     {
+      Instantiate(_bloodVfxPrefab, _bloodVfxPoint.position, transform.rotation);
       PlayDamagedScreenEffect();
       _cameraShaker.Shake(_shakeSettings);
       _animator.PlayAttack();

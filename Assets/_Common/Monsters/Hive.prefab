@@ -634,7 +634,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5007239821427409084}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.7, y: 0.359, z: -0.961}
+  m_LocalPosition: {x: 0.7, y: 0.359, z: 0.961}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -694,6 +694,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a75db28256b49169facbbeb1fc5bee5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <HasSpawnOffsetY>k__BackingField: 0
+  <SpawnOffsetY>k__BackingField: 0
+  _damagedMaterial: {fileID: 2100000, guid: 95f48dcf666b8de44bc93934b9ab85c6, type: 2}
+  _skinnedMeshRenderers:
+  - {fileID: 4031706246271767114}
+  _meshRenderers: []
   _health: {fileID: 5007239822048247680}
   _pooterSpawnPoint: {fileID: 5007239823189038546}
   _flySpawnPoints:
@@ -704,6 +710,7 @@ MonoBehaviour:
   _deathTrail: {fileID: 2062778965914715838, guid: 865a5219a9b66a641ad74ccce2788372,
     type: 3}
   _deathVfxPoint: {fileID: 7635356076009179367}
+  _hiveAnimator: {fileID: 1573736787320000351}
   _animator: {fileID: 5313160999167628851}
   _agent: {fileID: 5007239822048247686}
   _settings: {fileID: 11400000, guid: 2cef28ea4c0f1f0499126ad69fee0764, type: 2}
@@ -794,7 +801,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5007239822149849573}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.7, y: 0.359, z: -0.961}
+  m_LocalPosition: {x: -0.7, y: 0.359, z: 0.961}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -825,7 +832,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5007239823189038545}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.359, z: -0.961}
+  m_LocalPosition: {x: 0, y: 0.359, z: 0.961}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -843,6 +850,7 @@ GameObject:
   - component: {fileID: 4825593170386013323}
   - component: {fileID: 5313160999167628850}
   - component: {fileID: 5313160999167628851}
+  - component: {fileID: 1573736787320000351}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -900,6 +908,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 5313160999167628850}
+--- !u!114 &1573736787320000351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5313160999167628849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30b6d8daf74b4d36bc8ebd94ecffe3e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5504503073899454142
 GameObject:
   m_ObjectHideFlags: 0

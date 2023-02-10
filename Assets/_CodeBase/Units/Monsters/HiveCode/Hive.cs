@@ -22,6 +22,7 @@ namespace _CodeBase.Units.Monsters.HiveCode
     [SerializeField] private GameObject _deathTrail;
     [SerializeField] private Transform _deathVfxPoint;
     [Space(10)] 
+    [SerializeField] private HiveAnimator _hiveAnimator;
     [SerializeField] private UnitAnimator _animator;
     [SerializeField] private NavMeshAgent _agent;
     [Space(10)]
@@ -37,12 +38,14 @@ namespace _CodeBase.Units.Monsters.HiveCode
     {
       SubscribeEvents();
       Initialized += OnInitialize;
+      _hiveAnimator.AttackFramePlayed += OnAttackFrame;
     }
 
     private void OnDisable()
     {
       UnSubscribeEvents();
       Initialized -= OnInitialize;
+      _hiveAnimator.AttackFramePlayed -= OnAttackFrame;
     }
 
     private void Start() => CheckForHero();
@@ -63,9 +66,9 @@ namespace _CodeBase.Units.Monsters.HiveCode
 
     private void OnInitialize()
     {
-      _roomZoneCollider = RoomZone.GetComponent<Collider>();
       RoomZone.Entered += OnRoomZoneEnter;
       RoomZone.Canceled += OnRoomZoneCancel;
+      _roomZoneCollider = RoomZone.GetComponent<Collider>();
     }
 
     private void OnRoomZoneEnter(Collider obj)
@@ -104,15 +107,15 @@ namespace _CodeBase.Units.Monsters.HiveCode
       Vector3 rotationTargetPosition = _hero.transform.position;
       rotationTargetPosition.y = transform.position.y;
       transform.LookAt(rotationTargetPosition);
-      
-      if (IsTargetPositionFarEnough() == false) 
-        _escapePosition = Helpers.GetRandomPositionInCollider(_roomZoneCollider, transform.position.y).GetNavMeshSampledPosition();
 
+      if (IsTargetPositionFarEnough()) return;
+      _escapePosition = Helpers.GetRandomPositionInCollider(_roomZoneCollider, transform.position.y)
+        .GetNavMeshSampledPosition();
       _agent.SetDestination(_escapePosition);
     }
 
     private bool IsTargetPositionFarEnough() => 
-      Vector3.Distance(_hero.transform.position, _escapePosition) >= _settings.EscapeDistance;
+      Vector3.Distance(_hero.transform.position, transform.position) >= _settings.EscapeDistance;
 
     public IEnumerator SpawnFliesCoroutine()
     {
@@ -120,9 +123,10 @@ namespace _CodeBase.Units.Monsters.HiveCode
       {
         yield return new WaitForSeconds(_settings.SpawnDelay);
         _animator.PlayAttack();
-        SpawnFly();
       }
     }
+
+    private void OnAttackFrame() => SpawnFly();
 
     private void SpawnFly(int amount = 1)
     {

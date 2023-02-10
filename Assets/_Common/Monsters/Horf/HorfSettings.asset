@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 341d5b4f0d5d410c818519dc4cee265c, type: 3}
   m_Name: HorfSettings
   m_EditorClassIdentifier: 
-  AttackCooldown: 2.8
+  AttackCooldown: 2
   ShakeDuration: 0.2
   ShakeStrength: 0.15
   ObstaclesLayerMask:
