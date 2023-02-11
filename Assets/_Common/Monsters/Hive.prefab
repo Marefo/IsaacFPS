@@ -694,13 +694,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a75db28256b49169facbbeb1fc5bee5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <IsBoss>k__BackingField: 0
+  <Health>k__BackingField: {fileID: 5007239822048247680}
   <HasSpawnOffsetY>k__BackingField: 0
   <SpawnOffsetY>k__BackingField: 0
   _damagedMaterial: {fileID: 2100000, guid: 95f48dcf666b8de44bc93934b9ab85c6, type: 2}
   _skinnedMeshRenderers:
   - {fileID: 4031706246271767114}
   _meshRenderers: []
-  _health: {fileID: 5007239822048247680}
   _pooterSpawnPoint: {fileID: 5007239823189038546}
   _flySpawnPoints:
   - {fileID: 5007239821427409085}

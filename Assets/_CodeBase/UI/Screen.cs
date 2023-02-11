@@ -10,7 +10,7 @@ namespace _CodeBase.UI
     
     [SerializeField] private Transform _visual;
 
-    protected virtual void Open()
+    public virtual void Open()
     {
       CursorVisibilityController.Show();
       _visual.DOKill();
@@ -19,7 +19,7 @@ namespace _CodeBase.UI
         .SetLink(gameObject);
     }
 
-    protected virtual void Close()
+    public virtual void Close()
     {
       CursorVisibilityController.Hide();
       _visual.DOKill();

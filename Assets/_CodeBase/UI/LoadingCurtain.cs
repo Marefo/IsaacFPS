@@ -1,4 +1,5 @@
 ﻿using System;
+using _CodeBase.Logging;
 using DG.Tweening;
 using UnityEngine;
 
@@ -35,8 +36,18 @@ namespace _CodeBase.UI
 			_curtain.gameObject.SetActive(false);
 		}
 
+		public void FadeInAndOut(float duration = 1, Action onFadeInComplete = null) => 
+			FadeIn(duration / 2, () => FadeOutWithAction(duration / 2, onFadeInComplete));
+
+		public void FadeOutWithAction(float duration = 1, Action action = null)
+		{
+			action?.Invoke();
+			FadeOut(duration);
+		}
+		
 		public void FadeIn(float duration = 1, Action onComplete = null)
 		{
+			MyDebug.Log($"FadeIn", MyDebug.DebugColor.yellow);
 			_fadeOut?.Kill();
 			_curtain.alpha = 0;
 			_curtain.gameObject.SetActive(true);
@@ -47,6 +58,7 @@ namespace _CodeBase.UI
 
 		public void FadeOut(float duration = 1, Action onComplete = null)
 		{
+			MyDebug.Log($"FadeOut", MyDebug.DebugColor.cyan);
 			_fadeIn?.Kill();
 			_curtain.alpha = 1;
 			

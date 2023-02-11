@@ -4,9 +4,12 @@ using _CodeBase.Infrastructure.Services;
 using _CodeBase.Logging;
 using _CodeBase.Points;
 using _CodeBase.RoomCode;
+using _CodeBase.UI;
 using _CodeBase.Units.Monsters.Data;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Serialization;
 using Zenject;
 
 namespace _CodeBase.Units.Monsters
@@ -14,7 +17,10 @@ namespace _CodeBase.Units.Monsters
   public class MonsterSpawner : MonoBehaviour
   {
     [SerializeField] private ParticleSystem _spawnVfx;
-    [Space(10)] 
+    [FormerlySerializedAs("_isBoss")]
+    [Space(10)]
+    [SerializeField] private bool _hasBoss;
+    [ShowIf("_hasBoss"), SerializeField] private BossHealthVisualizer _bossHealthVisualizer;  
     [SerializeField] private Room _room;
     [SerializeField] private MonsterMonitor _monitor;
     [SerializeField] private MonstersSpawnPointsStorage _spawnPointsStorage;
@@ -53,6 +59,7 @@ namespace _CodeBase.Units.Monsters
       spawnPoint.Take();
       GameObject prefab = _prefabsData.GetPrefab(spawnPoint.Type);
       Monster monsterPrefab = prefab.GetComponent<Monster>();
+
       Transform vfx = Instantiate(_spawnVfx, spawnPoint.transform).transform;
       vfx.localPosition = new Vector3(0, vfx.localPosition.y, 0);
 
@@ -65,7 +72,12 @@ namespace _CodeBase.Units.Monsters
         spawnPosition.y = monsterPrefab.SpawnOffsetY;
       
       monster.transform.localPosition = spawnPosition;
+      
+      if(monster.IsBoss)
+        _bossHealthVisualizer.RegisterBoss(monster.Health);
 
+      monster.Dead += OnMonsterDeath;
+      
       if(monster.TryGetComponent(out NavMeshAgent agent))
         agent.Warp(spawnPoint.Position.GetNavMeshSampledPosition());
 
@@ -74,6 +86,12 @@ namespace _CodeBase.Units.Monsters
           
       monster.Initialize(_room.Zone, _monitor);
       _monitor.AddMonster(monster);
+    }
+
+    private void OnMonsterDeath(Monster monster)
+    {
+      monster.Dead -= OnMonsterDeath;
+      _bossHealthVisualizer.UnRegisterBoss(monster.Health);
     }
   }
 }

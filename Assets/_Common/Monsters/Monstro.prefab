@@ -558,13 +558,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eee1bfe842d04912855226bbea8dab6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <IsBoss>k__BackingField: 1
+  <Health>k__BackingField: {fileID: 3813913331385941487}
   <HasSpawnOffsetY>k__BackingField: 0
   <SpawnOffsetY>k__BackingField: 0
   _damagedMaterial: {fileID: 2100000, guid: 95f48dcf666b8de44bc93934b9ab85c6, type: 2}
   _skinnedMeshRenderers:
   - {fileID: 6182217976482071211}
   _meshRenderers: []
-  _health: {fileID: 3813913331385941487}
   _deathVfxSpawnPoint: {fileID: 8794636039528020449}
   _deathTrail: {fileID: 2062778965914715838, guid: 891bc87faf06e4146bc1c8b74cecbb42,
     type: 3}

@@ -26,14 +26,14 @@ namespace _CodeBase.UI
         Open();
     }
 
-    protected override void Open()
+    public override void Open()
     {
       _inputService.Disable();
       _timeService.Stop();
       base.Open();
     }
 
-    protected override void Close()
+    public override void Close()
     {
       _inputService.Enable();
       base.Close();

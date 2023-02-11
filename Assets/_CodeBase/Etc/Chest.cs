@@ -4,14 +4,18 @@ using _CodeBase.Data;
 using _CodeBase.Extensions;
 using _CodeBase.HeroCode;
 using _CodeBase.ItemsDrop;
+using _CodeBase.UI;
 using DG.Tweening;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using Zenject;
 
 namespace _CodeBase.Etc
 {
   public class Chest : MonoBehaviour
   {
+    [SerializeField] private bool _withWinnerLetter;
+    [Space(10)]
     [SerializeField] private Transform _model;
     [SerializeField] private ParticleSystem _particles;
     [SerializeField] private GameObject _lid;
@@ -20,6 +24,7 @@ namespace _CodeBase.Etc
     [SerializeField] private ChestSettings _settings;
 
     private Vector3 _defaultModelScale;
+    private WinnerLetter _winnerLetter;
     private bool _used;
 
     private void Start() => _defaultModelScale = _model.localScale;
@@ -30,6 +35,8 @@ namespace _CodeBase.Etc
       _used = true;
       StartCoroutine(OpenCoroutine(hero));
     }
+
+    public void Initialize(WinnerLetter winnerLetter) => _winnerLetter = winnerLetter;
 
     private IEnumerator OpenCoroutine(Hero hero)
     {
@@ -53,7 +60,10 @@ namespace _CodeBase.Etc
       _lidRigidbody.interpolation = RigidbodyInterpolation.Interpolate;
       _lidRigidbody.AddForce(directionFromHero * _settings.LidPushForce, ForceMode.Impulse);
 
-      _itemsDropper.TryDropItem(directionFromHero);
+      if (_withWinnerLetter == false)
+        _itemsDropper.TryDropItem(directionFromHero);
+      else
+        _winnerLetter.Open();
     }
   }
 }

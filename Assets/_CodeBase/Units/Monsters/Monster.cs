@@ -22,14 +22,14 @@ namespace _CodeBase.Units.Monsters
     public bool IsDead { get; private set; }
     public TriggerListener RoomZone { get; private set; }
     
+    [field: SerializeField] public bool IsBoss { get; private set; }
+    [field: SerializeField] public Health Health { get; private set; }
     [field: SerializeField] public bool HasSpawnOffsetY { get; private set; }
     [field: ShowIf("HasSpawnOffsetY"), SerializeField] public float SpawnOffsetY { get; private set; }
     [Space(10)] 
     [SerializeField] private Material _damagedMaterial;
     [SerializeField] private List<SkinnedMeshRenderer> _skinnedMeshRenderers;
     [SerializeField] private List<MeshRenderer> _meshRenderers;
-    [Space(10)] 
-    [SerializeField] private Health _health;
 
     protected MonsterMonitor _monsterMonitor { get; private set; }
     private Tween _changeMaterialTween;
@@ -48,9 +48,8 @@ namespace _CodeBase.Units.Monsters
 
     public virtual void ReceiveDamage(int damageValue, Vector3 position)
     {
-      _health.Decrease(damageValue);
+      Health.Decrease(damageValue);
       _changeMaterialTween?.Kill();
-      MyDebug.Log($"SetMaterial", MyDebug.DebugColor.green);
       SetMaterial(_damagedMaterial);
       _changeMaterialTween = DOVirtual.DelayedCall(0.125f, ResetMaterial).SetLink(gameObject);
     }
@@ -97,8 +96,8 @@ namespace _CodeBase.Units.Monsters
       }
     }
 
-    protected void SubscribeEvents() => _health.ValueCameToZero += Die;
-    protected void UnSubscribeEvents() => _health.ValueCameToZero -= Die;
+    protected void SubscribeEvents() => Health.ValueCameToZero += Die;
+    protected void UnSubscribeEvents() => Health.ValueCameToZero -= Die;
 
     protected virtual void Die()
     {

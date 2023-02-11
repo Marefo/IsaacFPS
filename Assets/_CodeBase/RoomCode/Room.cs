@@ -5,6 +5,7 @@ using _CodeBase.HeroCode;
 using _CodeBase.Infrastructure.Services;
 using _CodeBase.Logging;
 using _CodeBase.RoomCode.Data;
+using _CodeBase.UI;
 using _CodeBase.Units.Monsters;
 using DG.Tweening;
 using Sirenix.OdinInspector;
@@ -18,6 +19,8 @@ namespace _CodeBase.RoomCode
     [field: SerializeField] public TriggerListener Zone;
     [field: Space(10)] 
     [SerializeField] private bool _hasMonsters; 
+    [SerializeField] private bool _isBossRoom; 
+    [ShowIf("_isBossRoom"), SerializeField] private BossScreen _bossScreen; 
     [ShowIf("_hasMonsters"), SerializeField] private MonsterMonitor _monsterMonitor;
     [ShowIf("_hasMonsters"), SerializeField] private MonsterSpawner _monsterSpawner;
     [ShowIf("_hasMonsters"), SerializeField] private Transform _chestSpawnPoint;
@@ -31,21 +34,32 @@ namespace _CodeBase.RoomCode
     [SerializeField] private RoomSettings _settings;
 
     private NavMeshService _navMeshService;
+    private LoadingCurtain _loadingCurtain;
+    private InputService _inputService;
+    private WinnerLetter _winnerLetter;
     private bool _cleaned;
+    private bool _isHeroInRoomZone;
 
     [Inject]
-    public void Construct(NavMeshService navMeshService)
+    public void Construct(NavMeshService navMeshService, LoadingCurtain loadingCurtain, InputService inputService,
+      WinnerLetter winnerLetter)
     {
       _navMeshService = navMeshService;
+      _loadingCurtain = loadingCurtain;
+      _inputService = inputService;
+      _winnerLetter = winnerLetter;
     }
     
     private void OnEnable()
     {
       Zone.Entered += OnZoneEnter;
       Zone.Canceled += OnZoneCancel;
-      
+
       if(_hasMonsters)
         _monsterMonitor.AllMonstersDied += OnAllMonstersDie;
+
+      if (_isBossRoom)
+        _bossScreen.Showed += OnBossScreenShow;
     }
 
     private void OnDisable()
@@ -55,23 +69,50 @@ namespace _CodeBase.RoomCode
       
       if(_hasMonsters)
         _monsterMonitor.AllMonstersDied -= OnAllMonstersDie;
+      
+      if (_isBossRoom)
+        _bossScreen.Showed -= OnBossScreenShow;
     }
 
     private void OnZoneEnter(Collider obj)
     {
-      if (obj.TryGetComponent(out Hero hero) == false) return;
+      if (_isHeroInRoomZone || obj.TryGetComponent(out Hero hero) == false) return;
+      _isHeroInRoomZone = true;
       _chandelier.SetActive(true);
       if(_hasMonsters == false || _cleaned) return;
       ChangeDoorsState(true);
       ChangeLinkedRoomsDoorsState(true);
       _navMeshService.ReBake();
-      DOVirtual.DelayedCall(_settings.SpawnDelay, () => _monsterSpawner.SpawnMonsters(_settings.SpawnAfterSmokeDelay));
+
+      if (_isBossRoom)
+      {
+        _inputService.Disable();
+        _loadingCurtain.FadeInAndOut(0.5f, _bossScreen.Show);
+      }
+      else
+        SpawnMonsters();
     }
 
     private void OnZoneCancel(Collider obj)
     {
-      if (obj.TryGetComponent(out Hero hero) == false) return;
+      if (_isHeroInRoomZone == false || obj.TryGetComponent(out Hero hero) == false) return;
       _chandelier.SetActive(false);
+      _isHeroInRoomZone = false;
+    }
+
+    private void OnBossScreenShow() => _loadingCurtain.FadeInAndOut(0.5f, OnBossFightStart);
+
+    private void OnBossFightStart()
+    {
+      _bossScreen.Hide();
+      _inputService.Enable();
+      SpawnMonsters();
+    }
+
+    private void SpawnMonsters()
+    {
+      DOVirtual.DelayedCall(_settings.SpawnDelay,
+        () => _monsterSpawner.SpawnMonsters(_settings.SpawnAfterSmokeDelay));
     }
 
     private void OnAllMonstersDie()
@@ -79,7 +120,8 @@ namespace _CodeBase.RoomCode
       _cleaned = true;
       ChangeDoorsState(false);
       ChangeLinkedRoomsDoorsState(false);
-      Instantiate(_settings.ChestPrefab, _chestSpawnPoint.position, _settings.ChestPrefab.transform.rotation);
+      Chest chest = Instantiate(_settings.ChestPrefab, _chestSpawnPoint.position, _settings.ChestPrefab.transform.rotation);
+      chest.Initialize(_winnerLetter);
     }
 
     public void ChangeLinkedRoomsDoorsState(bool enable) => _linkedRooms.ForEach(room => room.ChangeDoorsState(enable));

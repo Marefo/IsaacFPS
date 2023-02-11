@@ -82,5 +82,7 @@ MonoBehaviour:
     type: 3}
   _navMeshService: {fileID: 2466442195871857616, guid: c29d25c144a29f34bb8e1159366d7f44,
     type: 3}
+  _winnerLetter: {fileID: 3538870325709117032, guid: 928e410cd85271f40943c8c5de000163,
+    type: 3}
   _loadingCurtain: {fileID: 3840022841783557036, guid: 17e63aa25dd304040bb3c900fbb194be,
     type: 3}
