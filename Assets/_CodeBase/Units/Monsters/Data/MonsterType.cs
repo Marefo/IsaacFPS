@@ -9,5 +9,6 @@
     Hive = 4,
     Worm = 5,
     Horf = 6,
+    Monstro = 7,
   }
 }

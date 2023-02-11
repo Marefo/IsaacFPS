@@ -18,6 +18,9 @@ namespace _CodeBase.Units.Monsters
   {
     public event Action Initialized;
     public event Action<Monster> Dead;
+
+    public bool IsDead { get; private set; }
+    public TriggerListener RoomZone { get; private set; }
     
     [field: SerializeField] public bool HasSpawnOffsetY { get; private set; }
     [field: ShowIf("HasSpawnOffsetY"), SerializeField] public float SpawnOffsetY { get; private set; }
@@ -28,9 +31,6 @@ namespace _CodeBase.Units.Monsters
     [Space(10)] 
     [SerializeField] private Health _health;
 
-    public bool IsDead { get; private set; }
-    public TriggerListener RoomZone { get; private set; }
-    
     protected MonsterMonitor _monsterMonitor { get; private set; }
     private Tween _changeMaterialTween;
     private List<Material[]> _defaultSkinnedMeshMaterials;

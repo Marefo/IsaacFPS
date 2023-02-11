@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa8196d78c4649268a0204092f564fee, type: 3}
+  m_Name: MonstroSettings
+  m_EditorClassIdentifier: 
+  AttackDelay:
+    Min: 5
+    Max: 10
+  ShootOffsetZ:
+    Min: -3
+    Max: 3
+  ProjectilePickHeight: 1
+  ProjectileGravity: 30
+  JumpImpactVfxPrefab: {fileID: 1357065491893747763, guid: 5aeb5636742a5394aa15b55e11e94559,
+    type: 3}
+  ProjectilePrefab: {fileID: 7295786881039957687, guid: 376ed346e012bf14f94931809e0bcf11,
+    type: 3}
+  Grenade: {fileID: -1978816788479211978, guid: ee83f38e11f167342a9f3bb083fc015a,
+    type: 3}

@@ -4,38 +4,10 @@
     <list default="true" id="f8849ab3-d35d-492a-ab84-559b39c4dc6c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IsaacFPS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IsaacFPS/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/HeroCode/Hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/HeroCode/Hero.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Infrastructure/Services/InputService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Infrastructure/Services/InputService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/ItemsDrop/Data/DropsData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/ItemsDrop/Data/DropsData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/PickableItems/PickableHeart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/PickableItems/PickableHeart.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/HiveCode/Hive.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/HiveCode/Hive.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/ShooterCode/Grenade.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/ShooterCode/Grenade.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/Data/MonsterType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/Data/MonsterType.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/Monster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/Monster.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/WormCode/Data/WormSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/WormCode/Data/WormSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/WormCode/Worm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Units/Monsters/WormCode/Worm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Environment/Rock1 Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Environment/Rock1 Variant.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/InputSystem/InputActions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/InputSystem/InputActions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/InputSystem/InputActions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/InputSystem/InputActions.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Items/BombMonsterHealth.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Items/BombMonsterHealth.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Items/Campfire.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Items/Campfire.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Items/ChestDropsData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Items/ChestDropsData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Items/PoopDropsData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Items/PoopDropsData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Fly.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/Fly.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Fly/FlyHealth.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/Fly/FlyHealth.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Gaper.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/Gaper.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Hive.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/Hive.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Hive/Animations/Attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/Hive/Animations/Attack.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Hive/HiveHealth.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/Hive/HiveHealth.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Hive/HiveSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/Hive/HiveSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Horf.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/Horf.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Horf/HorfHealth.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/Horf/HorfHealth.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Horf/HorfSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/Horf/HorfSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Pacer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/Pacer.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Pooter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/Pooter.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Pooter/PooterHealth.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/Pooter/PooterHealth.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Worm.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/Worm.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Worm/WormHealth.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/Worm/WormHealth.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Worm/WormSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/Worm/WormSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Scenes/Bootstrap.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Scenes/Bootstrap.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/MonsterPrefabsData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/MonsterPrefabsData.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Common/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
@@ -164,6 +136,7 @@
       <workItem from="1675936067816" duration="20810000" />
       <workItem from="1675976139198" duration="6808000" />
       <workItem from="1676023715773" duration="8857000" />
+      <workItem from="1676114784516" duration="13076000" />
     </task>
     <servers />
   </component>

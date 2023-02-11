@@ -66,6 +66,7 @@ namespace _CodeBase.HeroCode
       _animator.PlayAttack();
       _health.Decrease(_contactDamageSettings.Damage);
       Vector3 knockBackDirection = Vector3.Normalize(transform.position - contactPoint);
+      knockBackDirection.y = 0.25f;
       _rigidbody.velocity = Vector3.zero;
       _rigidbody.AddForce(knockBackDirection * _contactDamageSettings.KnockBackForce, ForceMode.Impulse);
     }
