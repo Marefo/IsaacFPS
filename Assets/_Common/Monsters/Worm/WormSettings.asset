@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08f5bf79a5994a4686ce8ee8e4ad56f1, type: 3}
   m_Name: WormSettings
   m_EditorClassIdentifier: 
-  DisappearDelay: 1.125
+  DisappearDelay: 1.15
   AppearDelay:
     Min: 3.8
     Max: 4.25
-  AttackDelay: 1.125
+  AttackDelay: 1.15
   GroundAppearTime: 0.2
   GroundDisappearTime: 1.2
   BulletPrefab: {fileID: 2758664052018798143, guid: 57ab8ed884d48e046abcaa63547166d8,

@@ -49,7 +49,7 @@ namespace _CodeBase.Etc
     {
       _model.DOKill();
       _model.localScale = Vector3.one;
-      _model.DOPunchScale(Vector3.one * _settings.PunchScaleStrength, _settings.PunchScaleTime);
+      _model.DOPunchScale(Vector3.one * _settings.PunchScaleStrength, _settings.PunchScaleTime).SetLink(gameObject);
     }
     
     private void ChangeModelTo(int index)

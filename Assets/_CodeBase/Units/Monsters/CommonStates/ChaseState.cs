@@ -23,7 +23,7 @@ namespace _CodeBase.Units.Monsters.CommonStates
     public override void Exit()
     {
       base.Exit();
-      _agent.destination = _targetProvider.GetTarget().position;
+      _agent.destination = _agent.transform.position;
     }
 
     public override void Update() => Chase();

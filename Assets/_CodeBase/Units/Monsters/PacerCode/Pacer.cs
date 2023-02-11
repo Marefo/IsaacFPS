@@ -93,7 +93,7 @@ namespace _CodeBase.Units.Monsters.PacerCode
     {
       transform.DOKill();
       transform.DOJump(_targetPosition,  _settings.JumpHeight, 1, _settings.JumpDuration)
-        .SetEase(_settings.JumpEase);
+        .SetEase(_settings.JumpEase).SetLink(gameObject);
     }
 
     private void RandomPositionJump()

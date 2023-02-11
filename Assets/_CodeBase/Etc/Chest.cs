@@ -34,12 +34,13 @@ namespace _CodeBase.Etc
     private IEnumerator OpenCoroutine(Hero hero)
     {
       _model.DOShakePosition(_settings.ShakeTime, _settings.ShakeStrength, _settings.ShakeVibrato, 90, 
-        false, false);
+        false, false).SetLink(gameObject);
       
       yield return new WaitForSeconds(_settings.ShakeDuration);
       
       _model.DOKill();
-      _model.DOPunchScale(_defaultModelScale * _settings.PunchScaleStrength, _settings.PunchScaleTime, _settings.PunchScaleVibrato);
+      _model.DOPunchScale(_defaultModelScale * _settings.PunchScaleStrength, _settings.PunchScaleTime, 
+        _settings.PunchScaleVibrato).SetLink(gameObject);
       
       yield return new WaitForSeconds(_settings.PunchScaleTime);
       

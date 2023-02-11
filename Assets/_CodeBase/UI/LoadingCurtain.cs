@@ -42,7 +42,7 @@ namespace _CodeBase.UI
 			_curtain.gameObject.SetActive(true);
 
 			_fadeIn = _curtain.DOFade(1, duration)
-				.OnComplete(() => OnFadeInComplete(onComplete));
+				.OnComplete(() => OnFadeInComplete(onComplete)).SetLink(gameObject);
 		}
 
 		public void FadeOut(float duration = 1, Action onComplete = null)
@@ -52,7 +52,7 @@ namespace _CodeBase.UI
 			
 			_fadeOut = _curtain.DOFade(0, duration)
 				.OnUpdate(OnFadeOutUpdate)
-				.OnComplete(() => OnFadeOutComplete(onComplete));
+				.OnComplete(() => OnFadeOutComplete(onComplete)).SetLink(gameObject);
 		}
 
 		private void OnFadeInComplete(Action onComplete = null)

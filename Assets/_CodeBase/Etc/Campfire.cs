@@ -32,7 +32,7 @@ namespace _CodeBase.Etc
     private void PlayPunchScaleEffect()
     {
       _particles.DOKill();
-      _particles.DOPunchScale(Vector3.one * _punchScaleStrength, _punchScaleTime);
+      _particles.DOPunchScale(Vector3.one * _punchScaleStrength, _punchScaleTime).SetLink(gameObject);
     }
     
     private void OnHealthAmountChange(int currentValue)
@@ -40,7 +40,7 @@ namespace _CodeBase.Etc
       float healthPercent = Mathf.InverseLerp(0, _health.MaxValue, currentValue);
       _particles.DOKill();
       _particles.localScale = Vector3.one * healthPercent;
-      _particles.DOPunchScale(Vector3.one * _punchScaleStrength, _punchScaleTime);
+      _particles.DOPunchScale(Vector3.one * _punchScaleStrength, _punchScaleTime).SetLink(gameObject);
     }
   }
 }

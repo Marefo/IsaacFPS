@@ -42,7 +42,7 @@ namespace _CodeBase.UI
     private void PlayPunchScaleVfx()
     {
       transform.DOKill();
-      transform.DOPunchScale(Vector3.one * _settings.Punch, _settings.Duration);
+      transform.DOPunchScale(Vector3.one * _settings.Punch, _settings.Duration).SetLink(gameObject);
     }
   }
 }
