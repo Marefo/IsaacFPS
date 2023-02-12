@@ -7,12 +7,14 @@ namespace _CodeBase.UI
   {
     private InputService _inputService;
     private TimeService _timeService;
+    private AudioService _audioService;
 
     [Inject]
-    public void Construct(InputService inputService, TimeService timeService)
+    public void Construct(InputService inputService, TimeService timeService, AudioService audioService)
     {
       _inputService = inputService;
       _timeService = timeService;
+      _audioService = audioService;
     }
 
     private void OnEnable() => _inputService.MenuButtonClicked += ChangeVisibility;
@@ -20,6 +22,8 @@ namespace _CodeBase.UI
 
     public void ChangeVisibility()
     {
+      _audioService.PlaySfx(_audioService.SfxData.BookPageTurn, true);
+      
       if(IsVisible)
         Close();
       else

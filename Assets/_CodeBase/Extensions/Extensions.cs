@@ -42,7 +42,7 @@ namespace _CodeBase.Extensions
       return hit.position;
     }
     
-    public static float GetRandomValue(this Range range) => Random.Range(range.Min, range.Max + 1);
+    public static float GetRandomValue(this Range range) => Random.Range(range.Min, range.Max);
     
     public static bool AddIfNotExists<T>(this List<T> list, T value)
     {

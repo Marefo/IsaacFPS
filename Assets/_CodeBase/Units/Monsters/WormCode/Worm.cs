@@ -27,7 +27,6 @@ namespace _CodeBase.Units.Monsters.WormCode
 
     private Hero _hero;
     private bool _isHeroInRoomZone;
-    private float _defaultPositionY;
     private Collider _roomZoneCollider;
 
     private void OnEnable()
@@ -46,7 +45,6 @@ namespace _CodeBase.Units.Monsters.WormCode
 
     private void Start()
     {
-      _defaultPositionY = transform.position.y;
       CheckForHero();
       StartCoroutine(FightCoroutine());
     }
@@ -120,7 +118,11 @@ namespace _CodeBase.Units.Monsters.WormCode
       return targetPosition;
     }
 
-    private void Attack() => _animator.PlayAttack();
+    private void Attack()
+    {
+      _audioService.PlaySfx(_audioService.SfxData.WormAttack.GetRandomValue(), true);
+      _animator.PlayAttack();
+    }
 
     private void Appear()
     {
@@ -156,6 +158,7 @@ namespace _CodeBase.Units.Monsters.WormCode
     
     protected override void Die()
     {
+      _audioService.PlaySfx(_audioService.SfxData.WormDeath.GetRandomValue(), true);
       Instantiate(_deathTrail, _deathVfxPoint.position, Quaternion.identity);
       Instantiate(_deathVfx, _deathVfxPoint.position, Quaternion.identity);
       base.Die();

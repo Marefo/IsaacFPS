@@ -30,6 +30,7 @@ namespace _CodeBase.Units.Monsters.PacerCode
     [SerializeField] private Transform _landVfxSpawnPoint;
     [SerializeField] private ParticleSystem _landVfx;
     [Space(10)] 
+    [SerializeField] private AudioSource _audioSource;
     [SerializeField] private PacerAnimator _pacerAnimator;
     [SerializeField] private UnitAnimator _animator;
     [Space(10)] 
@@ -91,6 +92,7 @@ namespace _CodeBase.Units.Monsters.PacerCode
 
     private void OnJumpFrame()
     {
+      _audioService.PlaySfx(_audioSource, _audioService.SfxData.PacerJump.GetRandomValue(), true);
       transform.DOKill();
       transform.DOJump(_targetPosition,  _settings.JumpHeight, 1, _settings.JumpDuration)
         .SetEase(_settings.JumpEase).SetLink(gameObject);
@@ -111,6 +113,7 @@ namespace _CodeBase.Units.Monsters.PacerCode
       _isJumping = false;
       _startJumpTime = float.MaxValue;
       _animator.PlayLand();
+      _audioService.PlaySfx(_audioSource, _audioService.SfxData.PacerLand.GetRandomValue(), true);
       _damageZone.gameObject.SetActive(true);
     }
 
@@ -150,6 +153,7 @@ namespace _CodeBase.Units.Monsters.PacerCode
     
     protected override void Die()
     {
+      _audioService.PlaySfx(_audioSource, _audioService.SfxData.PacerDeath.GetRandomValue(), true);
       Instantiate(_deathTrail, _deathVfxSpawnPoint.position, Quaternion.identity);
       ParticleSystem vfx = Instantiate(_deathVfx, _deathVfxSpawnPoint.position, Quaternion.identity);
       vfx.transform.localScale = Vector3.one * 0.8f;

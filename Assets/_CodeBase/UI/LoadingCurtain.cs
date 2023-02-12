@@ -47,7 +47,6 @@ namespace _CodeBase.UI
 		
 		public void FadeIn(float duration = 1, Action onComplete = null)
 		{
-			MyDebug.Log($"FadeIn", MyDebug.DebugColor.yellow);
 			_fadeOut?.Kill();
 			_curtain.alpha = 0;
 			_curtain.gameObject.SetActive(true);
@@ -58,7 +57,6 @@ namespace _CodeBase.UI
 
 		public void FadeOut(float duration = 1, Action onComplete = null)
 		{
-			MyDebug.Log($"FadeOut", MyDebug.DebugColor.cyan);
 			_fadeIn?.Kill();
 			_curtain.alpha = 1;
 			

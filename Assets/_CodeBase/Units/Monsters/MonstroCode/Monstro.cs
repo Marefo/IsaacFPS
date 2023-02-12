@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using _CodeBase.Etc;
 using _CodeBase.Extensions;
@@ -48,6 +49,8 @@ namespace _CodeBase.Units.Monsters.MonstroCode
       _jumpImpactZone.Canceled -= OnJumpImpactZoneCancel;
     }
 
+    private void Start() => StartCoroutine(RoarCoroutine());
+
     private void Update()
     {
       if(_monsterStateMachine.Hero == null) return;
@@ -55,7 +58,11 @@ namespace _CodeBase.Units.Monsters.MonstroCode
       TryApplyJumpImpact();
     }
 
-    public void Attack() => _animator.PlayAttack();
+    public void Attack()
+    {
+      _audioService.PlaySfx(_audioService.SfxData.MonstroAttack.GetRandomValue(), true);
+      _animator.PlayAttack();
+    }
 
     private void OnJumpImpactZoneEnter(Collider obj)
     {
@@ -71,12 +78,22 @@ namespace _CodeBase.Units.Monsters.MonstroCode
 
     private void OnJumpImpactStart()
     {
+      _audioService.PlaySfx(_audioService.SfxData.MonstroLand.GetRandomValue(), true, 0.7f);
       Instantiate(_settings.JumpImpactVfxPrefab, _jumpImpactPoint.position, Quaternion.identity);
       _jumpImpact = true;
     }
 
     private void OnJumpImpactFinish() => _jumpImpact = false;
 
+
+    private IEnumerator RoarCoroutine()
+    {
+      while (true)
+      {
+        _audioService.PlaySfx(_audioService.SfxData.MonstroRoar.GetRandomValue(), true, 0.8f);
+        yield return new WaitForSeconds(_settings.RoarDelay.GetRandomValue());
+      }
+    }
 
     private void TryApplyJumpImpact()
     {
@@ -133,6 +150,7 @@ namespace _CodeBase.Units.Monsters.MonstroCode
     
     protected override void Die()
     {
+      _audioService.PlaySfx(_audioService.SfxData.MonstroDeath.GetRandomValue(), true);
       Instantiate(_deathTrail, _deathVfxSpawnPoint.position, Quaternion.identity);
       base.Die();
       Destroy(gameObject);

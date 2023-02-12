@@ -15,7 +15,9 @@ namespace _CodeBase.HeroCode
   public class HeroShooter : MonoBehaviour
   {
     public event Action<int> BombsAmountChanged;
-    
+
+    public bool IsThrowingGrenade { get; private set; }
+
     [SerializeField] private Transform _camera;
     [SerializeField] private Transform _shootPoint;
     [SerializeField] private Transform _throwPoint;
@@ -108,6 +110,7 @@ namespace _CodeBase.HeroCode
       
       _currentGrenade = null;
       _canThrowGrenade = true;
+      IsThrowingGrenade = false;
     }
 
     private void TryThrowGrenade()
@@ -118,6 +121,7 @@ namespace _CodeBase.HeroCode
 
     private void Throw()
     {
+      IsThrowingGrenade = true;
       _canThrowGrenade = false;
       _animator.PlayThrow();
       _lastShootTime = Time.time;

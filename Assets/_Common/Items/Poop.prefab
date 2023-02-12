@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 480842446953696528}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HalfPoop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 934465821066298359}
   - component: {fileID: 776488748310439223}
   - component: {fileID: 145662738405553649}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Torus.009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 643755234964283339}
   - component: {fileID: 2705504938258415729}
   - component: {fileID: 3615158780411494757}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Torus.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 5048316701510324759}
   - component: {fileID: 7413270894762443755}
   - component: {fileID: 32248430334111448}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Torus.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -296,7 +296,7 @@ GameObject:
   - component: {fileID: 7654034919203342919}
   - component: {fileID: 5581004232849344909}
   - component: {fileID: 3774812526501697808}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Torus.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -379,7 +379,7 @@ GameObject:
   - component: {fileID: 428067418196219908}
   - component: {fileID: 8235782491927316925}
   - component: {fileID: 2993994255617733768}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Torus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -460,7 +460,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4310796143185721090}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -497,7 +497,7 @@ GameObject:
   - component: {fileID: 4310796143271462675}
   - component: {fileID: 4310796143271462674}
   - component: {fileID: 4310796143271462673}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Poop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -518,6 +518,7 @@ Transform:
   m_Children:
   - {fileID: 4310796143185721090}
   - {fileID: 4310796144310838316}
+  - {fileID: 5361696235953943864}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -551,6 +552,7 @@ MonoBehaviour:
   _collider: {fileID: 4310796143271462673}
   _model: {fileID: 4310796143185721090}
   _destroyVfxPoint: {fileID: 4310796144310838316}
+  _audioSource: {fileID: 3567739216838074675}
   _models:
   - {fileID: 4689105810037587728}
   - {fileID: 1001939887641499562}
@@ -578,7 +580,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4310796144310838316}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DestroyVfxPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -609,7 +611,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5357273990550447530}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FullPoop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -646,7 +648,7 @@ GameObject:
   - component: {fileID: 856417962555695183}
   - component: {fileID: 2915567379781562196}
   - component: {fileID: 2310252296902980018}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Torus.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -729,7 +731,7 @@ GameObject:
   - component: {fileID: 2792028429876814452}
   - component: {fileID: 1114717489446274279}
   - component: {fileID: 6901621319740247624}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sphere.009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -812,7 +814,7 @@ GameObject:
   - component: {fileID: 8869572015653215770}
   - component: {fileID: 1856164328760645793}
   - component: {fileID: 4495297710849462794}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Torus.007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -895,7 +897,7 @@ GameObject:
   - component: {fileID: 4539749776424782972}
   - component: {fileID: 4589124385394332208}
   - component: {fileID: 7024828736310932616}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Torus.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -978,7 +980,7 @@ GameObject:
   - component: {fileID: 3111668867122271119}
   - component: {fileID: 3411905790875351366}
   - component: {fileID: 1655715107845170627}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Torus.010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1061,7 +1063,7 @@ GameObject:
   - component: {fileID: 390174367606106313}
   - component: {fileID: 508625018064186692}
   - component: {fileID: 4292357171302624089}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Torus.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1133,6 +1135,134 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &7374024549165664264
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5361696235953943864}
+  - component: {fileID: 3567739216838074675}
+  m_Layer: 6
+  m_Name: AudioZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5361696235953943864
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7374024549165664264}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.75, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4310796143271462672}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &3567739216838074675
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7374024549165664264}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 3
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &8617507239270277121
 GameObject:
   m_ObjectHideFlags: 0
@@ -1142,7 +1272,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8997164569063307963}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ThirdOfPoop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1179,7 +1309,7 @@ GameObject:
   - component: {fileID: 6813145622846209872}
   - component: {fileID: 3419550104553232579}
   - component: {fileID: 8822679057671189082}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sphere.007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1262,7 +1392,7 @@ GameObject:
   - component: {fileID: 3245230195107792762}
   - component: {fileID: 264103067694475510}
   - component: {fileID: 7870129033550899674}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sphere.008
   m_TagString: Untagged
   m_Icon: {fileID: 0}

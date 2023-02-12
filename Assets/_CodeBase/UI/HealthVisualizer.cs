@@ -69,14 +69,14 @@ namespace _CodeBase.UI
         if (decrease)
         {
           float affect = difference >= _heartSettings.HeartValue ? _heartSettings.HeartValue : difference;
-          float newDifference = Mathf.Clamp(difference - currentHeart.Value, 0, _health.MaxValue);
+          float newDifference = Mathf.Clamp(difference - affect, 0, _health.MaxValue);
           currentHeart.ChangeValue(currentHeart.Value - affect);
           difference = newDifference;
         }
         else
         {
           float affect = difference >= _heartSettings.HeartValue ? _heartSettings.HeartValue : difference;
-          float newDifference = Mathf.Clamp(difference - currentHeart.Value, 0, _health.MaxValue);
+          float newDifference = Mathf.Clamp(difference - affect, 0, _health.MaxValue);
           currentHeart.ChangeValue(currentHeart.Value + affect);
           difference = newDifference;
         }

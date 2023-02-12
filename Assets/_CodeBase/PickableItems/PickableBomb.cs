@@ -6,6 +6,7 @@ namespace _CodeBase.PickableItems
   {
     protected override void OnCollisionWithHero(Hero hero)
     {
+      _audioService.PlaySfx(_audioService.SfxData.PickUp, true);
       HeroShooter shooter = hero.GetComponent<HeroShooter>();
       shooter.IncreaseBombAmount();
       SetAsUsed();

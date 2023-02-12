@@ -3,6 +3,7 @@ using System.Collections;
 using _CodeBase.CameraCode;
 using _CodeBase.CameraCode.Data;
 using _CodeBase.Data;
+using _CodeBase.Extensions;
 using _CodeBase.IndicatorCode;
 using _CodeBase.Infrastructure.Services;
 using _CodeBase.Interfaces;
@@ -26,6 +27,7 @@ namespace _CodeBase.HeroCode
     [SerializeField] private GameObject _bloodVfxPrefab;
     [field: Space(10)]
     [field: SerializeField] public Transform ShootTarget { get; private set; }
+    [SerializeField] private HeroShooter _heroShooter;
     [SerializeField] private CameraShaker _cameraShaker;
     [SerializeField] private Volume _volume;
     [SerializeField] private Health _health;
@@ -38,12 +40,14 @@ namespace _CodeBase.HeroCode
     private Vignette _vignette;
     private Tween _resetVignetteColorTween;
     private SceneService _sceneService;
+    private AudioService _audioService;
     private LoadingCurtain _loadingCurtain;
 
     [Inject]
-    public void Construct(SceneService sceneService, LoadingCurtain loadingCurtain)
+    public void Construct(SceneService sceneService, AudioService audioService, LoadingCurtain loadingCurtain)
     {
       _sceneService = sceneService;
+      _audioService = audioService;
       _loadingCurtain = loadingCurtain;
     }
 
@@ -63,18 +67,25 @@ namespace _CodeBase.HeroCode
       Instantiate(_bloodVfxPrefab, _bloodVfxPoint.position, transform.rotation);
       PlayDamagedScreenEffect();
       _cameraShaker.Shake(_shakeSettings);
-      _animator.PlayAttack();
+      
+      if(_heroShooter.IsThrowingGrenade == false)
+        _animator.PlayAttack();
+      
       _health.Decrease(_contactDamageSettings.Damage);
       Vector3 knockBackDirection = Vector3.Normalize(transform.position - contactPoint);
       knockBackDirection.y = 0.25f;
       _rigidbody.velocity = Vector3.zero;
       _rigidbody.AddForce(knockBackDirection * _contactDamageSettings.KnockBackForce, ForceMode.Impulse);
+      
+      if(_health.IsValueZero == false)
+        _audioService.PlaySfx(_audioService.SfxData.HeroDamage.GetRandomValue(), true);
     }
 
-    private void OnValueBecomeZero() => DOVirtual.DelayedCall(_dieDelay, Die);
+    private void OnValueBecomeZero() => DOVirtual.DelayedCall(_dieDelay, Die).SetLink(gameObject);
 
     private void Die()
     {
+      _audioService.PlaySfx(_audioService.SfxData.HeroDeath.GetRandomValue());
       _resetVignetteColorTween?.Kill();
       StopAllCoroutines();
       StartCoroutine(CollapseVignetteCoroutine());
@@ -95,7 +106,7 @@ namespace _CodeBase.HeroCode
       _vignette.color.value = Color.black;
       
       StartCoroutine(ChangeVignetteColorCoroutine(Color.red, _shakeSettings.Duration / 2.1f));
-      _resetVignetteColorTween = DOVirtual.DelayedCall(_shakeSettings.Duration / 2, ResetVignetteColor);
+      _resetVignetteColorTween = DOVirtual.DelayedCall(_shakeSettings.Duration / 2, ResetVignetteColor).SetLink(gameObject);
     }
 
     private void ResetVignetteColor()

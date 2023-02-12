@@ -218,8 +218,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 24, y: 5, z: 24}
-  m_Center: {x: 0, y: 2.55, z: 0}
+  m_Size: {x: 24, y: 28.693481, z: 24}
+  m_Center: {x: 0, y: 14.39674, z: 0}
 --- !u!114 &1288395993139384153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -429,6 +429,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Zone: {fileID: 1288395993139384153}
   _hasMonsters: 1
+  _isBossRoom: 0
+  _bossScreen: {fileID: 0}
   _monsterMonitor: {fileID: 1288395993527672734}
   _monsterSpawner: {fileID: 1288395993527672735}
   _chestSpawnPoint: {fileID: 1288395993629259462}
@@ -452,6 +454,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spawnVfx: {fileID: 7935822871881947554, guid: f5baf434e4474904faf091ee92cf4e76,
     type: 3}
+  _hasBoss: 0
+  _bossHealthVisualizer: {fileID: 0}
   _room: {fileID: 1288395993527672736}
   _monitor: {fileID: 1288395993527672734}
   _spawnPointsStorage: {fileID: 1288395992914639491}

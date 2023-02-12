@@ -48,7 +48,11 @@ namespace _CodeBase.Units.Monsters.HiveCode
       _hiveAnimator.AttackFramePlayed -= OnAttackFrame;
     }
 
-    private void Start() => CheckForHero();
+    private void Start()
+    {
+      CheckForHero();
+      StartCoroutine(SoundsCoroutine());
+    }
 
     private void Update()
     {
@@ -87,6 +91,15 @@ namespace _CodeBase.Units.Monsters.HiveCode
         StopCoroutine(_spawnFliesCoroutine);
     }
 
+    private IEnumerator SoundsCoroutine()
+    {
+      while (true)
+      {
+        _audioService.PlaySfx(_audioService.SfxData.HiveSounds.GetRandomValue(), true, 0.6f);
+        yield return new WaitForSeconds(_settings.SoundsDelay.GetRandomValue());
+      }
+    }
+
     private void CheckForHero()
     {
       Collider heroCollider = RoomZone.GetHeroFromZone();
@@ -122,6 +135,7 @@ namespace _CodeBase.Units.Monsters.HiveCode
       while (true)
       {
         yield return new WaitForSeconds(_settings.SpawnDelay);
+        _audioService.PlaySfx(_audioService.SfxData.HiveAttack.GetRandomValue(), true, 0.45f);
         _animator.PlayAttack();
       }
     }
@@ -140,12 +154,13 @@ namespace _CodeBase.Units.Monsters.HiveCode
     private void SpawnMonster(Monster prefab, List<Transform> spawnPoints)
     {
       Monster monster = Instantiate(prefab, spawnPoints.GetRandomValue().position, Quaternion.identity);
-      monster.Initialize(RoomZone, _monsterMonitor);
+      monster.Initialize(RoomZone, _monsterMonitor, _audioService);
       _monsterMonitor.AddMonster(monster);
     }
 
     protected override void Die()
     {
+      _audioService.PlaySfx(_audioService.SfxData.HiveDeath.GetRandomValue(), true);
       Instantiate(_deathTrail, _deathVfxPoint.position, Quaternion.identity);
       Instantiate(_deathVfx, _deathVfxPoint.position, Quaternion.identity);
       base.Die();

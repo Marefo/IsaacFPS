@@ -1,10 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using _CodeBase.Data;
+using _CodeBase.Infrastructure.Services;
 using _CodeBase.Interfaces;
 using _CodeBase.ItemsDrop;
 using DG.Tweening;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using Zenject;
 
 namespace _CodeBase.Etc
 {
@@ -14,12 +17,22 @@ namespace _CodeBase.Etc
     [SerializeField] private Collider _collider;
     [SerializeField] private Transform _model;
     [SerializeField] private Transform _destroyVfxPoint;
+    [SerializeField] private AudioSource _audioSource;
     [Space(10)]
     [SerializeField] private List<GameObject> _models;
     [Space(10)]
     [SerializeField] private PoopSettings _settings;
 
+    private AudioService _audioService;
     private int _hitNumber;
+
+    [Inject]
+    public void Construct(AudioService audioService)
+    {
+      _audioService = audioService;
+    }
+
+    private void Start() => _itemsDropper.Initialize(_audioService);
 
     public void ReceiveDamage(int damageValue, Vector3 position)
     {
@@ -41,6 +54,11 @@ namespace _CodeBase.Etc
       Vector3 spawnPosition = position;
       spawnPosition.z = _destroyVfxPoint.position.z;
       Instantiate(_settings.DestroyVfx, spawnPosition, _settings.DestroyVfx.transform.rotation);
+      
+      DOVirtual.DelayedCall(_settings.PunchScaleTime / 2, 
+        () => _audioService.PlaySfx(_audioSource, _audioService.SfxData.Plop))
+        .SetLink(gameObject);
+      
       Destroy(gameObject, _settings.PunchScaleTime);
     }
 

@@ -10,5 +10,6 @@ namespace _CodeBase.Units.Monsters.GaperCode.Data
     public float AttackCooldown;
     public Range Acceleration;
     public Range MoveSpeed;
+    public Range SfxDelay;
   }
 }

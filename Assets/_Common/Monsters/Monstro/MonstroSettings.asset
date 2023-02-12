@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa8196d78c4649268a0204092f564fee, type: 3}
   m_Name: MonstroSettings
   m_EditorClassIdentifier: 
+  RoarDelay:
+    Min: 5
+    Max: 8
   AttackDelay:
     Min: 5
     Max: 10

@@ -103,6 +103,7 @@ namespace _CodeBase.Units.Monsters.HorfCode
     
     private void Attack()
     {
+      _audioService.PlaySfx(_audioService.SfxData.HorfAttack.GetRandomValue(), true);
       _lastAttackTime = Time.time;
       _shooter.Shoot(_settings.BulletPrefab, _shootPoint, _hero.ShootTarget, _settings.BulletSettings);
       DOVirtual.DelayedCall(1, PlayShake).SetLink(gameObject);
@@ -118,6 +119,7 @@ namespace _CodeBase.Units.Monsters.HorfCode
     
     protected override void Die()
     {
+      _audioService.PlaySfx(_audioService.SfxData.HorfDeath.GetRandomValue(), true);
       Instantiate(_deathTrail, _deathVfxPoint.position, Quaternion.identity);
       Instantiate(_deathVfx, _deathVfxPoint.position, Quaternion.identity);
       base.Die();

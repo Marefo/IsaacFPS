@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpawnDelay: 0.25
   SpawnAfterSmokeDelay: 0.15
-  ChestPrefab: {fileID: 5448322347203627516, guid: 7fbede272ef81114c8aa79007b894875,
+  ChestPrefab: {fileID: 7480461645159795317, guid: 44263caff9642b34b98e04dc78c67132,
     type: 3}

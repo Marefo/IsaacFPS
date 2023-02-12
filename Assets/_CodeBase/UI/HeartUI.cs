@@ -1,4 +1,5 @@
-﻿using _CodeBase.UI.Data;
+﻿using _CodeBase.Logging;
+using _CodeBase.UI.Data;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Serialization;

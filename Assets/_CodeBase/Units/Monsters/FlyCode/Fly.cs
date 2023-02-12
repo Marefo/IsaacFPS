@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using _CodeBase.Extensions;
+using UnityEngine;
 
 namespace _CodeBase.Units.Monsters.FlyCode
 {
@@ -13,6 +14,7 @@ namespace _CodeBase.Units.Monsters.FlyCode
 
     protected override void Die()
     {
+      _audioService.PlaySfx(_audioService.SfxData.FlyDeath.GetRandomValue(), true, 0.5f);
       Instantiate(_deathTrail, _deathVfxPoint.position, Quaternion.identity);
       Instantiate(_deathVfx, _deathVfxPoint.position, Quaternion.identity);
       base.Die();

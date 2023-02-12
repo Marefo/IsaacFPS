@@ -7,6 +7,8 @@ namespace _CodeBase.Units.Monsters.MonstroCode.Data
   [CreateAssetMenu(fileName = "MonstroSettings", menuName = "Settings/Monsters/Monstro", order = 0)]
   public class MonstroSettings : ScriptableObject
   {
+    public Range RoarDelay;
+    [Space(10)]
     public Range AttackDelay;
     [Space(10)]
     public Range ShootOffsetZ;

@@ -1,5 +1,6 @@
 ﻿using System;
 using _CodeBase.Data;
+using _CodeBase.Extensions;
 using UnityEngine;
 
 namespace _CodeBase.Units.Monsters.PooterCode
@@ -25,6 +26,7 @@ namespace _CodeBase.Units.Monsters.PooterCode
 
     protected override void Die()
     {
+      _audioService.PlaySfx(_audioService.SfxData.PooterDeath.GetRandomValue());
       Instantiate(_deathTrail, _deathVfxPoint.position, Quaternion.identity);
       Instantiate(_deathVfx, _deathVfxPoint.position, Quaternion.identity);
       base.Die();

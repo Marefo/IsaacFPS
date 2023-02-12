@@ -22,6 +22,7 @@ namespace _CodeBase.PickableItems
       
       if(_used || health.CurrentValue == health.MaxValue) return;
 
+      _audioService.PlaySfx(_audioService.SfxData.PickUp, true);
       SetAsUsed();
       health.Increase(1);
       SetAsUsed();

@@ -3,7 +3,9 @@ using System.Collections;
 using _CodeBase.Data;
 using _CodeBase.Extensions;
 using _CodeBase.HeroCode;
+using _CodeBase.Infrastructure.Services;
 using _CodeBase.ItemsDrop;
+using _CodeBase.Logging;
 using _CodeBase.UI;
 using DG.Tweening;
 using Sirenix.OdinInspector;
@@ -19,13 +21,24 @@ namespace _CodeBase.Etc
     [SerializeField] private Transform _model;
     [SerializeField] private ParticleSystem _particles;
     [SerializeField] private GameObject _lid;
+    [SerializeField] private GroundChecker _groundChecker;
     [SerializeField] private ItemsDropper _itemsDropper;
     [Space(10)]
     [SerializeField] private ChestSettings _settings;
 
+    private AudioService _audioService;
     private Vector3 _defaultModelScale;
     private WinnerLetter _winnerLetter;
     private bool _used;
+
+    [Inject]
+    public void Construct(WinnerLetter winnerLetter, AudioService audioService)
+    {
+      Initialize(winnerLetter, audioService);
+    }
+    
+    private void OnEnable() => _groundChecker.Landed += OnLand;
+    private void OnDisable() => _groundChecker.Landed -= OnLand;
 
     private void Start() => _defaultModelScale = _model.localScale;
 
@@ -36,7 +49,18 @@ namespace _CodeBase.Etc
       StartCoroutine(OpenCoroutine(hero));
     }
 
-    public void Initialize(WinnerLetter winnerLetter) => _winnerLetter = winnerLetter;
+    private void OnLand(float velocityY)
+    {
+      float volume = Mathf.InverseLerp(0, 10, Mathf.Abs(velocityY));
+      _audioService.PlaySfx(_audioService.SfxData.ChestLand, true, volume);
+    }
+
+    public void Initialize(WinnerLetter winnerLetter, AudioService audioService)
+    {
+      _winnerLetter = winnerLetter;
+      _audioService = audioService;
+      _itemsDropper.Initialize(_audioService);
+    }
 
     private IEnumerator OpenCoroutine(Hero hero)
     {
@@ -48,6 +72,7 @@ namespace _CodeBase.Etc
       _model.DOKill();
       _model.DOPunchScale(_defaultModelScale * _settings.PunchScaleStrength, _settings.PunchScaleTime, 
         _settings.PunchScaleVibrato).SetLink(gameObject);
+      _audioService.PlaySfx(_audioService.SfxData.ChestOpen);
       
       yield return new WaitForSeconds(_settings.PunchScaleTime);
       

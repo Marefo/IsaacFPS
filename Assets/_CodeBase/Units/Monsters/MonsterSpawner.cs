@@ -28,13 +28,15 @@ namespace _CodeBase.Units.Monsters
     [SerializeField] private MonsterPrefabsData _prefabsData;
 
     private NavMeshService _navMeshService;
+    private AudioService _audioService;
     private int _spawnedChasers;
     private float _spawnAfterSmokeDelay;
 
     [Inject]
-    public void Construct(NavMeshService navMeshService)
+    public void Construct(NavMeshService navMeshService, AudioService audioService)
     {
       _navMeshService = navMeshService;
+      _audioService = audioService;
     }
     
     public void SpawnMonsters(float spawnAfterSmokeDelay)
@@ -72,11 +74,12 @@ namespace _CodeBase.Units.Monsters
         spawnPosition.y = monsterPrefab.SpawnOffsetY;
       
       monster.transform.localPosition = spawnPosition;
-      
-      if(monster.IsBoss)
-        _bossHealthVisualizer.RegisterBoss(monster.Health);
 
-      monster.Dead += OnMonsterDeath;
+      if (monster.IsBoss)
+      {
+        _bossHealthVisualizer.RegisterBoss(monster.Health);
+        monster.Dead += OnMonsterDeath;
+      }
       
       if(monster.TryGetComponent(out NavMeshAgent agent))
         agent.Warp(spawnPoint.Position.GetNavMeshSampledPosition());
@@ -84,7 +87,7 @@ namespace _CodeBase.Units.Monsters
       if (spawnPoint.HasTargetRotation)
         monster.transform.localRotation = Quaternion.Euler(spawnPoint.TargetRotation);
           
-      monster.Initialize(_room.Zone, _monitor);
+      monster.Initialize(_room.Zone, _monitor, _audioService);
       _monitor.AddMonster(monster);
     }
 

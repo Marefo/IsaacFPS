@@ -1,4 +1,5 @@
 ﻿using System;
+using _CodeBase.Logging;
 using UnityEngine;
 
 namespace _CodeBase.IndicatorCode

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5303784436901496469}
   - component: {fileID: 9094184151376808240}
   - component: {fileID: 6472234534617071098}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,6 +151,11 @@ PrefabInstance:
       value: Rock1 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8943114468871378382, guid: 8e74607f25e1ea04a8b5db2bc8879631,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8943114469077855011, guid: 8e74607f25e1ea04a8b5db2bc8879631,
         type: 3}
       propertyPath: m_Layer
       value: 6

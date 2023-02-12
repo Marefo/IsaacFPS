@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 855e748fc2374d319dd24ad62b3ab3b4, type: 3}
   m_Name: HiveSettings
   m_EditorClassIdentifier: 
-  SpawnDelay: 3
+  SoundsDelay:
+    Min: 3
+    Max: 7
+  SpawnDelay: 4
   EscapeDistance: 8
   PooterPrefab: {fileID: 3889967501242644347, guid: bc09e3cb4066af146af1ee5243fa774e,
     type: 3}

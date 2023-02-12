@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections;
+using System.Linq;
 using _CodeBase.Etc;
 using _CodeBase.Extensions;
 using _CodeBase.HeroCode;
@@ -27,6 +28,7 @@ namespace _CodeBase.Units.Monsters.GaperCode
 
     private bool _isAttacking;
     private bool _attacked;
+    private bool _isFirstSound = true;
     
     private void OnEnable()
     {
@@ -42,10 +44,28 @@ namespace _CodeBase.Units.Monsters.GaperCode
       _gaperAnimator.AttackFramePlayed -= OnAttackFrame;
     }
 
-    private void Start() => SetUpSpeed();
+    private void Start()
+    {
+      SetUpSpeed();
+      StartCoroutine(SfxCoroutine());
+    }
 
     private void Update() => UpdateRunAnimationState();
 
+    private IEnumerator SfxCoroutine()
+    {
+      while (true)
+      {
+        if (_isFirstSound || Health.IsValueZero == false)
+        {
+          _isFirstSound = false;
+          _audioService.PlaySfx(_audioService.SfxData.GaperSounds.GetRandomValue(), true, 0.6f);
+        }
+
+        yield return new WaitForSeconds(_settings.SfxDelay.GetRandomValue());
+      }
+    }
+    
     public void Attack()
     {
       _isAttacking = true;
@@ -90,12 +110,13 @@ namespace _CodeBase.Units.Monsters.GaperCode
     
     protected override void Die()
     {
+      _audioService.PlaySfx(_audioService.SfxData.GaperDeath.GetRandomValue(), true);
       Instantiate(_deathTrail, _deathVfxSpawnPoint.position, Quaternion.identity);
       Instantiate(_deathVfx, _deathVfxSpawnPoint.position, Quaternion.identity);
       Vector3 spawnPosition = transform.position;
       spawnPosition.y += _pacerPrefab.SpawnOffsetY;
       Pacer pacer = Instantiate(_pacerPrefab, spawnPosition, Quaternion.identity);
-      pacer.Initialize(RoomZone, _monsterMonitor);
+      pacer.Initialize(RoomZone, _monsterMonitor, _audioService);
       _monsterMonitor.AddMonster(pacer);
       base.Die();
       Destroy(gameObject);

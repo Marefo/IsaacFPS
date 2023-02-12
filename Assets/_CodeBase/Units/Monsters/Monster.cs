@@ -3,14 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using _CodeBase.Etc;
 using _CodeBase.IndicatorCode;
+using _CodeBase.Infrastructure.Services;
 using _CodeBase.Interfaces;
-using _CodeBase.Logging;
 using DG.Tweening;
 using Sirenix.OdinInspector;
-using Sirenix.Utilities;
 using UnityEngine;
-using UnityEngine.AI;
-using UnityEngine.Serialization;
 
 namespace _CodeBase.Units.Monsters
 {
@@ -32,17 +29,19 @@ namespace _CodeBase.Units.Monsters
     [SerializeField] private List<MeshRenderer> _meshRenderers;
 
     protected MonsterMonitor _monsterMonitor { get; private set; }
+    protected AudioService _audioService { get; private set; }
     private Tween _changeMaterialTween;
     private List<Material[]> _defaultSkinnedMeshMaterials;
     private List<Material[]> _defaultMeshMaterials;
 
-    public void Initialize(TriggerListener roomZone, MonsterMonitor monsterMonitor)
+    public void Initialize(TriggerListener roomZone, MonsterMonitor monsterMonitor, AudioService audioService)
     {
       _defaultSkinnedMeshMaterials = _skinnedMeshRenderers.Select(mesh => mesh.materials).ToList();
       _defaultMeshMaterials = _meshRenderers.Select(mesh => mesh.materials).ToList();
       
       RoomZone = roomZone;
       _monsterMonitor = monsterMonitor;
+      _audioService = audioService;
       Initialized?.Invoke();
     }
 

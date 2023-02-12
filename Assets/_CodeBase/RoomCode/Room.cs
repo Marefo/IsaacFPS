@@ -36,17 +36,19 @@ namespace _CodeBase.RoomCode
     private NavMeshService _navMeshService;
     private LoadingCurtain _loadingCurtain;
     private InputService _inputService;
+    private AudioService _audioService;
     private WinnerLetter _winnerLetter;
     private bool _cleaned;
     private bool _isHeroInRoomZone;
 
     [Inject]
     public void Construct(NavMeshService navMeshService, LoadingCurtain loadingCurtain, InputService inputService,
-      WinnerLetter winnerLetter)
+      AudioService audioService, WinnerLetter winnerLetter)
     {
       _navMeshService = navMeshService;
       _loadingCurtain = loadingCurtain;
       _inputService = inputService;
+      _audioService = audioService;
       _winnerLetter = winnerLetter;
     }
     
@@ -87,10 +89,14 @@ namespace _CodeBase.RoomCode
       if (_isBossRoom)
       {
         _inputService.Disable();
+        _audioService.ChangeMusicTo(_audioService.MusicData.BossShow);
         _loadingCurtain.FadeInAndOut(0.5f, _bossScreen.Show);
       }
       else
+      {
+        _audioService.PlaySfx(_audioService.SfxData.LockDoors);
         SpawnMonsters();
+      }
     }
 
     private void OnZoneCancel(Collider obj)
@@ -104,6 +110,8 @@ namespace _CodeBase.RoomCode
 
     private void OnBossFightStart()
     {
+      _audioService.ChangeMusicTo(_audioService.MusicData.BossFight);
+      _audioService.PlaySfx(_audioService.SfxData.BossLockDoors);
       _bossScreen.Hide();
       _inputService.Enable();
       SpawnMonsters();
@@ -112,16 +120,17 @@ namespace _CodeBase.RoomCode
     private void SpawnMonsters()
     {
       DOVirtual.DelayedCall(_settings.SpawnDelay,
-        () => _monsterSpawner.SpawnMonsters(_settings.SpawnAfterSmokeDelay));
+        () => _monsterSpawner.SpawnMonsters(_settings.SpawnAfterSmokeDelay)).SetLink(gameObject);
     }
 
     private void OnAllMonstersDie()
     {
+      _audioService.PlaySfx(_audioService.SfxData.UnLockDoors);
       _cleaned = true;
       ChangeDoorsState(false);
       ChangeLinkedRoomsDoorsState(false);
       Chest chest = Instantiate(_settings.ChestPrefab, _chestSpawnPoint.position, _settings.ChestPrefab.transform.rotation);
-      chest.Initialize(_winnerLetter);
+      chest.Initialize(_winnerLetter, _audioService);
     }
 
     public void ChangeLinkedRoomsDoorsState(bool enable) => _linkedRooms.ForEach(room => room.ChangeDoorsState(enable));
