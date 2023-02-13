@@ -126,6 +126,10 @@ namespace _CodeBase.RoomCode
     private void OnAllMonstersDie()
     {
       _audioService.PlaySfx(_audioService.SfxData.UnLockDoors);
+
+      if (_isBossRoom)
+        _audioService.ChangeMusicTo(_audioService.MusicData.Main);
+      
       _cleaned = true;
       ChangeDoorsState(false);
       ChangeLinkedRoomsDoorsState(false);
