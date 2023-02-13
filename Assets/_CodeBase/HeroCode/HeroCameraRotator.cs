@@ -1,5 +1,6 @@
 ﻿using System;
 using _CodeBase.Etc;
+using _CodeBase.HeroCode.Data;
 using _CodeBase.Infrastructure.Services;
 using _CodeBase.Logging;
 using UnityEngine;
@@ -10,15 +11,13 @@ namespace _CodeBase.HeroCode
 {
   public class HeroCameraRotator : MonoBehaviour
   {
-    [SerializeField] private float _sensitivityX;
-    [SerializeField] private float _sensitivityY;
-    [Space(10)]
-    [SerializeField] private Vector3 _offsetFromHero;
-    [Space(10)]
     [SerializeField] private Transform _orientation;
+    [Space(10)]
+    [SerializeField] private HeroCameraSettings _settings;
 
     private float _rotationX;
     private float _rotationY;
+    private Vector3 _offsetFromHero;
     private InputService _inputService;
 
     [Inject]
@@ -46,8 +45,8 @@ namespace _CodeBase.HeroCode
 
     private void Look()
     {
-      float mouseX = _inputService.LookInput.x * Time.deltaTime * _sensitivityX;
-      float mouseY = _inputService.LookInput.y * Time.deltaTime * _sensitivityY;
+      float mouseX = _inputService.LookInput.x * Time.deltaTime * _settings.Sensitivity;
+      float mouseY = _inputService.LookInput.y * Time.deltaTime * _settings.Sensitivity;
 
       _rotationY += mouseX;
       _rotationX -= mouseY;

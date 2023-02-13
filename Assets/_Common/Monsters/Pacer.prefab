@@ -765,7 +765,7 @@ MonoBehaviour:
   <IsBoss>k__BackingField: 0
   <Health>k__BackingField: {fileID: 5477675582962795514}
   <HasSpawnOffsetY>k__BackingField: 1
-  <SpawnOffsetY>k__BackingField: 0.67
+  <SpawnOffsetY>k__BackingField: 0.64
   _damagedMaterial: {fileID: 2100000, guid: 95f48dcf666b8de44bc93934b9ab85c6, type: 2}
   _skinnedMeshRenderers:
   - {fileID: 4095150183013258224}
