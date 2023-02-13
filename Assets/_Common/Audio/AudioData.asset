@@ -9,11 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1698b319ee3b42ea87d9e84a5fbe4302, type: 3}
-  m_Name: GrenadeSettings
+  m_Script: {fileID: 11500000, guid: 464113f4eb2545529d3bf0593c81ddc3, type: 3}
+  m_Name: AudioData
   m_EditorClassIdentifier: 
-  Damage: 2
-  Gravity: 8
-  Height: 0.8
-  MaxThrowDistance: 4
-  MovingThrowDistanceMultiplier: 4
+  MusicVolume: 0.18
+  DefaultMusicVolume: 0.18

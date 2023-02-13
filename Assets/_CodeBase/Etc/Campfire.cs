@@ -15,6 +15,7 @@ namespace _CodeBase.Etc
     [SerializeField] private float _punchScaleStrength;
     [SerializeField] private float _punchScaleTime;
     [Space(10)]
+    [SerializeField] private AudioSource _audioSource;
     [SerializeField] private Transform _particles;
     [SerializeField] private Health _health;
 
@@ -56,6 +57,7 @@ namespace _CodeBase.Etc
       if (currentValue == 0)
       {
         _choked = true;
+        _audioSource.Stop();
         _audioService.PlaySfx(_audioService.SfxData.FireChoke);
       }
       

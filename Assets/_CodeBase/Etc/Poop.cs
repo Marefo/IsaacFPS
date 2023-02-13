@@ -4,6 +4,7 @@ using _CodeBase.Data;
 using _CodeBase.Infrastructure.Services;
 using _CodeBase.Interfaces;
 using _CodeBase.ItemsDrop;
+using _CodeBase.Logging;
 using DG.Tweening;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -36,7 +37,7 @@ namespace _CodeBase.Etc
 
     public void ReceiveDamage(int damageValue, Vector3 position)
     {
-      _hitNumber += 1;
+      _hitNumber += damageValue;
       PlayPunchScaleEffect();
 
       if (_hitNumber == 3)

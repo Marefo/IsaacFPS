@@ -180,6 +180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _punchScaleStrength: 0.35
   _punchScaleTime: 0.1
+  _audioSource: {fileID: 380315244498894892}
   _particles: {fileID: 6881031154282876863}
   _health: {fileID: 5617075376635762357}
 --- !u!114 &5617075376635762356
