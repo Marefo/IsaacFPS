@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: PacerSettings
   m_EditorClassIdentifier: 
   ResetRotationSpeed: 25
-  JumpCooldown: 1.5
+  JumpCooldown: 1
   JumpDistance:
     Min: 8
     Max: 16
-  JumpHeight: 5
+  JumpHeight: 8
   JumpDuration: 1
   JumpEase: 1

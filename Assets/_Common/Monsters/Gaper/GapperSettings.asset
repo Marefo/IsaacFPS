@@ -15,11 +15,11 @@ MonoBehaviour:
   AttackDuration: 1
   AttackCooldown: 2.5
   Acceleration:
-    Min: 4
-    Max: 8
+    Min: 16
+    Max: 20
   MoveSpeed:
-    Min: 6
-    Max: 10
+    Min: 16
+    Max: 20
   SfxDelay:
     Min: 1.5
     Max: 3

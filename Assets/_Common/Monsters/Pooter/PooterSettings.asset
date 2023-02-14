@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 132fb69a50004f7884908546efb10253, type: 3}
   m_Name: PooterSettings
   m_EditorClassIdentifier: 
-  AttackDelay: 1.2
+  AttackDelay: 1
   EscapeDistance: 8
   ProjectilePrefab: {fileID: 2758664052018798143, guid: 57ab8ed884d48e046abcaa63547166d8,
     type: 3}
