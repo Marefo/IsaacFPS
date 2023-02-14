@@ -42,6 +42,7 @@ namespace _CodeBase.HeroCode
     private SceneService _sceneService;
     private AudioService _audioService;
     private LoadingCurtain _loadingCurtain;
+    private bool _dead;
 
     [Inject]
     public void Construct(SceneService sceneService, AudioService audioService, LoadingCurtain loadingCurtain)
@@ -85,6 +86,8 @@ namespace _CodeBase.HeroCode
 
     private void Die()
     {
+      if(_dead) return;
+      _dead = true;
       _audioService.PlaySfx(_audioService.SfxData.HeroDeath.GetRandomValue());
       _resetVignetteColorTween?.Kill();
       StopAllCoroutines();

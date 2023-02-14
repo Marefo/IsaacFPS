@@ -3,15 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="f8849ab3-d35d-492a-ab84-559b39c4dc6c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IsaacFPS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IsaacFPS/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Etc/Campfire.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Etc/Campfire.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/Etc/Poop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/Etc/Poop.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Hero/GrenadeSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Hero/GrenadeSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Infrastructure/AudioService.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Infrastructure/AudioService.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Infrastructure/NavMeshService.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Infrastructure/NavMeshService.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Items/Campfire.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Items/Campfire.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Common/UI/inconsolata-bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/UI/inconsolata-bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_CodeBase/HeroCode/Hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_CodeBase/HeroCode/Hero.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Hero/Animations/Hands.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Hero/Animations/Hands.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/MonsterPrefabsData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/MonsterPrefabsData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Monstro/MonstroHealthSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/Monstro/MonstroHealthSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/Monsters/Monstro/MonstroSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/Monsters/Monstro/MonstroSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Common/UI/WinnerLetter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Common/UI/WinnerLetter.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +139,8 @@
       <workItem from="1676114784516" duration="19443000" />
       <workItem from="1676199936810" duration="21905000" />
       <workItem from="1676281657595" duration="2772000" />
-      <workItem from="1676289107703" duration="2077000" />
+      <workItem from="1676289107703" duration="2225000" />
+      <workItem from="1676373841420" duration="629000" />
     </task>
     <servers />
   </component>

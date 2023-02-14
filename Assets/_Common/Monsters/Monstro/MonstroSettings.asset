@@ -17,7 +17,7 @@ MonoBehaviour:
     Max: 8
   AttackDelay:
     Min: 5
-    Max: 10
+    Max: 8.5
   ShootOffsetZ:
     Min: -3
     Max: 3
