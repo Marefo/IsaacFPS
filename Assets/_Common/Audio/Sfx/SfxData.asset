@@ -34,9 +34,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d36e23a9597d4ed4ebec93661c232fa1, type: 3}
   - {fileID: 8300000, guid: f9e48408330dc9f45806dbc76e2f4355, type: 3}
   WormAttack:
-  - {fileID: 8300000, guid: 02b369ead8797fe4ab7a1e2f2dad9ac2, type: 3}
-  - {fileID: 8300000, guid: c1cb6a190f2c7654b9756438170c70b2, type: 3}
-  - {fileID: 8300000, guid: cdf46188fb8360d4d8a12c6f940ae1a7, type: 3}
+  - {fileID: 8300000, guid: 74394ad6d0ad0a042b843a1222ab55de, type: 3}
+  - {fileID: 8300000, guid: 2856f7651c40bf94aa7539df4cba6cd6, type: 3}
   WormDeath:
   - {fileID: 8300000, guid: d36e23a9597d4ed4ebec93661c232fa1, type: 3}
   - {fileID: 8300000, guid: f9e48408330dc9f45806dbc76e2f4355, type: 3}

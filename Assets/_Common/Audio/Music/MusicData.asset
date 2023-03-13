@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfe316ee59e64e42b5dd01eba0defa1c, type: 3}
   m_Name: MusicData
   m_EditorClassIdentifier: 
-  Main: {fileID: 8300000, guid: f4c6a3a89b61bac459a8d5e5e5e9ced1, type: 3}
-  BossShow: {fileID: 8300000, guid: e379f688e865a4042b108f71b0d2ec64, type: 3}
-  BossFight: {fileID: 8300000, guid: 6790be9bcb9357b4b857bc82cd1be06e, type: 3}
+  Main: {fileID: 8300000, guid: 37ca2b1f2b048e64885984a4e46d3457, type: 3}
+  BossShow: {fileID: 8300000, guid: 786a7f91cd996c14ab83708cefeb6b1a, type: 3}
+  BossFight: {fileID: 8300000, guid: 886ad6ee82338a74cb536f1144e59d3e, type: 3}

@@ -4909,8 +4909,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sfxPrefabs:
   - {fileID: 1535713125723696766, guid: 0dd54a9389cc5034684c2202f5a57b5a, type: 3}
-  - {fileID: 7888673042911475377, guid: 3fba8b4f10cc84a48bf008e6ec4ce2cf, type: 3}
-  - {fileID: 5575693192269290880, guid: 67a5dc1c48d01e14b9a9672bac017856, type: 3}
   _destroyWhenDone: 1
   _pitchRandomMultiplier: 1.2
 --- !u!1 &8257329071730293700

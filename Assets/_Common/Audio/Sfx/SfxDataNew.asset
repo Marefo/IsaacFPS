@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c2f662c26d442d8aed697379a1d3f10, type: 3}
+  m_Name: SfxDataNew
+  m_EditorClassIdentifier: 
+  HeroDamage:
+  - {fileID: 8300000, guid: b674b6f205e697a4c929642d11fe6001, type: 3}
+  - {fileID: 8300000, guid: 890ba46ca00ab3f4abf9c19d7958ae5e, type: 3}
+  - {fileID: 8300000, guid: e1d8c9d3b630ffc4ea4059b643009e6e, type: 3}
+  HeroDeath:
+  - {fileID: 8300000, guid: 88ea79c9cbdc96d48af853e8f8077134, type: 3}
+  - {fileID: 8300000, guid: f02de252f6b170b4ca8949feaece82ca, type: 3}
+  RockDestroy:
+  - {fileID: 8300000, guid: f77dc48dc6616f44e9a97a5479399091, type: 3}
+  FlyDeath:
+  - {fileID: 8300000, guid: fd62fc3f7f9dba24fa3a90f9bccf254a, type: 3}
+  HorfAttack:
+  - {fileID: 8300000, guid: fba73bc3604b65d4b980212ba1a366cf, type: 3}
+  - {fileID: 8300000, guid: b72a981679157e540a2dfe093094ee93, type: 3}
+  HorfDeath:
+  - {fileID: 8300000, guid: a9d89ecda28365d4ba6ac7a81afb40f3, type: 3}
+  PooterDeath:
+  - {fileID: 8300000, guid: a9d89ecda28365d4ba6ac7a81afb40f3, type: 3}
+  WormAttack:
+  - {fileID: 8300000, guid: 74394ad6d0ad0a042b843a1222ab55de, type: 3}
+  - {fileID: 8300000, guid: 2856f7651c40bf94aa7539df4cba6cd6, type: 3}
+  WormDeath:
+  - {fileID: 8300000, guid: a9d89ecda28365d4ba6ac7a81afb40f3, type: 3}
+  PacerJump:
+  - {fileID: 8300000, guid: 2387cf45b7764ce42a636cc60d94c9ce, type: 3}
+  - {fileID: 8300000, guid: 6fd3abaad9fd88e4c84759364003a99f, type: 3}
+  PacerLand:
+  - {fileID: 8300000, guid: b556b816b6fe1b740849d6fda489cf1a, type: 3}
+  - {fileID: 8300000, guid: c7523f6ddc257ea41b1cbea0ea9215db, type: 3}
+  PacerDeath:
+  - {fileID: 8300000, guid: a9d89ecda28365d4ba6ac7a81afb40f3, type: 3}
+  GaperSounds:
+  - {fileID: 8300000, guid: 2766f1b3186194340b82de93bc7a7e6e, type: 3}
+  - {fileID: 8300000, guid: acd3c97da05046644a26526d1ffb4c7d, type: 3}
+  GaperDeath:
+  - {fileID: 8300000, guid: a9d89ecda28365d4ba6ac7a81afb40f3, type: 3}
+  HiveSounds:
+  - {fileID: 8300000, guid: d239c37df69caae458954db5207396d3, type: 3}
+  - {fileID: 8300000, guid: 7c856c2acf33fa941939b8e4fd05ff46, type: 3}
+  HiveAttack:
+  - {fileID: 8300000, guid: c8431168e8dcab043b2500d5a7210b1e, type: 3}
+  - {fileID: 8300000, guid: 9df620d4f62e96f48b0d53c5276bba1c, type: 3}
+  HiveDeath:
+  - {fileID: 8300000, guid: a9d89ecda28365d4ba6ac7a81afb40f3, type: 3}
+  MonstroRoar:
+  - {fileID: 8300000, guid: 899cf1e669c7beb4dbfc8b97cddb79e4, type: 3}
+  - {fileID: 8300000, guid: 3cb4de8453d8e3c418ed1519cbec00c0, type: 3}
+  MonstroLand:
+  - {fileID: 8300000, guid: 7db5f795b4b52bf4db754e5aa737f707, type: 3}
+  - {fileID: 8300000, guid: a7ccc5021d7d67b4290b95fa713b4b64, type: 3}
+  MonstroAttack:
+  - {fileID: 8300000, guid: dffcc46d39671d9429cafc33a3653b78, type: 3}
+  MonstroDeath:
+  - {fileID: 8300000, guid: c91ee0b09662f5449997541a2c9a0cf8, type: 3}
+  BookPageTurn: {fileID: 8300000, guid: 2522879a68c47e141abd657b63055ce0, type: 3}
+  Plop: {fileID: 8300000, guid: b94256e5bfd6e6d47ab4b8e9abdd9353, type: 3}
+  PickUp: {fileID: 8300000, guid: 9432cd9de4c6cd649a79913a4e865a6e, type: 3}
+  FireChoke: {fileID: 8300000, guid: 0706d3a8f7c44254f8277d57065da5fc, type: 3}
+  ChestLand: {fileID: 8300000, guid: c059fb4dde88b7a4cbdd062d121f2062, type: 3}
+  ChestOpen: {fileID: 8300000, guid: ecda38532dc4b8447b835882c32cd747, type: 3}
+  LockDoors: {fileID: 8300000, guid: ff5988052ddff61488b9efad4b52b688, type: 3}
+  BossLockDoors: {fileID: 8300000, guid: b5f08436e479eba47819a425ed875ebf, type: 3}
+  UnLockDoors: {fileID: 8300000, guid: 20962b66c2a65e34d8af9e371361bf02, type: 3}

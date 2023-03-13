@@ -5587,8 +5587,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.06, z: 0.019999996}
-  m_Center: {x: -2.3283064e-10, y: 1.5543122e-15, z: -0.0000000013969839}
+  m_Size: {x: 0.02, y: 0.09061861, z: 0.019999996}
+  m_Center: {x: 4.396067e-24, y: -0.015309331, z: -0.0000000014100404}
 --- !u!114 &542626220
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -39767,7 +39767,7 @@ MonoBehaviour:
   drawingMode: 1
   outlineLayer: 0
   outlineTargets:
-  - IsVisible: 1
+  - IsVisible: 0
     CutoutMask: 8
     edgeDilateAmount: 5
     frontEdgeDilateAmount: 5
